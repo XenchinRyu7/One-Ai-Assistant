@@ -5,7 +5,8 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import { Menu, Bot, ChevronDown } from 'lucide-react';
+import { Menu, Bot, ChevronDown, Sun, Moon } from 'lucide-react';
+import { useTheme } from "next-themes";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -43,6 +44,35 @@ const mobileNavSections = [
   }
 ];
 
+function ThemeToggleButton() {
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) {
+    // Render a placeholder or null on the server to avoid mismatch
+    return <Button variant="ghost" size="icon" disabled className="h-9 w-9 md:h-8 md:w-8"><Sun className="h-5 w-5" /></Button>;
+  }
+
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      aria-label="Toggle theme"
+      className="h-9 w-9 md:h-8 md:w-8"
+    >
+      {resolvedTheme === 'dark' ? (
+        <Sun className="h-5 w-5 transition-all" />
+      ) : (
+        <Moon className="h-5 w-5 transition-all" />
+      )}
+    </Button>
+  );
+}
+
+
 export function Navbar() {
   const [isMounted, setIsMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -78,7 +108,7 @@ export function Navbar() {
           <span className="text-xl font-bold text-foreground font-headline">One AI Assistant</span>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
           {primaryNavItems.map((item) => (
             <Link
               key={item.label}
@@ -117,6 +147,7 @@ export function Navbar() {
           </Link>
           
           <div className="flex items-center space-x-2">
+            <ThemeToggleButton />
             <Button asChild variant="ghost" size="sm">
               <Link href="/signin">Sign In</Link>
             </Button>
@@ -126,7 +157,8 @@ export function Navbar() {
           </div>
         </nav>
 
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggleButton />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">

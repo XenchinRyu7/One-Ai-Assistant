@@ -3,6 +3,7 @@ import './globals.css';
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: 'One AI Assistant - Intelligent Chatbot Solutions',
@@ -22,12 +23,19 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
