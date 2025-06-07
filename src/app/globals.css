@@ -26,8 +26,8 @@ body {
     --muted: 220 15% 90%; /* Lighter muted for light theme */
     --muted-foreground: 220 10% 45%;
 
-    --accent: 285 100% 50%; /* Bright Purple #9F00FF */
-    --accent-foreground: 0 0% 98%; /* White for text on bright purple */
+    --accent: 225 100% 58%; /* Changed from Bright Purple to Deep Blue (same as primary) */
+    --accent-foreground: 0 0% 98%; /* White for text on accent (same as primary-foreground) */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -73,8 +73,8 @@ body {
     --muted: 220 10% 22%;
     --muted-foreground: 220 10% 60%;
 
-    --accent: 285 100% 60%; /* Slightly lighter purple for dark mode */
-    --accent-foreground: 0 0% 98%;
+    --accent: 225 100% 65%; /* Changed from Bright Purple to Lighter Blue (same as dark primary) */
+    --accent-foreground: 0 0% 98%; /* White for text on accent */
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
