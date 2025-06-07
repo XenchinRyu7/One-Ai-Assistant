@@ -7,15 +7,25 @@ import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
 
 const icons = [
-  <Bot className="h-10 w-10 text-primary" />,
-  <Zap className="h-10 w-10 text-primary" />,
-  <Cog className="h-10 w-10 text-primary" />,
-  <Shield className="h-10 w-10 text-primary" />
+  <Bot key="bot" className="h-10 w-10 text-primary" />,
+  <Zap key="zap" className="h-10 w-10 text-primary" />,
+  <Cog key="cog" className="h-10 w-10 text-primary" />,
+  <Shield key="shield" className="h-10 w-10 text-primary" />
 ];
+
+interface ServiceItem {
+  title: string;
+  description: string;
+}
 
 export default async function ServicesPage() {
   const t = await getScopedI18n('servicesPage');
-  const servicesList = t('services');
+  
+  const rawServices = t('services');
+  const servicesList: ServiceItem[] = Array.isArray(rawServices) ? rawServices : [];
+
+  const rawFeatures = t('whyChooseUs.features');
+  const whyChooseUsFeatures: string[] = Array.isArray(rawFeatures) ? rawFeatures : [];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -28,7 +38,7 @@ export default async function ServicesPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        {servicesList.map((service: {title: string, description: string}, index: number) => (
+        {servicesList.map((service: ServiceItem, index: number) => (
           <Card key={service.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardHeader className="flex flex-row items-center gap-4">
               {icons[index % icons.length]}
@@ -50,7 +60,7 @@ export default async function ServicesPage() {
                     {t('whyChooseUs.description')}
                 </p>
                 <ul className="space-y-3 text-foreground/70">
-                    {t('whyChooseUs.features').map((feature: string) => (
+                    {whyChooseUsFeatures.map((feature: string) => (
                        <li key={feature} className="flex items-center"><Zap className="h-5 w-5 text-primary mr-2" /> {feature}</li>
                     ))}
                 </ul>
