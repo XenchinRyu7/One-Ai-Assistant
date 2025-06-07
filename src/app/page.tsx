@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { CheckCircle, Brain, Puzzle, Clock, Palette, Zap, Settings2, MessageSquare, ShieldCheck, ArrowRight } from 'lucide-react';
+import { CheckCircle, Brain, Puzzle, Clock, Palette, Zap, Settings2, MessageSquare, ShieldCheck, ArrowRight, Star } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const features = [
   {
@@ -47,6 +48,45 @@ const howItWorksSteps = [
     description: 'Add a simple code snippet to your website and start engaging customers instantly.',
     icon: <MessageSquare className="h-8 w-8 text-accent" />,
   },
+];
+
+const testimonials = [
+  {
+    quote: "One AI Assistant has revolutionized our customer support. Response times are down 60%, and our customers love the instant, accurate answers!",
+    name: "Jane Doe",
+    company: "Tech Solutions Inc.",
+    avatarSrc: "https://placehold.co/100x100.png",
+    avatarFallback: "JD",
+    rating: 5,
+    dataAiHint: "professional woman",
+  },
+  {
+    quote: "The RAG system is incredibly powerful. It understands context and provides relevant information from our knowledge base like never before. Highly recommended!",
+    name: "John Smith",
+    company: "Global Innovations Ltd.",
+    avatarSrc: "https://placehold.co/100x100.png",
+    avatarFallback: "JS",
+    rating: 5,
+    dataAiHint: "male executive",
+  },
+  {
+    quote: "Integrating One AI Assistant was surprisingly easy, and the impact on our team's workload was immediate. A game-changer for our e-commerce site.",
+    name: "Alice Brown",
+    company: "Online Emporium",
+    avatarSrc: "https://placehold.co/100x100.png",
+    avatarFallback: "AB",
+    rating: 4,
+    dataAiHint: "startup founder",
+  }
+];
+
+const trustedBrands = [
+  { name: "Google", logoSrc: "https://placehold.co/150x75.png?text=Google", dataAiHint: "tech company" },
+  { name: "Microsoft", logoSrc: "https://placehold.co/150x75.png?text=Microsoft", dataAiHint: "software company" },
+  { name: "Amazon", logoSrc: "https://placehold.co/150x75.png?text=Amazon", dataAiHint: "ecommerce giant" },
+  { name: "Salesforce", logoSrc: "https://placehold.co/150x75.png?text=Salesforce", dataAiHint: "crm platform" },
+  { name: "Netflix", logoSrc: "https://placehold.co/150x75.png?text=Netflix", dataAiHint: "streaming service" },
+  { name: "Spotify", logoSrc: "https://placehold.co/150x75.png?text=Spotify", dataAiHint: "music streaming" },
 ];
 
 export default function HomePage() {
@@ -180,6 +220,91 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div 
+            className="text-center mb-12"
+            data-jos_animation="fade"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-headline">
+              What Our Clients Say
+            </h2>
+            <p className="mt-4 max-w-xl mx-auto text-lg text-foreground/70">
+              Real stories from businesses benefiting from One AI Assistant.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card 
+                key={testimonial.name} 
+                className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card"
+                data-jos_animation="zoom-in"
+                data-jos_delay={(index * 0.1).toFixed(1)}
+              >
+                <CardContent className="pt-6 flex-grow flex flex-col">
+                  <div className="flex mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-muted-foreground/50'}`} />
+                    ))}
+                  </div>
+                  <blockquote className="text-foreground/80 italic mb-4 flex-grow">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className="flex items-center mt-auto">
+                    <Avatar className="h-12 w-12 mr-4 border-2 border-primary">
+                      <AvatarImage src={testimonial.avatarSrc} alt={testimonial.name} data-ai-hint={testimonial.dataAiHint} />
+                      <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold text-foreground">{testimonial.name}</p>
+                      <p className="text-sm text-foreground/70">{testimonial.company}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted By Section */}
+      <section className="py-16 md:py-24 bg-secondary/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div 
+            className="text-center mb-12"
+            data-jos_animation="fade"
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground font-headline">
+              Trusted by Leading Companies
+            </h2>
+          </div>
+          <div 
+            className="flex flex-wrap justify-center items-center gap-x-10 gap-y-8"
+            data-jos_animation="fade-up"
+            data-jos_delay="0.1"
+          >
+            {trustedBrands.map((brand, index) => (
+              <div 
+                key={brand.name} 
+                className="grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                data-jos_animation="zoom-in"
+                data-jos_delay={(index * 0.05 + 0.2).toFixed(2)}
+              >
+                <Image 
+                  src={brand.logoSrc} 
+                  alt={`${brand.name} logo`} 
+                  width={130} 
+                  height={50} 
+                  className="object-contain"
+                  data-ai-hint={brand.dataAiHint}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Security/Trust Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -261,3 +386,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
