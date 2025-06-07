@@ -5,53 +5,45 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
-import { Menu, Bot, ChevronDown, Sun, Moon } from 'lucide-react';
+import { Menu, Bot, ChevronDown, Sun, Moon, Globe } from 'lucide-react';
 import { useTheme } from "next-themes";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuLabel,
+  DropdownMenuSeparator
 } from "@/components/ui/dropdown-menu";
+import { useScopedI18n, useChangeLocale, useCurrentLocale } from '@/i18n/client';
+import type { Locale } from '@/i18n/settings';
 
-const primaryNavItems = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/services', label: 'Services' },
-  { href: '/pricing', label: 'Pricing' },
+
+const primaryNavItemsConfig = [
+  { href: '/', labelKey: 'navbar.home' },
+  { href: '/about', labelKey: 'navbar.about' },
+  { href: '/services', labelKey: 'navbar.services' },
+  { href: '/pricing', labelKey: 'navbar.pricing' },
 ];
 
-const moreDropdownItems = [
-  { href: '/whats-new', label: "What's New" },
-  { href: '/our-teams', label: 'Our Teams' },
-  { href: '/our-clients', label: 'Our Clients' },
-  { href: '/faq', label: 'FAQs' },
+const moreDropdownItemsConfig = [
+  { href: '/whats-new', labelKey: 'navbar.whatsNew' },
+  { href: '/our-teams', labelKey: 'navbar.ourTeams' },
+  { href: '/our-clients', labelKey: 'navbar.ourClients' },
+  { href: '/faq', labelKey: 'navbar.faqs' },
 ];
 
-const contactNavItem = { href: '/contact', label: 'Contact' };
+const contactNavItemConfig = { href: '/contact', labelKey: 'navbar.contact' };
 
-// For mobile menu structure
-const mobileNavSections = [
-  {
-    items: primaryNavItems,
-  },
-  {
-    title: 'Explore More',
-    items: moreDropdownItems,
-  },
-  {
-    items: [contactNavItem],
-  }
-];
 
 function ThemeToggleButton() {
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const t = useScopedI18n('navbar');
 
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    // Render a placeholder or null on the server to avoid mismatch
     return <Button variant="ghost" size="icon" disabled className="h-9 w-9 md:h-8 md:w-8"><Sun className="h-5 w-5" /></Button>;
   }
 
@@ -60,7 +52,7 @@ function ThemeToggleButton() {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      aria-label="Toggle theme"
+      aria-label={t('themeToggle')}
       className="h-9 w-9 md:h-8 md:w-8"
     >
       {resolvedTheme === 'dark' ? (
@@ -72,21 +64,65 @@ function ThemeToggleButton() {
   );
 }
 
+function LanguageSwitcher() {
+  const changeLocale = useChangeLocale();
+  const currentLocale = useCurrentLocale();
+  const t = useScopedI18n('navbar');
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" size="icon" className="h-9 w-9 md:h-8 md:w-8">
+          <Globe className="h-5 w-5" />
+          <span className="sr-only">{t('language')}</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="bg-background">
+        <DropdownMenuLabel>{t('language')}</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem
+          onClick={() => changeLocale('en')}
+          disabled={currentLocale === 'en'}
+        >
+          {t('english')}
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => changeLocale('id')}
+          disabled={currentLocale === 'id'}
+        >
+          {t('indonesian')}
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
 
 export function Navbar() {
   const [isMounted, setIsMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const t = useScopedI18n('navbar');
+  const currentLocale = useCurrentLocale();
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
+  const primaryNavItems = primaryNavItemsConfig.map(item => ({...item, label: t(item.labelKey as any)}));
+  const moreDropdownItems = moreDropdownItemsConfig.map(item => ({...item, label: t(item.labelKey as any)}));
+  const contactNavItem = {...contactNavItemConfig, label: t(contactNavItemConfig.labelKey as any)};
+  
+  const mobileNavSections = [
+    { items: primaryNavItems },
+    { title: t('more'), items: moreDropdownItems },
+    { items: [contactNavItem] }
+  ];
+
   if (!isMounted) {
-    // Avoid rendering on server to prevent hydration mismatch for Sheet & Dropdown
     return (
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-2" prefetch={false}>
+          <Link href={`/${currentLocale}`} className="flex items-center gap-2" prefetch={false}>
             <Bot className="h-7 w-7 text-primary" />
             <span className="text-xl font-bold text-foreground font-headline">One AI Assistant</span>
           </Link>
@@ -103,17 +139,17 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2" prefetch={false}>
+        <Link href={`/${currentLocale}`} className="flex items-center gap-2" prefetch={false}>
           <Bot className="h-7 w-7 text-primary" />
           <span className="text-xl font-bold text-foreground font-headline">One AI Assistant</span>
         </Link>
         
-        <nav className="hidden md:flex flex-1 items-center justify-between text-sm font-medium ml-6">
-          <div className="flex items-center space-x-6"> {/* Group primary nav items, More, and Contact */}
+        <nav className="hidden md:flex flex-1 items-center justify-end text-sm font-medium">
+          <div className="flex items-center space-x-6">
             {primaryNavItems.map((item) => (
               <Link
                 key={item.label}
-                href={item.href}
+                href={item.href} // next-international middleware will handle locale prefixing
                 className="text-foreground/70 transition-colors hover:text-foreground"
                 prefetch={false}
               >
@@ -124,7 +160,7 @@ export function Navbar() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="text-foreground/70 transition-colors hover:text-foreground hover:bg-transparent px-0 md:px-2 flex items-center gap-1">
-                  More
+                  {t('more')}
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -148,18 +184,20 @@ export function Navbar() {
             </Link>
           </div>
           
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 ml-6">
+            <LanguageSwitcher />
             <ThemeToggleButton />
             <Button asChild variant="ghost" size="sm">
-              <Link href="/signin">Sign In</Link>
+              <Link href="/signin">{t('signin')}</Link>
             </Button>
             <Button asChild variant="default" size="sm" className="bg-primary hover:bg-primary/90">
-              <Link href="/signup">Sign Up</Link>
+              <Link href="/signup">{t('signup')}</Link>
             </Button>
           </div>
         </nav>
 
-        <div className="md:hidden flex items-center gap-2">
+        <div className="md:hidden flex items-center gap-1">
+          <LanguageSwitcher />
           <ThemeToggleButton />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -169,12 +207,12 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-background p-0">
-              <SheetHeader className="p-6 sr-only"> 
-                <SheetTitle>Navigation Menu</SheetTitle>
-                <SheetDescription>Access main sections of the One AI Assistant website.</SheetDescription>
+              <SheetHeader className="p-6"> 
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                <SheetDescription className="sr-only">Access main sections of the One AI Assistant website.</SheetDescription>
               </SheetHeader>
               <div className="p-6 flex flex-col h-full">
-                <Link href="/" className="flex items-center gap-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href={`/${currentLocale}`} className="flex items-center gap-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
                   <Bot className="h-7 w-7 text-primary" />
                   <span className="text-xl font-bold text-foreground font-headline">One AI Assistant</span>
                 </Link>
@@ -202,12 +240,12 @@ export function Navbar() {
                 <div className="mt-auto pt-6 space-y-2">
                    <SheetClose asChild>
                     <Button asChild variant="outline" size="lg" className="w-full">
-                       <Link href="/signin" onClick={() => setIsMobileMenuOpen(false)}>Sign In</Link>
+                       <Link href="/signin" onClick={() => setIsMobileMenuOpen(false)}>{t('signin')}</Link>
                     </Button>
                   </SheetClose>
                   <SheetClose asChild>
                     <Button asChild variant="default" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                       <Link href="/signup" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</Link>
+                       <Link href="/signup" onClick={() => setIsMobileMenuOpen(false)}>{t('signup')}</Link>
                     </Button>
                   </SheetClose>
                 </div>
