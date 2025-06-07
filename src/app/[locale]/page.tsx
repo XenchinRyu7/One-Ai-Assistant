@@ -51,10 +51,17 @@ export default async function HomePage() {
   const securitySectionFeature3 = homeT('securitySection.features.2');
   const securitySectionFeature3Parts = securitySectionFeature3.split(/<strong>|<\/strong>/);
 
-  const featuresList = (homeT('featuresSection.features') as FeatureItem[] | undefined) || [];
-  const stepsList = (homeT('howItWorksSection.steps') as StepItem[] | undefined) || [];
-  const testimonialsList = (homeT('testimonialsSection.testimonials') as TestimonialItem[] | undefined) || [];
-  const brandsList = (homeT('trustedBySection.brands') as BrandItem[] | undefined) || [];
+  const featuresData = homeT('featuresSection.features');
+  const featuresList: FeatureItem[] = Array.isArray(featuresData) ? featuresData : [];
+
+  const stepsData = homeT('howItWorksSection.steps');
+  const stepsList: StepItem[] = Array.isArray(stepsData) ? stepsData : [];
+
+  const testimonialsData = homeT('testimonialsSection.testimonials');
+  const testimonialsList: TestimonialItem[] = Array.isArray(testimonialsData) ? testimonialsData : [];
+
+  const brandsData = homeT('trustedBySection.brands');
+  const brandsList: BrandItem[] = Array.isArray(brandsData) ? brandsData : [];
 
 
   return (
