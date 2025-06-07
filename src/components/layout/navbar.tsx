@@ -108,43 +108,45 @@ export function Navbar() {
           <span className="text-xl font-bold text-foreground font-headline">One AI Assistant</span>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
-          {primaryNavItems.map((item) => (
+        <nav className="hidden md:flex flex-1 items-center justify-between text-sm font-medium ml-6"> {/* Added flex-1, justify-between and ml-6 for spacing from logo */}
+          <div className="flex items-center space-x-6"> {/* Group primary nav items, More, and Contact */}
+            {primaryNavItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="text-foreground/70 transition-colors hover:text-foreground"
+                prefetch={false}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-foreground/70 transition-colors hover:text-foreground hover:bg-transparent px-0 md:px-2 flex items-center gap-1">
+                  More
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-background">
+                {moreDropdownItems.map((item) => (
+                  <DropdownMenuItem key={item.label} asChild>
+                    <Link href={item.href} className="text-foreground/70 transition-colors hover:text-foreground">
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link
-              key={item.label}
-              href={item.href}
+              href={contactNavItem.href}
               className="text-foreground/70 transition-colors hover:text-foreground"
               prefetch={false}
             >
-              {item.label}
+              {contactNavItem.label}
             </Link>
-          ))}
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="text-foreground/70 transition-colors hover:text-foreground hover:bg-transparent px-0 md:px-2 flex items-center gap-1">
-                More
-                <ChevronDown className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="bg-background">
-              {moreDropdownItems.map((item) => (
-                <DropdownMenuItem key={item.label} asChild>
-                  <Link href={item.href} className="text-foreground/70 transition-colors hover:text-foreground">
-                    {item.label}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <Link
-            href={contactNavItem.href}
-            className="text-foreground/70 transition-colors hover:text-foreground"
-            prefetch={false}
-          >
-            {contactNavItem.label}
-          </Link>
+          </div>
           
           <div className="flex items-center space-x-2">
             <ThemeToggleButton />
@@ -167,7 +169,7 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-background p-0">
-              <SheetHeader className="sr-only">
+              <SheetHeader className="p-6 pb-0 sr-only"> {/* Made SR only but kept for structure if needed */}
                 <SheetTitle>Navigation Menu</SheetTitle>
                 <SheetDescription>Access main sections of the One AI Assistant website.</SheetDescription>
               </SheetHeader>
