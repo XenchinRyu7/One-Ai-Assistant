@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { Menu, Bot, ChevronDown, Sun, Moon } from 'lucide-react';
 import { useTheme } from "next-themes";
 import {
@@ -166,7 +166,11 @@ export function Navbar() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-background">
+            <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-background p-0">
+              <SheetHeader className="sr-only">
+                <SheetTitle>Navigation Menu</SheetTitle>
+                <SheetDescription>Access main sections of the One AI Assistant website.</SheetDescription>
+              </SheetHeader>
               <div className="p-6 flex flex-col h-full">
                 <Link href="/" className="flex items-center gap-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
                   <Bot className="h-7 w-7 text-primary" />
