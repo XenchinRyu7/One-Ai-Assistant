@@ -108,7 +108,7 @@ export function Navbar() {
           <span className="text-xl font-bold text-foreground font-headline">One AI Assistant</span>
         </Link>
         
-        <nav className="hidden md:flex flex-1 items-center justify-between text-sm font-medium ml-6"> {/* Added flex-1, justify-between and ml-6 for spacing from logo */}
+        <nav className="hidden md:flex flex-1 items-center justify-between text-sm font-medium ml-6">
           <div className="flex items-center space-x-6"> {/* Group primary nav items, More, and Contact */}
             {primaryNavItems.map((item) => (
               <Link
@@ -169,7 +169,7 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-background p-0">
-              <SheetHeader className="p-6 pb-0 sr-only"> {/* Made SR only but kept for structure if needed */}
+              <SheetHeader className="p-6 sr-only"> 
                 <SheetTitle>Navigation Menu</SheetTitle>
                 <SheetDescription>Access main sections of the One AI Assistant website.</SheetDescription>
               </SheetHeader>
