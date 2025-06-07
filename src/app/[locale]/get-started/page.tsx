@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
 import { setStaticParamsLocale } from 'next-international/server';
-import { Trans } from "next-international";
+import { Trans } from 'next-international/Trans'; // Corrected import path
 import type { Locale } from '@/i18n/settings';
 
 export default async function GetStartedPage({ params: { locale } }: { params: { locale: Locale } }) {

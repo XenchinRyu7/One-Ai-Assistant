@@ -12,7 +12,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import React from 'react';
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { useScopedI18n } from '@/i18n/client';
-import { Trans } from "next-international";
+import { Trans } from "next-international/Trans"; // Corrected import path
 
 
 export default function ContactPage() {
