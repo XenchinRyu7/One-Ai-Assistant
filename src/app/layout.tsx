@@ -1,7 +1,9 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
+import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "next-themes";
 
@@ -31,6 +33,7 @@ export default function RootLayout({
         >
           <Navbar />
           <main className="flex-grow">
+            <Breadcrumbs />
             {children}
           </main>
           <Footer />
