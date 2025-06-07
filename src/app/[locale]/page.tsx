@@ -9,6 +9,33 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getI18n, getScopedI18n, getStaticParams as i18nGetStaticParams } from '@/i18n/server';
 import { Trans } from 'next-international';
 
+interface FeatureItem {
+  title: string;
+  description: string;
+}
+
+interface StepItem {
+  title: string;
+  description: string;
+}
+
+interface TestimonialItem {
+  quote: string;
+  name: string;
+  company: string;
+  avatarSrc: string;
+  avatarFallback: string;
+  rating: number;
+  dataAiHint: string;
+}
+
+interface BrandItem {
+  name: string;
+  logoSrc: string;
+  dataAiHint: string;
+}
+
+
 export default async function HomePage() {
   const t = await getI18n();
   const heroT = await getScopedI18n('hero');
@@ -23,6 +50,11 @@ export default async function HomePage() {
   const securitySectionFeature2Parts = securitySectionFeature2.split(/<strong>|<\/strong>/);
   const securitySectionFeature3 = homeT('securitySection.features.2');
   const securitySectionFeature3Parts = securitySectionFeature3.split(/<strong>|<\/strong>/);
+
+  const featuresList = (homeT('featuresSection.features') as FeatureItem[] | undefined) || [];
+  const stepsList = (homeT('howItWorksSection.steps') as StepItem[] | undefined) || [];
+  const testimonialsList = (homeT('testimonialsSection.testimonials') as TestimonialItem[] | undefined) || [];
+  const brandsList = (homeT('trustedBySection.brands') as BrandItem[] | undefined) || [];
 
 
   return (
@@ -90,7 +122,7 @@ export default async function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {homeT('featuresSection.features').map((feature: {title: string, description: string}, index: number) => (
+            {featuresList.map((feature: FeatureItem, index: number) => (
               <Card 
                 key={feature.title} 
                 className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card"
@@ -128,7 +160,7 @@ export default async function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {homeT('howItWorksSection.steps').map((step: {title: string, description: string}, index: number) => (
+            {stepsList.map((step: StepItem, index: number) => (
               <div 
                 key={step.title} 
                 className="flex flex-col items-center text-center p-6 bg-card rounded-lg shadow-lg"
@@ -177,7 +209,7 @@ export default async function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {homeT('testimonialsSection.testimonials').map((testimonial: {quote:string, name:string, company:string, avatarSrc:string, avatarFallback:string, rating:number, dataAiHint: string }, index: number) => (
+            {testimonialsList.map((testimonial: TestimonialItem, index: number) => (
               <Card 
                 key={testimonial.name} 
                 className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card"
@@ -226,7 +258,7 @@ export default async function HomePage() {
             data-jos_animation="fade-up"
             data-jos_delay="0.1"
           >
-            {homeT('trustedBySection.brands').map((brand: {name: string, logoSrc: string, dataAiHint: string}, index: number) => (
+            {brandsList.map((brand: BrandItem, index: number) => (
               <div 
                 key={brand.name} 
                 className="grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
