@@ -1,3 +1,4 @@
+
 // src/i18n/dictionaries/id.ts
 export default {
   navbar: {
@@ -39,5 +40,52 @@ export default {
     privacyPolicy: 'Kebijakan Privasi',
     termsOfService: 'Ketentuan Layanan',
   },
-  // Add other page translations here as needed
+  pricingPage: {
+    title: "Harga Fleksibel untuk Setiap Kebutuhan",
+    subtitle: "Pilih paket yang paling sesuai dengan tujuan bisnis Anda dan skalakan seiring pertumbuhan Anda. Semua paket menyertakan fitur chatbot AI inti kami.",
+    monthly: "Bulanan",
+    annually: "Tahunan",
+    usd: "USD",
+    idr: "IDR",
+    selectCurrency: "Pilih Mata Uang",
+    popular: "Populer",
+    save20Percent: "Hemat 20% dengan tagihan tahunan!",
+
+    starterPlanName: "Pemula",
+    starterPlanDescription: "Sempurna untuk bisnis kecil dan startup yang ingin mengotomatiskan pertanyaan pelanggan dasar.",
+    starterFeatures: [
+      "Hingga 1.000 interaksi/bulan",
+      "Kapabilitas RAG dasar",
+      "Integrasi basis pengetahuan standar",
+      "Dukungan email"
+    ],
+    chooseStarter: "Pilih Pemula",
+
+    professionalPlanName: "Profesional",
+    professionalPlanDescription: "Ideal untuk bisnis yang sedang berkembang yang membutuhkan lebih banyak kekuatan dan kustomisasi.",
+    professionalFeatures: [
+      "Hingga 5.000 interaksi/bulan",
+      "Kapabilitas RAG tingkat lanjut",
+      "Integrasi beberapa basis pengetahuan",
+      "Dukungan email prioritas",
+      "Analitik dasar"
+    ],
+    chooseProfessional: "Pilih Profesional",
+
+    enterprisePlanName: "Enterprise",
+    enterprisePlanDescription: "Solusi yang disesuaikan untuk organisasi besar dengan persyaratan khusus.",
+    enterpriseFeatures: [
+      "Interaksi tidak terbatas",
+      "Fine-tuning RAG & LLM premium",
+      "Integrasi khusus (CRM, dll.)",
+      "Manajer akun khusus",
+      "Analitik & pelaporan tingkat lanjut",
+      "SLA & dukungan premium 24/7"
+    ],
+
+    contactSales: "Hubungi Sales",
+    customSolutionTitle: "Butuh Solusi Khusus?",
+    customSolutionSubtitle: "Kami dapat menyesuaikan paket khusus untuk kebutuhan perusahaan Anda. Hubungi tim penjualan kami untuk penawaran yang dipersonalisasi.",
+  }
 } as const;
+    

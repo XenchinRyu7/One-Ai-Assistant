@@ -1,3 +1,4 @@
+
 // src/i18n/dictionaries/en.ts
 export default {
   navbar: {
@@ -39,9 +40,52 @@ export default {
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
   },
-  // Add other page translations here as needed
-  // For example:
-  // aboutPage: {
-  //   title: "About One AI Assistant"
-  // }
+  pricingPage: {
+    title: "Flexible Pricing for Every Need",
+    subtitle: "Choose the plan that best fits your business goals and scale as you grow. All plans include our core AI chatbot features.",
+    monthly: "Monthly",
+    annually: "Annually",
+    usd: "USD",
+    idr: "IDR",
+    selectCurrency: "Select Currency",
+    popular: "Popular",
+    save20Percent: "Save 20% with annual billing!",
+    
+    starterPlanName: "Starter",
+    starterPlanDescription: "Perfect for small businesses and startups looking to automate basic customer queries.",
+    starterFeatures: [
+      "Up to 1,000 interactions/month",
+      "Basic RAG capabilities",
+      "Standard knowledge base integration",
+      "Email support"
+    ],
+    chooseStarter: "Choose Starter",
+
+    professionalPlanName: "Professional",
+    professionalPlanDescription: "Ideal for growing businesses needing more power and customization.",
+    professionalFeatures: [
+      "Up to 5,000 interactions/month",
+      "Advanced RAG capabilities",
+      "Multiple knowledge base integrations",
+      "Priority email support",
+      "Basic analytics"
+    ],
+    chooseProfessional: "Choose Professional",
+
+    enterprisePlanName: "Enterprise",
+    enterprisePlanDescription: "Tailored solutions for large organizations with specific requirements.",
+    enterpriseFeatures: [
+      "Unlimited interactions",
+      "Premium RAG & LLM fine-tuning",
+      "Custom integrations (CRM, etc.)",
+      "Dedicated account manager",
+      "Advanced analytics & reporting",
+      "SLA & 24/7 premium support"
+    ],
+    
+    contactSales: "Contact Sales",
+    customSolutionTitle: "Need a Custom Solution?",
+    customSolutionSubtitle: "We can tailor a plan specifically for your enterprise needs. Get in touch with our sales team for a personalized quote.",
+  }
 } as const;
+    
