@@ -13,8 +13,8 @@ import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 // Note: generateStaticParams is usually for server components, but for routing consistency with [locale]
 // we include it. For purely client-side pages, localization might be handled differently or not at build time.
 // However, to make the routes available for each locale, it's good practice.
-import type { Locale } from '@/i18n/settings';
-import { getStaticParams as i18nGetStaticParams } from '@/i18n/server';
+// import type { Locale } from '@/i18n/settings'; // No longer needed
+// import { getStaticParams as i18nGetStaticParams } from '@/i18n/server'; // No longer needed
 
 
 export default function ContactPage() {
@@ -123,6 +123,6 @@ export default function ContactPage() {
   );
 }
 
-export async function generateStaticParams() {
-  return i18nGetStaticParams();
-}
+// export async function generateStaticParams() { // Removed
+// return i18nGetStaticParams();
+// }

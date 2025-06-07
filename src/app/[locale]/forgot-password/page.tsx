@@ -9,7 +9,7 @@ import Link from "next/link";
 import React from 'react';
 import { useToast } from "@/hooks/use-toast";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
-import { getStaticParams as i18nGetStaticParams } from '@/i18n/server';
+// import { getStaticParams as i18nGetStaticParams } from '@/i18n/server'; // No longer needed
 
 export default function ForgotPasswordPage() {
   const { toast } = useToast();
@@ -58,6 +58,6 @@ export default function ForgotPasswordPage() {
   );
 }
 
-export async function generateStaticParams() {
-  return i18nGetStaticParams();
-}
+// export async function generateStaticParams() { // Removed
+// return i18nGetStaticParams();
+// }
