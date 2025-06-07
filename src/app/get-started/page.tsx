@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 export default function GetStartedPage() {
   return (
@@ -12,6 +13,7 @@ export default function GetStartedPage() {
         <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
           You're one step closer to revolutionizing your customer support. Choose an option below to begin your journey with One AI Assistant.
         </p>
+        <Breadcrumbs />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">

@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
 import React from 'react';
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 export default function ContactPage() {
   const { toast } = useToast();
@@ -31,6 +32,7 @@ export default function ContactPage() {
         <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
           We'd love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.
         </p>
+        <Breadcrumbs />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">

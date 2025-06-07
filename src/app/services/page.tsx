@@ -2,6 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Bot, Zap, Cog, Shield } from "lucide-react";
 import Image from "next/image";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 const servicesList = [
   {
@@ -34,6 +35,7 @@ export default function ServicesPage() {
         <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
           We offer a comprehensive suite of services to help you deploy and manage a powerful AI assistant for your business.
         </p>
+        <Breadcrumbs />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

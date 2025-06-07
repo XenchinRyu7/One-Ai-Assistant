@@ -1,6 +1,7 @@
 
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import Image from "next/image";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 const clientLogos = [
   { name: "Innovatech Corp", logo: "https://placehold.co/150x80.png?text=Innovatech", dataAiHint: "tech logo" },
@@ -39,6 +40,7 @@ export default function OurClientsPage() {
           <CardDescription className="mt-2 text-lg text-foreground/70 max-w-2xl mx-auto">
             We're proud to partner with a diverse range of organizations, helping them enhance customer engagement and streamline support with our AI solutions.
           </CardDescription>
+          <Breadcrumbs />
         </CardHeader>
         <CardContent>
           <section className="mb-12">

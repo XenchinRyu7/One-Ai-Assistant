@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import React from 'react';
 import { useToast } from "@/hooks/use-toast";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 export default function SignUpPage() {
   const { toast } = useToast();
@@ -27,6 +28,7 @@ export default function SignUpPage() {
         <CardHeader className="text-center">
           <CardTitle className="text-3xl font-bold font-headline text-primary">Create Account</CardTitle>
           <CardDescription>Join One AI Assistant today!</CardDescription>
+          <Breadcrumbs />
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">

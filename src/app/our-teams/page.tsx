@@ -2,6 +2,7 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 const teamMembers = [
   { name: "Dr. Eva Rostova", role: "Lead AI Researcher", avatar: "https://placehold.co/100x100.png?text=ER", initials: "ER", bio: "PhD in AI with a focus on NLP. Eva leads our research and development efforts, pushing the boundaries of conversational AI.", dataAiHint: "scientist portrait" },
@@ -21,6 +22,7 @@ export default function OurTeamsPage() {
            <p className="mt-2 text-lg text-foreground/70 max-w-2xl mx-auto">
             The passionate minds behind One AI Assistant, dedicated to revolutionizing customer interaction through artificial intelligence.
           </p>
+          <Breadcrumbs />
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">

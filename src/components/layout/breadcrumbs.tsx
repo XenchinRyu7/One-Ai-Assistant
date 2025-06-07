@@ -37,18 +37,17 @@ export function Breadcrumbs() {
     });
   });
 
-  // Do not render breadcrumbs if there's only "Home" (e.g., for non-existent top-level paths if any)
   if (breadcrumbItems.length <= 1) {
     return null;
   }
 
   return (
-    <nav aria-label="Breadcrumb" className="container mx-auto max-w-screen-xl px-4 py-3 mb-4 sm:px-6 lg:px-8">
-      <ol className="flex items-center space-x-1.5 text-sm">
+    <nav aria-label="Breadcrumb" className="my-3">
+      <ol className="flex items-center justify-center space-x-1.5 text-sm">
         {breadcrumbItems.map((item, index) => (
           <li key={item.href} className="flex items-center">
             {index === breadcrumbItems.length - 1 ? (
-              <span className="font-medium text-foreground">{item.label}</span>
+              <span className="font-semibold text-primary">{item.label}</span>
             ) : (
               <Link href={item.href} className="text-muted-foreground hover:text-primary transition-colors">
                 {item.label}

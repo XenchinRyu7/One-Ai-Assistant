@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 const faqItems = [
   {
@@ -58,6 +59,7 @@ export default function FAQPage() {
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">
             Frequently Asked Questions
           </CardTitle>
+          <Breadcrumbs />
         </CardHeader>
         <CardContent>
           <Accordion type="single" collapsible className="w-full">

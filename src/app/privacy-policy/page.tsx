@@ -1,12 +1,14 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <Card className="shadow-lg">
-        <CardHeader>
-          <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary text-center">Privacy Policy</CardTitle>
+        <CardHeader className="text-center">
+          <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">Privacy Policy</CardTitle>
+          <Breadcrumbs />
         </CardHeader>
         <CardContent className="prose prose-lg max-w-none text-foreground/80">
           <p className="text-sm text-center text-muted-foreground">Last Updated: {new Date().toLocaleDateString()}</p>

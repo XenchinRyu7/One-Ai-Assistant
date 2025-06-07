@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 export default function AboutPage() {
   return (
@@ -8,6 +9,7 @@ export default function AboutPage() {
       <Card className="shadow-lg">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">About One AI Assistant</CardTitle>
+          <Breadcrumbs />
         </CardHeader>
         <CardContent className="space-y-8 text-lg text-foreground/80">
           <div className="flex flex-col md:flex-row items-center gap-8">

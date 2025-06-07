@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 const pricingPlans = [
   {
@@ -63,6 +64,7 @@ export default function PricingPage() {
         <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
           Choose the plan that best fits your business goals and scale as you grow. All plans include our core AI chatbot features.
         </p>
+        <Breadcrumbs />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

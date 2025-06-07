@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ShieldCheck, Lock, DatabaseZap, ServerCog } from "lucide-react";
 import Image from "next/image";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 const securityFeatures = [
   {
@@ -44,6 +45,7 @@ export default function SecurityDetailsPage() {
         <p className="mt-4 text-lg text-foreground/80 max-w-3xl mx-auto">
           At One AI Assistant, the security and privacy of your data are paramount. We are dedicated to implementing and maintaining robust security measures to protect your information and ensure the trustworthiness of our platform.
         </p>
+        <Breadcrumbs />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">

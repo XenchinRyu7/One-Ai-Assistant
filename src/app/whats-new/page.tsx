@@ -1,15 +1,17 @@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 
 export default function WhatsNewPage() {
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <Card className="shadow-lg">
-        <CardHeader>
-          <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary text-center">
+        <CardHeader className="text-center">
+          <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">
             What's New
           </CardTitle>
+          <Breadcrumbs />
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="text-lg text-foreground/80 text-center max-w-2xl mx-auto">
