@@ -3,11 +3,11 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
-// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import { setStaticParamsLocale } from 'next-international/server';
 import type { Locale } from '@/i18n/settings';
 
 export default async function WhatsNewPage({ params: { locale } }: { params: { locale: Locale } }) {
-  // Removed: setStaticParamsLocale(locale);
+  setStaticParamsLocale(locale);
   const t = await getScopedI18n('whatsNewPage');
   const enhancementsData = t('enhancements');
   const enhancements: string[] = Array.isArray(enhancementsData) ? enhancementsData : [];

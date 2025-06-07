@@ -8,7 +8,7 @@ import {
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
-// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import { setStaticParamsLocale } from 'next-international/server';
 import type { Locale } from '@/i18n/settings';
 
 interface FAQItem {
@@ -17,7 +17,7 @@ interface FAQItem {
 }
 
 export default async function FAQPage({ params: { locale } }: { params: { locale: Locale } }) {
-  // Removed: setStaticParamsLocale(locale);
+  setStaticParamsLocale(locale);
   const t = await getScopedI18n('faqPage');
   const faqItemsData = t('items');
   const faqItems: FAQItem[] = Array.isArray(faqItemsData) ? faqItemsData : [];

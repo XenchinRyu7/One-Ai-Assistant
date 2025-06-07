@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
-// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import { setStaticParamsLocale } from 'next-international/server';
 import type { Locale } from '@/i18n/settings';
 
 interface TeamMember {
@@ -17,7 +17,7 @@ interface TeamMember {
 }
 
 export default async function OurTeamsPage({ params: { locale } }: { params: { locale: Locale } }) {
-  // Removed: setStaticParamsLocale(locale);
+  setStaticParamsLocale(locale);
   const t = await getScopedI18n('ourTeamsPage');
   const teamMembersData = t('teamMembers');
   const teamMembers: TeamMember[] = Array.isArray(teamMembersData) ? teamMembersData : [];

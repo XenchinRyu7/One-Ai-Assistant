@@ -4,17 +4,17 @@ import { ShieldCheck, Lock, DatabaseZap, ServerCog } from "lucide-react";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
-// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import { setStaticParamsLocale } from 'next-international/server';
 import { Trans } from "next-international";
 import type { Locale } from '@/i18n/settings';
 
 const icons = [
-  <ShieldCheck key="sc1" className="h-8 w-8 text-primary" />,
-  <Lock key="l1" className="h-8 w-8 text-primary" />,
-  <DatabaseZap key="dz1" className="h-8 w-8 text-primary" />,
-  <ServerCog key="scg1" className="h-8 w-8 text-primary" />,
-  <ShieldCheck key="sc2" className="h-8 w-8 text-primary" />,
-  <Lock key="l2" className="h-8 w-8 text-primary" />
+  <ShieldCheck key="sc-enc" className="h-8 w-8 text-primary" />,
+  <Lock key="l-auth" className="h-8 w-8 text-primary" />,
+  <DatabaseZap key="dz-infra" className="h-8 w-8 text-primary" />,
+  <ServerCog key="scg-audit" className="h-8 w-8 text-primary" />,
+  <ShieldCheck key="sc-min" className="h-8 w-8 text-primary" />,
+  <Lock key="l-incident" className="h-8 w-8 text-primary" />
 ];
 
 interface SecurityFeature {
@@ -23,7 +23,7 @@ interface SecurityFeature {
 }
 
 export default async function SecurityDetailsPage({ params: { locale } }: { params: { locale: Locale } }) {
-  // Removed: setStaticParamsLocale(locale);
+  setStaticParamsLocale(locale);
   const t = await getScopedI18n('securityDetailsPage');
   const securityFeaturesData = t('features');
   const securityFeatures: SecurityFeature[] = Array.isArray(securityFeaturesData) ? securityFeaturesData : [];

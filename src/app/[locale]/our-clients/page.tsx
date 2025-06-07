@@ -3,7 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/com
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
-// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import { setStaticParamsLocale } from 'next-international/server';
 import type { Locale } from '@/i18n/settings';
 
 interface ClientLogo {
@@ -21,7 +21,7 @@ interface Testimonial {
 }
 
 export default async function OurClientsPage({ params: { locale } }: { params: { locale: Locale } }) {
-  // Removed: setStaticParamsLocale(locale);
+  setStaticParamsLocale(locale);
   const t = await getScopedI18n('ourClientsPage');
 
   const clientLogosData = t('clientLogos');
@@ -50,7 +50,7 @@ export default async function OurClientsPage({ params: { locale } }: { params: {
                 <div key={client.name} className="p-4 bg-card rounded-lg shadow-sm border border-border">
                   <Image 
                     src={client.logo} 
-                    alt={`${client.name} ${t('logoAltTextSuffix', { ns: 'ourClientsPage' })}`}
+                    alt={`${client.name} ${t('logoAltTextSuffix')}`}
                     width={150} 
                     height={80} 
                     className="object-contain"

@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Brain, Puzzle, Clock, Palette, Zap, Settings2, MessageSquare, ShieldCheck, ArrowRight, Star } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getI18n, getScopedI18n, getStaticParams as i18nGetStaticParams } from '@/i18n/server';
-// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import { setStaticParamsLocale } from 'next-international/server';
 import { Trans } from 'next-international';
 import type { Locale } from '@/i18n/settings';
 
@@ -39,7 +39,7 @@ interface BrandItem {
 
 
 export default async function HomePage({ params: { locale } }: { params: { locale: Locale } }) {
-  // Removed: setStaticParamsLocale(locale);
+  setStaticParamsLocale(locale);
   const t = await getI18n();
   const heroT = await getScopedI18n('hero');
   const homeT = await getScopedI18n('homepage');
@@ -277,7 +277,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
               >
                 <Image 
                   src={brand.logoSrc} 
-                  alt={`${brand.name} ${homeT('trustedBySection.logoAltTextSuffix', { ns: 'homepage' })}`}
+                  alt={`${brand.name} ${homeT('trustedBySection.logoAltTextSuffix')}`}
                   width={130} 
                   height={50} 
                   className="object-contain"

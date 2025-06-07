@@ -4,7 +4,7 @@ import { Bot, Zap, Cog, Shield } from "lucide-react";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
-// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import { setStaticParamsLocale } from 'next-international/server';
 import type { Locale } from '@/i18n/settings';
 
 const icons = [
@@ -20,7 +20,7 @@ interface ServiceItem {
 }
 
 export default async function ServicesPage({ params: { locale } }: { params: { locale: Locale } }) {
-  // Removed: setStaticParamsLocale(locale);
+  setStaticParamsLocale(locale);
   const t = await getScopedI18n('servicesPage');
   
   const rawServices = t('services');
