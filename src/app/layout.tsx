@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
-// import { Breadcrumbs } from '@/components/layout/breadcrumbs'; // Removed
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "next-themes";
+import { JosInitializer } from '@/components/layout/JosInitializer'; // Added JOS Initializer
 
 export const metadata: Metadata = {
   title: 'One AI Assistant - Intelligent Chatbot Solutions',
@@ -31,9 +31,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <JosInitializer /> {/* Added JOS Initializer */}
           <Navbar />
           <main className="flex-grow">
-            {/* <Breadcrumbs /> */} {/* Removed */}
             {children}
           </main>
           <Footer />

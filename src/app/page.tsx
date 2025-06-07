@@ -55,13 +55,24 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-background to-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground font-headline">
+          <h1 
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground font-headline"
+            data-jos_animation="fade-down"
+          >
             Empower Your Website with <span className="text-primary">One AI Assistant</span>
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-foreground/80">
+          <p 
+            className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-foreground/80"
+            data-jos_animation="fade-up"
+            data-jos_delay="0.2"
+          >
             Seamlessly integrate our intelligent chatbot to provide instant, accurate answers using your own data, and elevate your customer support.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+          <div 
+            className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4"
+            data-jos_animation="zoom-in"
+            data-jos_delay="0.4"
+          >
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
               <Link href="/get-started">Get Started Free</Link>
             </Button>
@@ -69,7 +80,11 @@ export default function HomePage() {
               <Link href="/contact">Request a Demo</Link>
             </Button>
           </div>
-          <div className="mt-16 max-w-4xl mx-auto">
+          <div 
+            className="mt-16 max-w-4xl mx-auto"
+            data-jos_animation="zoom-in-up"
+            data-jos_delay="0.3"
+          >
             <Image
               src="https://placehold.co/1200x600.png"
               alt="AI Chatbot Interface Showcase"
@@ -86,7 +101,10 @@ export default function HomePage() {
       {/* Features Section */}
       <section id="features" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div 
+            className="text-center mb-12"
+            data-jos_animation="fade"
+          >
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-headline">
               The Future of Customer Interaction, Today.
             </h2>
@@ -95,8 +113,13 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature) => (
-              <Card key={feature.title} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+            {features.map((feature, index) => (
+              <Card 
+                key={feature.title} 
+                className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card"
+                data-jos_animation="fade-up"
+                data-jos_delay={(index * 0.1).toFixed(1)}
+              >
                 <CardHeader className="items-center">
                   {feature.icon}
                   <CardTitle className="font-headline text-xl">{feature.title}</CardTitle>
@@ -113,7 +136,10 @@ export default function HomePage() {
       {/* How It Works Section */}
       <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div 
+            className="text-center mb-12"
+            data-jos_animation="fade"
+          >
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-headline">
               Simple Steps to Smarter Support
             </h2>
@@ -122,8 +148,13 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {howItWorksSteps.map((step) => (
-              <div key={step.id} className="flex flex-col items-center text-center p-6 bg-card rounded-lg shadow-lg">
+            {howItWorksSteps.map((step, index) => (
+              <div 
+                key={step.id} 
+                className="flex flex-col items-center text-center p-6 bg-card rounded-lg shadow-lg"
+                data-jos_animation="flip-down"
+                data-jos_delay={(index * 0.15).toFixed(2)}
+              >
                 <div className="flex-shrink-0 mb-4 p-3 bg-accent/10 rounded-full">
                   {step.icon}
                 </div>
@@ -132,7 +163,11 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-           <div className="mt-12 text-center">
+           <div 
+            className="mt-12 text-center"
+            data-jos_animation="fade-up"
+            data-jos_delay="0.3"
+           >
             <Image 
               src="https://placehold.co/800x400.png" 
               alt="How it works diagram"
@@ -149,7 +184,10 @@ export default function HomePage() {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2">
+            <div 
+              className="md:w-1/2"
+              data-jos_animation="fade-right"
+            >
               <Image
                 src="https://placehold.co/600x450.png"
                 alt="Data Security"
@@ -159,7 +197,11 @@ export default function HomePage() {
                 data-ai-hint="data security"
               />
             </div>
-            <div className="md:w-1/2">
+            <div 
+              className="md:w-1/2"
+              data-jos_animation="fade-left"
+              data-jos_delay="0.2"
+            >
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-headline mb-6">
                 Your Data, Secured and Private
               </h2>
@@ -191,14 +233,25 @@ export default function HomePage() {
       {/* Call to Action Section */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight font-headline">
+          <h2 
+            className="text-3xl sm:text-4xl font-bold tracking-tight font-headline"
+            data-jos_animation="zoom-out"
+          >
             Ready to Transform Your Customer Experience?
           </h2>
-          <p className="mt-6 max-w-xl mx-auto text-lg sm:text-xl text-primary-foreground/90">
+          <p 
+            className="mt-6 max-w-xl mx-auto text-lg sm:text-xl text-primary-foreground/90"
+            data-jos_animation="fade-up"
+            data-jos_delay="0.1"
+          >
             Join businesses leveraging One AI Assistant to provide exceptional support, 
             increase engagement, and reduce operational costs.
           </p>
-          <div className="mt-10">
+          <div 
+            className="mt-10"
+            data-jos_animation="zoom-in"
+            data-jos_delay="0.2"
+          >
             <Button asChild size="lg" className="bg-background text-primary hover:bg-background/90 shadow-lg transform hover:scale-105 transition-transform duration-200">
               <Link href="/get-started">Start Your Free Trial</Link>
             </Button>
