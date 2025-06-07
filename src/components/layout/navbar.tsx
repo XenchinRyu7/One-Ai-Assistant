@@ -20,20 +20,20 @@ import type { Locale } from '@/i18n/settings';
 
 
 const primaryNavItemsConfig = [
-  { href: '/', labelKey: 'navbar.home' },
-  { href: '/about', labelKey: 'navbar.about' },
-  { href: '/services', labelKey: 'navbar.services' },
-  { href: '/pricing', labelKey: 'navbar.pricing' },
+  { href: '/', labelKey: 'home' },
+  { href: '/about', labelKey: 'about' },
+  { href: '/services', labelKey: 'services' },
+  { href: '/pricing', labelKey: 'pricing' },
 ];
 
 const moreDropdownItemsConfig = [
-  { href: '/whats-new', labelKey: 'navbar.whatsNew' },
-  { href: '/our-teams', labelKey: 'navbar.ourTeams' },
-  { href: '/our-clients', labelKey: 'navbar.ourClients' },
-  { href: '/faq', labelKey: 'navbar.faqs' },
+  { href: '/whats-new', labelKey: 'whatsNew' },
+  { href: '/our-teams', labelKey: 'ourTeams' },
+  { href: '/our-clients', labelKey: 'ourClients' },
+  { href: '/faq', labelKey: 'faqs' },
 ];
 
-const contactNavItemConfig = { href: '/contact', labelKey: 'navbar.contact' };
+const contactNavItemConfig = { href: '/contact', labelKey: 'contact' };
 
 
 function ThemeToggleButton() {
@@ -138,7 +138,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href={`/${currentLocale}`} className="flex items-center gap-2" prefetch={false}>
           <Bot className="h-7 w-7 text-primary" />
           <span className="text-xl font-bold text-foreground font-headline">One AI Assistant</span>
