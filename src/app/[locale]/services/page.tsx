@@ -1,16 +1,17 @@
 
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Bot, Zap, Cog, Shield } from "lucide-react";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
+// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import type { Locale } from '@/i18n/settings';
 
 const icons = [
-  <Bot key="bot" className="h-10 w-10 text-primary" />,
-  <Zap key="zap" className="h-10 w-10 text-primary" />,
-  <Cog key="cog" className="h-10 w-10 text-primary" />,
-  <Shield key="shield" className="h-10 w-10 text-primary" />
+  <Bot key="botIcon" className="h-10 w-10 text-primary" />,
+  <Zap key="zapIcon" className="h-10 w-10 text-primary" />,
+  <Cog key="cogIcon" className="h-10 w-10 text-primary" />,
+  <Shield key="shieldIcon" className="h-10 w-10 text-primary" />
 ];
 
 interface ServiceItem {
@@ -18,7 +19,8 @@ interface ServiceItem {
   description: string;
 }
 
-export default async function ServicesPage() {
+export default async function ServicesPage({ params: { locale } }: { params: { locale: Locale } }) {
+  // Removed: setStaticParamsLocale(locale);
   const t = await getScopedI18n('servicesPage');
   
   const rawServices = t('services');
@@ -85,4 +87,3 @@ export default async function ServicesPage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
-

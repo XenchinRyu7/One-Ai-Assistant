@@ -1,12 +1,16 @@
 
-
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
+// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import type { Locale } from '@/i18n/settings';
 
-export default async function WhatsNewPage() {
+export default async function WhatsNewPage({ params: { locale } }: { params: { locale: Locale } }) {
+  // Removed: setStaticParamsLocale(locale);
   const t = await getScopedI18n('whatsNewPage');
+  const enhancementsData = t('enhancements');
+  const enhancements: string[] = Array.isArray(enhancementsData) ? enhancementsData : [];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -34,7 +38,7 @@ export default async function WhatsNewPage() {
           <div className="prose prose-lg max-w-none text-foreground/80">
             <h3 className="font-semibold font-headline text-foreground">{t('upcomingEnhancementsTitle')}</h3>
             <ul>
-              {t('enhancements').map((enhancement: string) => (
+              {enhancements.map((enhancement: string) => (
                 <li key={enhancement}>{enhancement}</li>
               ))}
             </ul>
@@ -51,4 +55,3 @@ export default async function WhatsNewPage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
-

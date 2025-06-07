@@ -1,14 +1,34 @@
 
-
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
+// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import type { Locale } from '@/i18n/settings';
 
-export default async function OurClientsPage() {
+interface ClientLogo {
+  name: string;
+  logo: string;
+  dataAiHint: string;
+}
+
+interface Testimonial {
+  quote: string;
+  name: string;
+  company: string;
+  avatar: string;
+  dataAiHint: string;
+}
+
+export default async function OurClientsPage({ params: { locale } }: { params: { locale: Locale } }) {
+  // Removed: setStaticParamsLocale(locale);
   const t = await getScopedI18n('ourClientsPage');
-  const clientLogos = t('clientLogos');
-  const testimonials = t('testimonials');
+
+  const clientLogosData = t('clientLogos');
+  const clientLogos: ClientLogo[] = Array.isArray(clientLogosData) ? clientLogosData : [];
+  
+  const testimonialsData = t('testimonials');
+  const testimonials: Testimonial[] = Array.isArray(testimonialsData) ? testimonialsData : [];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -26,11 +46,11 @@ export default async function OurClientsPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold font-headline text-foreground text-center mb-8">{t('valuedClientsSectionTitle')}</h2>
             <div className="flex flex-wrap justify-center items-center gap-8">
-              {clientLogos.map((client: {name: string, logo: string, dataAiHint: string}) => (
+              {clientLogos.map((client: ClientLogo) => (
                 <div key={client.name} className="p-4 bg-card rounded-lg shadow-sm border border-border">
                   <Image 
                     src={client.logo} 
-                    alt={`${client.name} logo`}
+                    alt={`${client.name} ${t('logoAltTextSuffix', { ns: 'ourClientsPage' })}`}
                     width={150} 
                     height={80} 
                     className="object-contain"
@@ -44,7 +64,7 @@ export default async function OurClientsPage() {
           <section>
             <h2 className="text-2xl font-semibold font-headline text-foreground text-center mb-8">{t('successStoriesSectionTitle')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {testimonials.map((testimonial: {quote: string, name: string, company: string, avatar: string, dataAiHint: string}) => (
+              {testimonials.map((testimonial: Testimonial) => (
                 <Card key={testimonial.name} className="shadow-md bg-secondary/30">
                   <CardContent className="p-6">
                     <blockquote className="text-lg text-foreground/80 border-l-4 border-primary pl-4 italic mb-4">
@@ -81,4 +101,3 @@ export default async function OurClientsPage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
-

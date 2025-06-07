@@ -1,5 +1,4 @@
 
-
 import {
   Accordion,
   AccordionContent,
@@ -9,10 +8,19 @@ import {
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
+// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import type { Locale } from '@/i18n/settings';
 
-export default async function FAQPage() {
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export default async function FAQPage({ params: { locale } }: { params: { locale: Locale } }) {
+  // Removed: setStaticParamsLocale(locale);
   const t = await getScopedI18n('faqPage');
-  const faqItems = t('items');
+  const faqItemsData = t('items');
+  const faqItems: FAQItem[] = Array.isArray(faqItemsData) ? faqItemsData : [];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -25,7 +33,7 @@ export default async function FAQPage() {
         </CardHeader>
         <CardContent>
           <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item: {question: string, answer: string}, index: number) => (
+            {faqItems.map((item: FAQItem, index: number) => (
               <AccordionItem value={`item-${index}`} key={index}>
                 <AccordionTrigger className="text-lg font-semibold text-left hover:no-underline">
                   {item.question}
@@ -45,4 +53,3 @@ export default async function FAQPage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
-

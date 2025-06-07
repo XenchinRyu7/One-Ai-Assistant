@@ -1,12 +1,13 @@
 
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
-import { getStaticParams as i18nGetStaticParams, getScopedI18n, getI18n } from '@/i18n/server';
+import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
+// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import type { Locale } from '@/i18n/settings';
 
-export default async function PrivacyPolicyPage() {
+export default async function PrivacyPolicyPage({ params: { locale } }: { params: { locale: Locale } }) {
+  // Removed: setStaticParamsLocale(locale);
   const t = await getScopedI18n('privacyPolicyPage');
-  const pageT = await getI18n(); // For general terms if needed
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -16,68 +17,54 @@ export default async function PrivacyPolicyPage() {
           <Breadcrumbs />
         </CardHeader>
         <CardContent className="prose prose-lg max-w-none text-foreground/80">
-          <p className="text-sm text-center text-muted-foreground">{t('lastUpdated', { date: new Date().toLocaleDateString() })}</p>
+          <p className="text-sm text-center text-muted-foreground">{t('lastUpdated', { date: new Date().toLocaleDateString(locale) })}</p>
 
           <h2>{t('sections.introduction')}</h2>
-          <p>
-            Welcome to One AI Assistant ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [YourWebsite.com] and use our services (collectively, the "Services"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site or use our services.
-          </p>
+          <p>{t('introductionContent')}</p>
 
           <h2>{t('sections.informationWeCollect')}</h2>
-          <p>
-            We may collect information about you in a variety of ways. The information we may collect via the Services includes:
-          </p>
+          <p>{t('informationWeCollectIntro')}</p>
           <ul>
-            <li><strong>Personal Data:</strong> Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information, such as your age, gender, hometown, and interests, that you voluntarily give to us when you register with the Services or when you choose to participate in various activities related to the Services, such as online chat and message boards.</li>
-            <li><strong>Derivative Data:</strong> Information our servers automatically collect when you access the Services, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Services.</li>
-            <li><strong>Data From Chatbot Interactions:</strong> Content of conversations, queries, and feedback you provide when interacting with our AI chatbot. This data is used to improve our Services and the chatbot's performance.</li>
+            <li><strong>{t('personalDataTitle')}</strong> {t('personalDataContent')}</li>
+            <li><strong>{t('derivativeDataTitle')}</strong> {t('derivativeDataContent')}</li>
+            <li><strong>{t('chatbotInteractionsTitle')}</strong> {t('chatbotInteractionsContent')}</li>
           </ul>
 
           <h2>{t('sections.useOfYourInformation')}</h2>
-          <p>
-            Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Services to:
-          </p>
+          <p>{t('useOfYourInformationIntro')}</p>
           <ul>
-            <li>Create and manage your account.</li>
-            <li>Email you regarding your account or order.</li>
-            <li>Improve the efficiency and operation of the Services.</li>
-            <li>Monitor and analyze usage and trends to improve your experience with the Services.</li>
-            <li>Notify you of updates to the Services.</li>
-            <li>Offer new products, services, and/or recommendations to you.</li>
-            <li>Respond to customer service requests.</li>
+            <li>{t('useCases.0')}</li>
+            <li>{t('useCases.1')}</li>
+            <li>{t('useCases.2')}</li>
+            <li>{t('useCases.3')}</li>
+            <li>{t('useCases.4')}</li>
+            <li>{t('useCases.5')}</li>
+            <li>{t('useCases.6')}</li>
           </ul>
 
           <h2>{t('sections.disclosureOfYourInformation')}</h2>
-          <p>
-            We may share information we have collected about you in certain situations. Your information may be disclosed as follows:
-          </p>
+          <p>{t('disclosureOfYourInformationIntro')}</p>
           <ul>
-            <li><strong>By Law or to Protect Rights:</strong> If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.</li>
-            <li><strong>Third-Party Service Providers:</strong> We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.</li>
+            <li><strong>{t('byLawTitle')}</strong> {t('byLawContent')}</li>
+            <li><strong>{t('thirdPartyProvidersTitle')}</strong> {t('thirdPartyProvidersContent')}</li>
           </ul>
 
           <h2>{t('sections.securityOfYourInformation')}</h2>
-          <p>
-            We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.
-          </p>
+          <p>{t('securityOfYourInformationContent')}</p>
 
           <h2>{t('sections.policyForChildren')}</h2>
-          <p>
-            We do not knowingly solicit information from or market to children under the age of 13. If we learn that we have collected personal information from a child under age 13 without verification of parental consent, we will delete that information as quickly as possible.
-          </p>
+          <p>{t('policyForChildrenContent')}</p>
 
           <h2>{t('sections.changesToThisPolicy')}</h2>
-          <p>
-            We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.
-          </p>
+          <p>{t('changesToThisPolicyContent')}</p>
 
           <h2>{t('sections.contactUs')}</h2>
           <p>
-            If you have questions or comments about this Privacy Policy, please contact us at:
+            {t('contactUsIntro')}
             <br />
-            {t('contactEmailLabel')} <a href="mailto:privacy@oneaiassistant.com" className="text-primary hover:underline">privacy@oneaiassistant.com</a>
+            {t('contactEmailLabel')} <a href={`mailto:${t('contactEmailValue')}`} className="text-primary hover:underline">{t('contactEmailValue')}</a>
             <br />
-            {t('contactAddressLabel')} 123 AI Avenue, Tech City, TX 75001
+            {t('contactAddressLabel')} {t('contactAddressValue')}
           </p>
         </CardContent>
       </Card>
@@ -88,4 +75,3 @@ export default async function PrivacyPolicyPage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
-

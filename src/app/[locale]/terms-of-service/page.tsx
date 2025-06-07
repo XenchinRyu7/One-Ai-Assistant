@@ -1,10 +1,12 @@
 
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
+// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import type { Locale } from '@/i18n/settings';
 
-export default async function TermsOfServicePage() {
+export default async function TermsOfServicePage({ params: { locale } }: { params: { locale: Locale } }) {
+  // Removed: setStaticParamsLocale(locale);
   const t = await getScopedI18n('termsOfServicePage');
 
   return (
@@ -15,55 +17,48 @@ export default async function TermsOfServicePage() {
           <Breadcrumbs />
         </CardHeader>
         <CardContent className="prose prose-lg max-w-none text-foreground/80">
-          <p className="text-sm text-center text-muted-foreground">{t('lastUpdated', { date: new Date().toLocaleDateString() })}</p>
+          <p className="text-sm text-center text-muted-foreground">{t('lastUpdated', { date: new Date().toLocaleDateString(locale) })}</p>
 
           <h2>{t('sections.agreementToTerms')}</h2>
-          <p>
-            These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and One AI Assistant ("we," "us," or "our"), concerning your access to and use of the [YourWebsite.com] website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site” and our "Services"). You agree that by accessing the Site and/or Services, you have read, understood, and agree to be bound by all of these Terms of Service. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF SERVICE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.
-          </p>
+          <p>{t('agreementToTermsContent')}</p>
 
           <h2>{t('sections.intellectualPropertyRights')}</h2>
-          <p>
-            Unless otherwise indicated, the Site and the Services are our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the “Content”) and the trademarks, service marks, and logos contained therein (the “Marks”) are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws and various other intellectual property rights and unfair competition laws of the United States, foreign jurisdictions, and international conventions.
-          </p>
+          <p>{t('intellectualPropertyRightsContent')}</p>
 
           <h2>{t('sections.userRepresentations')}</h2>
-          <p>
-            By using the Site or Services, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary; (3) you have the legal capacity and you agree to comply with these Terms of Service; (4) you are not under the age of 13; (5) you will not access the Site or Services through automated or non-human means, whether through a bot, script or otherwise; (6) you will not use the Site or Services for any illegal or unauthorized purpose; and (7) your use of the Site or Services will not violate any applicable law or regulation.
-          </p>
+          <p>{t('userRepresentationsIntro')}</p>
+          <ol className="list-decimal list-inside">
+            <li>{t('userRepresentationsPoints.0')}</li>
+            <li>{t('userRepresentationsPoints.1')}</li>
+            <li>{t('userRepresentationsPoints.2')}</li>
+            <li>{t('userRepresentationsPoints.3')}</li>
+            <li>{t('userRepresentationsPoints.4')}</li>
+            <li>{t('userRepresentationsPoints.5')}</li>
+            <li>{t('userRepresentationsPoints.6')}</li>
+          </ol>
           
           <h2>{t('sections.prohibitedActivities')}</h2>
-          <p>
-            You may not access or use the Site or Services for any purpose other than that for which we make the Site and Services available. The Site and Services may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.
-          </p>
+          <p>{t('prohibitedActivitiesContent')}</p>
           
           <h2>{t('sections.serviceAvailability')}</h2>
-          <p>
-            We reserve the right to change, modify, or remove the contents of the Site or Services at any time or for any reason at our sole discretion without notice. We also reserve the right to modify or discontinue all or part of the Services without notice at any time. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Site or Services.
-          </p>
+          <p>{t('serviceAvailabilityContent')}</p>
 
           <h2>{t('sections.governingLaw')}</h2>
-          <p>
-            These Terms of Service and your use of the Site and Services are governed by and construed in accordance with the laws of the State of Texas applicable to agreements made and to be entirely performed within the State of Texas, without regard to its conflict of law principles.
-          </p>
+          <p>{t('governingLawContent')}</p>
 
           <h2>{t('sections.disclaimer')}</h2>
-          <p>
-            THE SITE AND SERVICES ARE PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE SITE AND SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SITE AND SERVICES AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
-          </p>
+          <p>{t('disclaimerContent')}</p>
 
           <h2>{t('sections.limitationOfLiability')}</h2>
-          <p>
-            IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST REVENUE, LOSS OF DATA, OR OTHER DAMAGES ARISING FROM YOUR USE OF THE SITE OR SERVICES, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-          </p>
+          <p>{t('limitationOfLiabilityContent')}</p>
 
           <h2>{t('sections.contactUs')}</h2>
           <p>
-            In order to resolve a complaint regarding the Site or Services or to receive further information regarding use of the Site or Services, please contact us at:
+            {t('contactUsIntro')}
             <br />
-            {t('contactEmailLabel')} <a href="mailto:support@oneaiassistant.com" className="text-primary hover:underline">support@oneaiassistant.com</a>
+            {t('contactEmailLabel')} <a href={`mailto:${t('contactEmailValue')}`} className="text-primary hover:underline">{t('contactEmailValue')}</a>
             <br />
-            {t('contactAddressLabel')} 123 AI Avenue, Tech City, TX 75001
+            {t('contactAddressLabel')} {t('contactAddressValue')}
           </p>
         </CardContent>
       </Card>
@@ -74,4 +69,3 @@ export default async function TermsOfServicePage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
-

@@ -1,25 +1,32 @@
 
-
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ShieldCheck, Lock, DatabaseZap, ServerCog } from "lucide-react";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
+// Removed: import { setStaticParamsLocale } from 'next-international/server';
 import { Trans } from "next-international";
+import type { Locale } from '@/i18n/settings';
 
 const icons = [
-  <ShieldCheck className="h-8 w-8 text-primary" />,
-  <Lock className="h-8 w-8 text-primary" />,
-  <DatabaseZap className="h-8 w-8 text-primary" />,
-  <ServerCog className="h-8 w-8 text-primary" />,
-  <ShieldCheck className="h-8 w-8 text-primary" />,
-  <Lock className="h-8 w-8 text-primary" />
+  <ShieldCheck key="sc1" className="h-8 w-8 text-primary" />,
+  <Lock key="l1" className="h-8 w-8 text-primary" />,
+  <DatabaseZap key="dz1" className="h-8 w-8 text-primary" />,
+  <ServerCog key="scg1" className="h-8 w-8 text-primary" />,
+  <ShieldCheck key="sc2" className="h-8 w-8 text-primary" />,
+  <Lock key="l2" className="h-8 w-8 text-primary" />
 ];
 
+interface SecurityFeature {
+  title: string;
+  description: string;
+}
 
-export default async function SecurityDetailsPage() {
+export default async function SecurityDetailsPage({ params: { locale } }: { params: { locale: Locale } }) {
+  // Removed: setStaticParamsLocale(locale);
   const t = await getScopedI18n('securityDetailsPage');
-  const securityFeatures = t('features');
+  const securityFeaturesData = t('features');
+  const securityFeatures: SecurityFeature[] = Array.isArray(securityFeaturesData) ? securityFeaturesData : [];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -32,7 +39,7 @@ export default async function SecurityDetailsPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        {securityFeatures.map((feature: {title: string, description: string}, index: number) => (
+        {securityFeatures.map((feature: SecurityFeature, index: number) => (
           <Card key={feature.title} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardHeader className="flex flex-row items-start gap-4">
               {icons[index % icons.length]}
@@ -84,4 +91,3 @@ export default async function SecurityDetailsPage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
-

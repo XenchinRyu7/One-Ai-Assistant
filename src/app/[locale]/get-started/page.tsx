@@ -1,15 +1,23 @@
 
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
+// Removed: import { setStaticParamsLocale } from 'next-international/server';
 import { Trans } from "next-international";
+import type { Locale } from '@/i18n/settings';
 
-export default async function GetStartedPage() {
+export default async function GetStartedPage({ params: { locale } }: { params: { locale: Locale } }) {
+  // Removed: setStaticParamsLocale(locale);
   const t = await getScopedI18n('getStartedPage');
+
+  const freeTrialFeaturesData = t('freeTrialCard.features');
+  const freeTrialFeatures: string[] = Array.isArray(freeTrialFeaturesData) ? freeTrialFeaturesData : [];
+
+  const demoFeaturesData = t('demoCard.features');
+  const demoFeatures: string[] = Array.isArray(demoFeaturesData) ? demoFeaturesData : [];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -31,7 +39,7 @@ export default async function GetStartedPage() {
           </CardHeader>
           <CardContent className="flex-grow">
             <Image 
-              src="https://placehold.co/500x300.png?text=Free+Trial+Benefits" 
+              src="https://placehold.co/500x300.png" 
               alt={t('freeTrialCard.imageAlt')}
               width={500}
               height={300}
@@ -39,7 +47,7 @@ export default async function GetStartedPage() {
               data-ai-hint="trial benefits"
             />
             <ul className="space-y-2 text-foreground/70 list-disc list-inside">
-              {t('freeTrialCard.features').map((feature: string) => (
+              {freeTrialFeatures.map((feature: string) => (
                 <li key={feature}>{feature}</li>
               ))}
             </ul>
@@ -60,7 +68,7 @@ export default async function GetStartedPage() {
           </CardHeader>
           <CardContent className="flex-grow">
             <Image 
-              src="https://placehold.co/500x300.png?text=Personalized+Demo" 
+              src="https://placehold.co/500x300.png" 
               alt={t('demoCard.imageAlt')}
               width={500}
               height={300}
@@ -68,7 +76,7 @@ export default async function GetStartedPage() {
               data-ai-hint="demo presentation"
             />
              <ul className="space-y-2 text-foreground/70 list-disc list-inside">
-                {t('demoCard.features').map((feature: string) => (
+                {demoFeatures.map((feature: string) => (
                   <li key={feature}>{feature}</li>
                 ))}
             </ul>
@@ -100,4 +108,3 @@ export default async function GetStartedPage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
-

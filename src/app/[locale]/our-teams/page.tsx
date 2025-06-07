@@ -1,14 +1,26 @@
 
-
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
+// Removed: import { setStaticParamsLocale } from 'next-international/server';
+import type { Locale } from '@/i18n/settings';
 
-export default async function OurTeamsPage() {
+interface TeamMember {
+  name: string;
+  role: string;
+  avatar: string;
+  initials: string;
+  bio: string;
+  dataAiHint: string;
+}
+
+export default async function OurTeamsPage({ params: { locale } }: { params: { locale: Locale } }) {
+  // Removed: setStaticParamsLocale(locale);
   const t = await getScopedI18n('ourTeamsPage');
-  const teamMembers = t('teamMembers');
+  const teamMembersData = t('teamMembers');
+  const teamMembers: TeamMember[] = Array.isArray(teamMembersData) ? teamMembersData : [];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -24,7 +36,7 @@ export default async function OurTeamsPage() {
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {teamMembers.map((member: { name: string, role: string, avatar: string, initials: string, bio: string, dataAiHint: string }) => (
+            {teamMembers.map((member: TeamMember) => (
               <Card key={member.name} className="shadow-md hover:shadow-lg transition-shadow bg-card overflow-hidden">
                 <CardContent className="p-6 flex flex-col sm:flex-row items-center gap-6">
                   <Avatar className="h-24 w-24 sm:h-28 sm:w-28 border-2 border-primary">
@@ -62,4 +74,3 @@ export default async function OurTeamsPage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
-
