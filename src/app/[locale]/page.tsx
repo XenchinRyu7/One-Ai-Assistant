@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { CheckCircle, Brain, Puzzle, Clock, Palette, Zap, Settings2, MessageSquare, ShieldCheck, ArrowRight, Star } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { getI18n, getScopedI18n } from '@/i18n/server';
+import { getI18n, getScopedI18n, getStaticParams as i18nGetStaticParams } from '@/i18n/server'; // Updated import
 import { Trans } from 'next-international'; // For rich text interpolation if needed, or manual split
 
 const features = [
@@ -83,12 +83,12 @@ const testimonials = [
 ];
 
 const trustedBrands = [
-  { name: "Google", logoSrc: "https://placehold.co/150x75.png?text=Google", dataAiHint: "tech company" },
-  { name: "Microsoft", logoSrc: "https://placehold.co/150x75.png?text=Microsoft", dataAiHint: "software company" },
-  { name: "Amazon", logoSrc: "https://placehold.co/150x75.png?text=Amazon", dataAiHint: "ecommerce giant" },
-  { name: "Salesforce", logoSrc: "https://placehold.co/150x75.png?text=Salesforce", dataAiHint: "crm platform" },
-  { name: "Netflix", logoSrc: "https://placehold.co/150x75.png?text=Netflix", dataAiHint: "streaming service" },
-  { name: "Spotify", logoSrc: "https://placehold.co/150x75.png?text=Spotify", dataAiHint: "music streaming" },
+  { name: "Google", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "tech company" },
+  { name: "Microsoft", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "software company" },
+  { name: "Amazon", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "ecommerce giant" },
+  { name: "Salesforce", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "crm platform" },
+  { name: "Netflix", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "streaming service" },
+  { name: "Spotify", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "music streaming" },
 ];
 
 export default async function HomePage() {
@@ -403,6 +403,6 @@ export default async function HomePage() {
 
 // Required for static generation of locale routes
 export async function generateStaticParams() {
-  const t = await getStaticParams();
-  return t;
+  // Call the imported i18nGetStaticParams function
+  return i18nGetStaticParams();
 }
