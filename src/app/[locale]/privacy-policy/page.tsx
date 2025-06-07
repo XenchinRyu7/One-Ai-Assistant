@@ -1,25 +1,29 @@
 
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
-import { getStaticParams as i18nGetStaticParams } from '@/i18n/server';
+import { getStaticParams as i18nGetStaticParams, getScopedI18n, getI18n } from '@/i18n/server';
 
-export default function PrivacyPolicyPage() {
+export default async function PrivacyPolicyPage() {
+  const t = await getScopedI18n('privacyPolicyPage');
+  const pageT = await getI18n(); // For general terms if needed
+
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <Card className="shadow-lg">
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">Privacy Policy</CardTitle>
+          <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">{t('title')}</CardTitle>
           <Breadcrumbs />
         </CardHeader>
         <CardContent className="prose prose-lg max-w-none text-foreground/80">
-          <p className="text-sm text-center text-muted-foreground">Last Updated: {new Date().toLocaleDateString()}</p>
+          <p className="text-sm text-center text-muted-foreground">{t('lastUpdated', { date: new Date().toLocaleDateString() })}</p>
 
-          <h2>1. Introduction</h2>
+          <h2>{t('sections.introduction')}</h2>
           <p>
             Welcome to One AI Assistant ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [YourWebsite.com] and use our services (collectively, the "Services"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site or use our services.
           </p>
 
-          <h2>2. Information We Collect</h2>
+          <h2>{t('sections.informationWeCollect')}</h2>
           <p>
             We may collect information about you in a variety of ways. The information we may collect via the Services includes:
           </p>
@@ -29,7 +33,7 @@ export default function PrivacyPolicyPage() {
             <li><strong>Data From Chatbot Interactions:</strong> Content of conversations, queries, and feedback you provide when interacting with our AI chatbot. This data is used to improve our Services and the chatbot's performance.</li>
           </ul>
 
-          <h2>3. Use of Your Information</h2>
+          <h2>{t('sections.useOfYourInformation')}</h2>
           <p>
             Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Services to:
           </p>
@@ -43,7 +47,7 @@ export default function PrivacyPolicyPage() {
             <li>Respond to customer service requests.</li>
           </ul>
 
-          <h2>4. Disclosure of Your Information</h2>
+          <h2>{t('sections.disclosureOfYourInformation')}</h2>
           <p>
             We may share information we have collected about you in certain situations. Your information may be disclosed as follows:
           </p>
@@ -52,28 +56,28 @@ export default function PrivacyPolicyPage() {
             <li><strong>Third-Party Service Providers:</strong> We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.</li>
           </ul>
 
-          <h2>5. Security of Your Information</h2>
+          <h2>{t('sections.securityOfYourInformation')}</h2>
           <p>
             We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.
           </p>
 
-          <h2>6. Policy for Children</h2>
+          <h2>{t('sections.policyForChildren')}</h2>
           <p>
             We do not knowingly solicit information from or market to children under the age of 13. If we learn that we have collected personal information from a child under age 13 without verification of parental consent, we will delete that information as quickly as possible.
           </p>
 
-          <h2>7. Changes to This Privacy Policy</h2>
+          <h2>{t('sections.changesToThisPolicy')}</h2>
           <p>
             We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.
           </p>
 
-          <h2>8. Contact Us</h2>
+          <h2>{t('sections.contactUs')}</h2>
           <p>
             If you have questions or comments about this Privacy Policy, please contact us at:
             <br />
-            Email: <a href="mailto:privacy@oneaiassistant.com" className="text-primary hover:underline">privacy@oneaiassistant.com</a>
+            {t('contactEmailLabel')} <a href="mailto:privacy@oneaiassistant.com" className="text-primary hover:underline">privacy@oneaiassistant.com</a>
             <br />
-            Address: 123 AI Avenue, Tech City, TX 75001
+            {t('contactAddressLabel')} 123 AI Avenue, Tech City, TX 75001
           </p>
         </CardContent>
       </Card>
@@ -84,3 +88,4 @@ export default function PrivacyPolicyPage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
+

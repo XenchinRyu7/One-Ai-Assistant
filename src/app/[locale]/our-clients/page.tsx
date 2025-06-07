@@ -1,53 +1,32 @@
 
+
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
-import { getStaticParams as i18nGetStaticParams } from '@/i18n/server';
+import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
 
-const clientLogos = [
-  { name: "Innovatech Corp", logo: "https://placehold.co/150x80.png?text=Innovatech", dataAiHint: "tech logo" },
-  { name: "Global Solutions Ltd.", logo: "https://placehold.co/150x80.png?text=Global+Solutions", dataAiHint: "corporate logo" },
-  { name: "E-Commerce Pro", logo: "https://placehold.co/150x80.png?text=EcomPro", dataAiHint: "retail logo" },
-  { name: "HealthFirst Clinic", logo: "https://placehold.co/150x80.png?text=HealthFirst", dataAiHint: "medical logo" },
-  { name: "EduLearn Platform", logo: "https://placehold.co/150x80.png?text=EduLearn", dataAiHint: "education logo" },
-  { name: "TravelWise Agency", logo: "https://placehold.co/150x80.png?text=TravelWise", dataAiHint: "travel logo" },
-];
+export default async function OurClientsPage() {
+  const t = await getScopedI18n('ourClientsPage');
+  const clientLogos = t('clientLogos');
+  const testimonials = t('testimonials');
 
-const testimonials = [
-  {
-    quote: "One AI Assistant has transformed our customer support, reducing response times by 70% and significantly improving customer satisfaction.",
-    name: "Sarah L., Head of Support",
-    company: "Innovatech Corp",
-    avatar: "https://placehold.co/80x80.png?text=SL",
-    dataAiHint: "business person"
-  },
-  {
-    quote: "The integration was seamless, and the AI's ability to understand and respond to complex queries based on our documentation is impressive.",
-    name: "Mike B., CTO",
-    company: "Global Solutions Ltd.",
-    avatar: "https://placehold.co/80x80.png?text=MB",
-    dataAiHint: "tech executive"
-  }
-]
-
-export default function OurClientsPage() {
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <Card className="shadow-lg">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">
-            Trusted by Businesses Like Yours
+            {t('title')}
           </CardTitle>
           <CardDescription className="mt-2 text-lg text-foreground/70 max-w-2xl mx-auto">
-            We're proud to partner with a diverse range of organizations, helping them enhance customer engagement and streamline support with our AI solutions.
+            {t('description')}
           </CardDescription>
           <Breadcrumbs />
         </CardHeader>
         <CardContent>
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold font-headline text-foreground text-center mb-8">Our Valued Clients</h2>
+            <h2 className="text-2xl font-semibold font-headline text-foreground text-center mb-8">{t('valuedClientsSectionTitle')}</h2>
             <div className="flex flex-wrap justify-center items-center gap-8">
-              {clientLogos.map(client => (
+              {clientLogos.map((client: {name: string, logo: string, dataAiHint: string}) => (
                 <div key={client.name} className="p-4 bg-card rounded-lg shadow-sm border border-border">
                   <Image 
                     src={client.logo} 
@@ -63,9 +42,9 @@ export default function OurClientsPage() {
           </section>
           
           <section>
-            <h2 className="text-2xl font-semibold font-headline text-foreground text-center mb-8">Success Stories</h2>
+            <h2 className="text-2xl font-semibold font-headline text-foreground text-center mb-8">{t('successStoriesSectionTitle')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {testimonials.map(testimonial => (
+              {testimonials.map((testimonial: {quote: string, name: string, company: string, avatar: string, dataAiHint: string}) => (
                 <Card key={testimonial.name} className="shadow-md bg-secondary/30">
                   <CardContent className="p-6">
                     <blockquote className="text-lg text-foreground/80 border-l-4 border-primary pl-4 italic mb-4">
@@ -91,7 +70,7 @@ export default function OurClientsPage() {
             </div>
           </section>
            <p className="text-center mt-12 text-lg text-foreground/80">
-            Join these and many other businesses that are leveraging One AI Assistant to achieve their customer support goals.
+            {t('joinUsText')}
           </p>
         </CardContent>
       </Card>
@@ -102,3 +81,4 @@ export default function OurClientsPage() {
 export async function generateStaticParams() {
   return i18nGetStaticParams();
 }
+

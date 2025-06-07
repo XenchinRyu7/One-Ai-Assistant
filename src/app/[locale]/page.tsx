@@ -1,105 +1,28 @@
+
 // src/app/[locale]/page.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { CheckCircle, Brain, Puzzle, Clock, Palette, Zap, Settings2, MessageSquare, ShieldCheck, ArrowRight, Star } from 'lucide-react';
+import { Brain, Puzzle, Clock, Palette, Zap, Settings2, MessageSquare, ShieldCheck, ArrowRight, Star } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { getI18n, getScopedI18n, getStaticParams as i18nGetStaticParams } from '@/i18n/server'; // Updated import
-import { Trans } from 'next-international'; // For rich text interpolation if needed, or manual split
-
-const features = [
-  {
-    icon: <Brain className="h-10 w-10 text-primary mb-4" />,
-    title: 'Intelligent RAG System', // These will need to be translated if dynamic
-    description: 'Leverages advanced Retrieval Augmented Generation for context-aware, accurate responses from your knowledge base.',
-  },
-  {
-    icon: <Puzzle className="h-10 w-10 text-primary mb-4" />,
-    title: 'Seamless Integration',
-    description: 'Easily embed our chatbot into your existing website with minimal effort using a simple script.',
-  },
-  {
-    icon: <Clock className="h-10 w-10 text-primary mb-4" />,
-    title: '24/7 Automated Support',
-    description: 'Provide round-the-clock assistance to your users, enhancing satisfaction and engagement anytime.',
-  },
-  {
-    icon: <Palette className="h-10 w-10 text-primary mb-4" />,
-    title: 'Highly Customizable',
-    description: "Tailor the chatbot's appearance, behavior, and responses to perfectly match your brand's voice and style.",
-  },
-];
-
-const howItWorksSteps = [
-  {
-    id: 1,
-    title: 'Connect Your Data',
-    description: 'Securely upload your documents, FAQs, or website content to build the chatbot\'s knowledge base.',
-    icon: <Zap className="h-8 w-8 text-accent" />,
-  },
-  {
-    id: 2,
-    title: 'Customize Your Bot',
-    description: 'Adjust settings, appearance, and pre-defined prompts to align with your brand and user needs.',
-    icon: <Settings2 className="h-8 w-8 text-accent" />,
-  },
-  {
-    id: 3,
-    title: 'Embed & Launch',
-    description: 'Add a simple code snippet to your website and start engaging customers instantly.',
-    icon: <MessageSquare className="h-8 w-8 text-accent" />,
-  },
-];
-
-const testimonials = [
-  {
-    quote: "One AI Assistant has revolutionized our customer support. Response times are down 60%, and our customers love the instant, accurate answers!",
-    name: "Jane Doe",
-    company: "Tech Solutions Inc.",
-    avatarSrc: "https://placehold.co/100x100.png",
-    avatarFallback: "JD",
-    rating: 5,
-    dataAiHint: "professional woman",
-  },
-  {
-    quote: "The RAG system is incredibly powerful. It understands context and provides relevant information from our knowledge base like never before. Highly recommended!",
-    name: "John Smith",
-    company: "Global Innovations Ltd.",
-    avatarSrc: "https://placehold.co/100x100.png",
-    avatarFallback: "JS",
-    rating: 5,
-    dataAiHint: "male executive",
-  },
-  {
-    quote: "Integrating One AI Assistant was surprisingly easy, and the impact on our team's workload was immediate. A game-changer for our e-commerce site.",
-    name: "Alice Brown",
-    company: "Online Emporium",
-    avatarSrc: "https://placehold.co/100x100.png",
-    avatarFallback: "AB",
-    rating: 4,
-    dataAiHint: "startup founder",
-  }
-];
-
-const trustedBrands = [
-  { name: "Google", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "tech company" },
-  { name: "Microsoft", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "software company" },
-  { name: "Amazon", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "ecommerce giant" },
-  { name: "Salesforce", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "crm platform" },
-  { name: "Netflix", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "streaming service" },
-  { name: "Spotify", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "music streaming" },
-];
+import { getI18n, getScopedI18n, getStaticParams as i18nGetStaticParams } from '@/i18n/server';
+import { Trans } from 'next-international';
 
 export default async function HomePage() {
   const t = await getI18n();
   const heroT = await getScopedI18n('hero');
+  const homeT = await getScopedI18n('homepage');
 
-  // For rich text in title like "Empower Your Website with <span className="text-primary">One AI Assistant</span>"
-  // We can use Trans component or split manually if Trans is not used here.
-  // Example for manual split:
-  const titleString = heroT('title'); // "Empower Your Website with <1>One AI Assistant</1>"
-  const titleParts = titleString.split(/<1>|<\/1>/);
+  const heroTitleString = heroT('title');
+  const heroTitleParts = heroTitleString.split(/<1>|<\/1>/);
+
+  const securitySectionFeature1 = homeT('securitySection.features.0');
+  const securitySectionFeature1Parts = securitySectionFeature1.split(/<strong>|<\/strong>/);
+  const securitySectionFeature2 = homeT('securitySection.features.1');
+  const securitySectionFeature2Parts = securitySectionFeature2.split(/<strong>|<\/strong>/);
+  const securitySectionFeature3 = homeT('securitySection.features.2');
+  const securitySectionFeature3Parts = securitySectionFeature3.split(/<strong>|<\/strong>/);
 
 
   return (
@@ -111,9 +34,9 @@ export default async function HomePage() {
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground font-headline"
             data-jos_animation="fade-down"
           >
-            {titleParts[0]}
-            {titleParts[1] && <span className="text-primary">{titleParts[1]}</span>}
-            {titleParts[2]}
+            {heroTitleParts[0]}
+            {heroTitleParts[1] && <span className="text-primary">{heroTitleParts[1]}</span>}
+            {heroTitleParts[2]}
           </h1>
           <p 
             className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-foreground/80"
@@ -141,7 +64,7 @@ export default async function HomePage() {
           >
             <Image
               src="https://placehold.co/1200x600.png"
-              alt="AI Chatbot Interface Showcase"
+              alt={heroT('aiChatbotInterfaceAlt')}
               width={1200}
               height={600}
               className="rounded-lg shadow-2xl object-cover"
@@ -152,7 +75,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Features Section (Content needs translation keys if made dynamic) */}
+      {/* Features Section */}
       <section id="features" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div 
@@ -160,14 +83,14 @@ export default async function HomePage() {
             data-jos_animation="fade"
           >
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-headline">
-              The Future of Customer Interaction, Today.
+              {homeT('featuresSection.title')}
             </h2>
             <p className="mt-4 max-w-xl mx-auto text-lg text-foreground/70">
-              Discover how One AI Assistant transforms your customer engagement with powerful, easy-to-use features.
+              {homeT('featuresSection.subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {homeT('featuresSection.features').map((feature: {title: string, description: string}, index: number) => (
               <Card 
                 key={feature.title} 
                 className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card"
@@ -175,7 +98,10 @@ export default async function HomePage() {
                 data-jos_delay={(index * 0.1).toFixed(1)}
               >
                 <CardHeader className="items-center">
-                  {feature.icon}
+                  {index === 0 && <Brain className="h-10 w-10 text-primary mb-4" />}
+                  {index === 1 && <Puzzle className="h-10 w-10 text-primary mb-4" />}
+                  {index === 2 && <Clock className="h-10 w-10 text-primary mb-4" />}
+                  {index === 3 && <Palette className="h-10 w-10 text-primary mb-4" />}
                   <CardTitle className="font-headline text-xl">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -187,7 +113,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* How It Works Section (Content needs translation keys) */}
+      {/* How It Works Section */}
       <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div 
@@ -195,22 +121,24 @@ export default async function HomePage() {
             data-jos_animation="fade"
           >
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-headline">
-              Simple Steps to Smarter Support
+              {homeT('howItWorksSection.title')}
             </h2>
             <p className="mt-4 max-w-xl mx-auto text-lg text-foreground/70">
-              Get your AI assistant up and running in minutes.
+              {homeT('howItWorksSection.subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {howItWorksSteps.map((step, index) => (
+            {homeT('howItWorksSection.steps').map((step: {title: string, description: string}, index: number) => (
               <div 
-                key={step.id} 
+                key={step.title} 
                 className="flex flex-col items-center text-center p-6 bg-card rounded-lg shadow-lg"
                 data-jos_animation="flip-down"
                 data-jos_delay={(index * 0.15).toFixed(2)}
               >
                 <div className="flex-shrink-0 mb-4 p-3 bg-accent/10 rounded-full">
-                  {step.icon}
+                  {index === 0 && <Zap className="h-8 w-8 text-accent" />}
+                  {index === 1 && <Settings2 className="h-8 w-8 text-accent" />}
+                  {index === 2 && <MessageSquare className="h-8 w-8 text-accent" />}
                 </div>
                 <h3 className="text-xl font-semibold mb-2 font-headline">{step.title}</h3>
                 <p className="text-foreground/70">{step.description}</p>
@@ -224,7 +152,7 @@ export default async function HomePage() {
            >
             <Image 
               src="https://placehold.co/800x400.png" 
-              alt="How it works diagram"
+              alt={homeT('howItWorksSection.diagramAlt')}
               width={800}
               height={400}
               className="rounded-lg shadow-lg mx-auto"
@@ -234,7 +162,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section (Content needs translation keys) */}
+      {/* Testimonials Section */}
       <section id="testimonials" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div 
@@ -242,14 +170,14 @@ export default async function HomePage() {
             data-jos_animation="fade"
           >
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-headline">
-              What Our Clients Say
+              {homeT('testimonialsSection.title')}
             </h2>
             <p className="mt-4 max-w-xl mx-auto text-lg text-foreground/70">
-              Real stories from businesses benefiting from One AI Assistant.
+              {homeT('testimonialsSection.subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {homeT('testimonialsSection.testimonials').map((testimonial: {quote:string, name:string, company:string, avatarSrc:string, avatarFallback:string, rating:number, dataAiHint: string }, index: number) => (
               <Card 
                 key={testimonial.name} 
                 className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card"
@@ -282,7 +210,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Trusted By Section (Content needs translation keys) */}
+      {/* Trusted By Section */}
       <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div 
@@ -290,7 +218,7 @@ export default async function HomePage() {
             data-jos_animation="fade"
           >
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground font-headline">
-              Trusted by Leading Companies
+              {homeT('trustedBySection.title')}
             </h2>
           </div>
           <div 
@@ -298,7 +226,7 @@ export default async function HomePage() {
             data-jos_animation="fade-up"
             data-jos_delay="0.1"
           >
-            {trustedBrands.map((brand, index) => (
+            {homeT('trustedBySection.brands').map((brand: {name: string, logoSrc: string, dataAiHint: string}, index: number) => (
               <div 
                 key={brand.name} 
                 className="grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
@@ -319,7 +247,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Security/Trust Section (Content needs translation keys) */}
+      {/* Security/Trust Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12">
@@ -329,7 +257,7 @@ export default async function HomePage() {
             >
               <Image
                 src="https://placehold.co/600x450.png"
-                alt="Data Security"
+                alt={homeT('securitySection.imageAlt')}
                 width={600}
                 height={450}
                 className="rounded-lg shadow-xl"
@@ -342,49 +270,48 @@ export default async function HomePage() {
               data-jos_delay="0.2"
             >
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-headline mb-6">
-                Your Data, Secured and Private
+                {homeT('securitySection.title')}
               </h2>
               <p className="text-lg text-foreground/70 mb-4">
-                We prioritize the security and privacy of your data. Our platform is built with industry-standard security practices to ensure your information is protected.
+                {homeT('securitySection.description')}
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <ShieldCheck className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                  <span><strong>End-to-End Encryption:</strong> All data in transit and at rest is encrypted.</span>
+                  <span><strong>{securitySectionFeature1Parts[1]}</strong>{securitySectionFeature1Parts[2]}</span>
                 </li>
                 <li className="flex items-start">
                   <ShieldCheck className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                  <span><strong>Access Controls:</strong> Granular control over who can access and manage your chatbot and data.</span>
+                  <span><strong>{securitySectionFeature2Parts[1]}</strong>{securitySectionFeature2Parts[2]}</span>
                 </li>
                  <li className="flex items-start">
                   <ShieldCheck className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                  <span><strong>Compliance Ready:</strong> Designed to help you meet relevant data privacy regulations.</span>
+                  <span><strong>{securitySectionFeature3Parts[1]}</strong>{securitySectionFeature3Parts[2]}</span>
                 </li>
               </ul>
               <Button asChild variant="link" className="mt-6 text-primary px-0">
-                <Link href="/security-details">Learn more about our security <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <Link href="/security-details">{homeT('securitySection.learnMoreLink')} <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action Section (Content needs translation keys) */}
+      {/* Call to Action Section */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 
             className="text-3xl sm:text-4xl font-bold tracking-tight font-headline"
             data-jos_animation="zoom-out"
           >
-            Ready to Transform Your Customer Experience?
+            {homeT('ctaSection.title')}
           </h2>
           <p 
             className="mt-6 max-w-xl mx-auto text-lg sm:text-xl text-primary-foreground/90"
             data-jos_animation="fade-up"
             data-jos_delay="0.1"
           >
-            Join businesses leveraging One AI Assistant to provide exceptional support, 
-            increase engagement, and reduce operational costs.
+            {homeT('ctaSection.description')}
           </p>
           <div 
             className="mt-10"
@@ -401,8 +328,7 @@ export default async function HomePage() {
   );
 }
 
-// Required for static generation of locale routes
 export async function generateStaticParams() {
-  // Call the imported i18nGetStaticParams function
   return i18nGetStaticParams();
 }
+

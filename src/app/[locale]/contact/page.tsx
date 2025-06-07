@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -10,22 +11,19 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
 import React from 'react';
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
-// Note: generateStaticParams is usually for server components, but for routing consistency with [locale]
-// we include it. For purely client-side pages, localization might be handled differently or not at build time.
-// However, to make the routes available for each locale, it's good practice.
-// import type { Locale } from '@/i18n/settings'; // No longer needed
-// import { getStaticParams as i18nGetStaticParams } from '@/i18n/server'; // No longer needed
+import { useScopedI18n } from '@/i18n/client';
+import { Trans } from "next-international";
 
 
 export default function ContactPage() {
+  const t = useScopedI18n('contactPage');
   const { toast } = useToast();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // In a real app, you would handle form submission here (e.g., send data to an API)
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you shortly.",
+      title: t('toastSuccessTitle'),
+      description: t('toastSuccessDescription'),
       variant: "default",
     });
     (event.target as HTMLFormElement).reset();
@@ -34,9 +32,9 @@ export default function ContactPage() {
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold font-headline text-primary">Get In Touch</h1>
+        <h1 className="text-3xl md:text-4xl font-bold font-headline text-primary">{t('title')}</h1>
         <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-          We'd love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.
+          {t('subtitle')}
         </p>
         <Breadcrumbs />
       </div>
@@ -44,35 +42,35 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <Card className="shadow-lg">
           <CardHeader>
-            <CardTitle className="font-headline text-2xl">Send us a message</CardTitle>
-            <CardDescription>Fill out the form below and we'll respond as soon as possible.</CardDescription>
+            <CardTitle className="font-headline text-2xl">{t('formCardTitle')}</CardTitle>
+            <CardDescription>{t('formCardDescription')}</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName">First Name</Label>
-                  <Input id="firstName" placeholder="John" required />
+                  <Label htmlFor="firstName">{t('firstNameLabel')}</Label>
+                  <Input id="firstName" placeholder={t('firstNamePlaceholder')} required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName">Last Name</Label>
-                  <Input id="lastName" placeholder="Doe" required />
+                  <Label htmlFor="lastName">{t('lastNameLabel')}</Label>
+                  <Input id="lastName" placeholder={t('lastNamePlaceholder')} required />
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
-                <Input id="email" type="email" placeholder="john.doe@example.com" required />
+                <Label htmlFor="email">{t('emailLabel')}</Label>
+                <Input id="email" type="email" placeholder={t('emailPlaceholder')} required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="Question about pricing" required />
+                <Label htmlFor="subject">{t('subjectLabel')}</Label>
+                <Input id="subject" placeholder={t('subjectPlaceholder')} required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea id="message" placeholder="Your message..." rows={5} required />
+                <Label htmlFor="message">{t('messageLabel')}</Label>
+                <Textarea id="message" placeholder={t('messagePlaceholder')} rows={5} required />
               </div>
               <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" size="lg">
-                Send Message
+                {t('sendMessageButton')}
               </Button>
             </form>
           </CardContent>
@@ -81,40 +79,40 @@ export default function ContactPage() {
         <div className="space-y-8">
           <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle className="font-headline text-xl">Contact Information</CardTitle>
+              <CardTitle className="font-headline text-xl">{t('contactInfoCardTitle')}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-foreground/80">
               <div className="flex items-start">
                 <Mail className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold">Email</h3>
+                  <h3 className="font-semibold">{t('emailInfo')}</h3>
                   <a href="mailto:support@oneaiassistant.com" className="hover:text-primary">support@oneaiassistant.com</a>
                 </div>
               </div>
               <div className="flex items-start">
                 <Phone className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold">Phone</h3>
+                  <h3 className="font-semibold">{t('phoneInfo')}</h3>
                   <a href="tel:+1234567890" className="hover:text-primary">+1 (234) 567-890</a>
                 </div>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold">Office Address</h3>
-                  <p>123 AI Avenue, Tech City, TX 75001</p>
+                  <h3 className="font-semibold">{t('addressInfo')}</h3>
+                  <p>{t('addressValue')}</p>
                 </div>
               </div>
             </CardContent>
           </Card>
            <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle className="font-headline text-xl">Operating Hours</CardTitle>
+              <CardTitle className="font-headline text-xl">{t('operatingHoursCardTitle')}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-foreground/80">
-               <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM (CST)</p>
-               <p><strong>Saturday - Sunday:</strong> Closed</p>
-               <p>Our AI Assistant is available 24/7 on client websites!</p>
+               <p><Trans i18nKey="contactPage.weekdaysHours" components={{ strong: <strong /> }} /></p>
+               <p><Trans i18nKey="contactPage.weekendHours" components={{ strong: <strong /> }} /></p>
+               <p>{t('aiAssistantAvailability')}</p>
             </CardContent>
           </Card>
         </div>
@@ -122,7 +120,3 @@ export default function ContactPage() {
     </div>
   );
 }
-
-// export async function generateStaticParams() { // Removed
-// return i18nGetStaticParams();
-// }
