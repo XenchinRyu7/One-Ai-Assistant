@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -7,27 +6,46 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
-import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
-import { setStaticParamsLocale } from 'next-international/server';
-import type { Locale } from '@/i18n/settings';
+import {
+  getStaticParams as i18nGetStaticParams,
+  getScopedI18n,
+} from "@/i18n/server";
+import { setStaticParamsLocale } from "next-international/server";
+import type { Locale } from "@/i18n/settings";
 
 interface FAQItem {
   question: string;
   answer: string;
 }
 
-export default async function FAQPage({ params: { locale } }: { params: { locale: Locale } }) {
+export default async function FAQPage({
+  params,
+}: {
+  params: { locale: Locale };
+}) {
+  const { locale } = await params;
   setStaticParamsLocale(locale);
-  const t = await getScopedI18n('faqPage');
-  const faqItemsData = t('items');
-  const faqItems: FAQItem[] = Array.isArray(faqItemsData) ? faqItemsData : [];
+  const t = await getScopedI18n("faqPage");
+
+  // Build FAQ items array using explicit keys for type safety
+  const faqItems: FAQItem[] = [];
+  for (let i = 0; ; i++) {
+    const questionKey = `items.${i}.question` as const;
+    const answerKey = `items.${i}.answer` as const;
+    // @ts-expect-error: next-international typegen doesn't allow dynamic keys, but this is safe
+    const question = t(questionKey);
+    // @ts-expect-error: next-international typegen doesn't allow dynamic keys, but this is safe
+    const answer = t(answerKey);
+    if (!question || !answer) break;
+    faqItems.push({ question, answer });
+  }
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <Card className="shadow-lg">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">
-            {t('title')}
+            {t("title")}
           </CardTitle>
           <Breadcrumbs />
         </CardHeader>

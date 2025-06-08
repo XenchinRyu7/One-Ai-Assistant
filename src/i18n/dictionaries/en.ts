@@ -1,4 +1,3 @@
-
 // src/i18n/dictionaries/en.ts
 export default {
   navbar: {
@@ -110,7 +109,8 @@ export default {
         { name: "Salesforce", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "crm platform" },
         { name: "Netflix", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "streaming service" },
         { name: "Spotify", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "music streaming" },
-      ]
+      ],
+      logoAltTextSuffix: "logo"
     },
     securitySection: {
       imageAlt: "Data Security",
@@ -230,8 +230,8 @@ export default {
     addressInfo: "Office Address",
     addressValue: "123 AI Avenue, Tech City, TX 75001",
     operatingHoursCardTitle: "Operating Hours",
-    weekdaysHours: "<strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM (CST)",
-    weekendHours: "<strong>Saturday - Sunday:</strong> Closed",
+    weekdaysHours: "Monday - Friday: 9:00 AM - 6:00 PM (CST)",
+    weekendHours: "Saturday - Sunday: Closed",
     aiAssistantAvailability: "Our AI Assistant is available 24/7 on client websites!",
     toastSuccessTitle: "Message Sent!",
     toastSuccessDescription: "Thank you for contacting us. We'll get back to you shortly."
@@ -533,4 +533,4 @@ export default {
     slaPremiumSupport: "SLA & 24/7 premium support"
   }
 } as const;
-    
+

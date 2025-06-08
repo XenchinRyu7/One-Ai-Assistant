@@ -1,4 +1,3 @@
-
 // src/app/[locale]/page.tsx
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,7 +7,7 @@ import { Brain, Puzzle, Clock, Palette, Zap, Settings2, MessageSquare, ShieldChe
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getI18n, getScopedI18n, getStaticParams as i18nGetStaticParams } from '@/i18n/server';
 import { setStaticParamsLocale } from 'next-international/server';
-import { Trans } from 'next-international';
+// import { Trans } from 'next-international';
 import type { Locale } from '@/i18n/settings';
 
 interface FeatureItem {
@@ -38,7 +37,8 @@ interface BrandItem {
 }
 
 
-export default async function HomePage({ params: { locale } }: { params: { locale: Locale } }) {
+export default async function HomePage(props: { params: { locale: Locale } }) {
+  const { locale } = await props.params;
   setStaticParamsLocale(locale);
   const t = await getI18n();
   const heroT = await getScopedI18n('hero');
@@ -54,17 +54,72 @@ export default async function HomePage({ params: { locale } }: { params: { local
   const securitySectionFeature3 = homeT('securitySection.features.2');
   const securitySectionFeature3Parts = securitySectionFeature3.split(/<strong>|<\/strong>/);
 
-  const featuresData = homeT('featuresSection.features');
-  const featuresList: FeatureItem[] = Array.isArray(featuresData) ? featuresData : [];
+  // Ambil fitur satu per satu sesuai struktur dictionary
+  const featuresList: FeatureItem[] = [
+    { title: homeT('featuresSection.features.0.title'), description: homeT('featuresSection.features.0.description') },
+    { title: homeT('featuresSection.features.1.title'), description: homeT('featuresSection.features.1.description') },
+    { title: homeT('featuresSection.features.2.title'), description: homeT('featuresSection.features.2.description') },
+    { title: homeT('featuresSection.features.3.title'), description: homeT('featuresSection.features.3.description') },
+  ];
 
-  const stepsData = homeT('howItWorksSection.steps');
-  const stepsList: StepItem[] = Array.isArray(stepsData) ? stepsData : [];
+  const stepsList: StepItem[] = [
+    { title: homeT('howItWorksSection.steps.0.title'), description: homeT('howItWorksSection.steps.0.description') },
+    { title: homeT('howItWorksSection.steps.1.title'), description: homeT('howItWorksSection.steps.1.description') },
+    { title: homeT('howItWorksSection.steps.2.title'), description: homeT('howItWorksSection.steps.2.description') },
+  ];
 
-  const testimonialsData = homeT('testimonialsSection.testimonials');
-  const testimonialsList: TestimonialItem[] = Array.isArray(testimonialsData) ? testimonialsData : [];
+  const testimonialsList: TestimonialItem[] = [
+    {
+      quote: homeT('testimonialsSection.testimonials.0.quote'),
+      name: homeT('testimonialsSection.testimonials.0.name'),
+      company: homeT('testimonialsSection.testimonials.0.company'),
+      avatarSrc: homeT('testimonialsSection.testimonials.0.avatarSrc'),
+      avatarFallback: homeT('testimonialsSection.testimonials.0.avatarFallback'),
+      rating: Number(homeT('testimonialsSection.testimonials.0.rating')),
+      dataAiHint: homeT('testimonialsSection.testimonials.0.dataAiHint'),
+    },
+    {
+      quote: homeT('testimonialsSection.testimonials.1.quote'),
+      name: homeT('testimonialsSection.testimonials.1.name'),
+      company: homeT('testimonialsSection.testimonials.1.company'),
+      avatarSrc: homeT('testimonialsSection.testimonials.1.avatarSrc'),
+      avatarFallback: homeT('testimonialsSection.testimonials.1.avatarFallback'),
+      rating: Number(homeT('testimonialsSection.testimonials.1.rating')),
+      dataAiHint: homeT('testimonialsSection.testimonials.1.dataAiHint'),
+    },
+    {
+      quote: homeT('testimonialsSection.testimonials.2.quote'),
+      name: homeT('testimonialsSection.testimonials.2.name'),
+      company: homeT('testimonialsSection.testimonials.2.company'),
+      avatarSrc: homeT('testimonialsSection.testimonials.2.avatarSrc'),
+      avatarFallback: homeT('testimonialsSection.testimonials.2.avatarFallback'),
+      rating: Number(homeT('testimonialsSection.testimonials.2.rating')),
+      dataAiHint: homeT('testimonialsSection.testimonials.2.dataAiHint'),
+    },
+  ];
 
-  const brandsData = homeT('trustedBySection.brands');
-  const brandsList: BrandItem[] = Array.isArray(brandsData) ? brandsData : [];
+  const brandsList: BrandItem[] = [
+    {
+      name: homeT('trustedBySection.brands.0.name'),
+      logoSrc: homeT('trustedBySection.brands.0.logoSrc'),
+      dataAiHint: homeT('trustedBySection.brands.0.dataAiHint'),
+    },
+    {
+      name: homeT('trustedBySection.brands.1.name'),
+      logoSrc: homeT('trustedBySection.brands.1.logoSrc'),
+      dataAiHint: homeT('trustedBySection.brands.1.dataAiHint'),
+    },
+    {
+      name: homeT('trustedBySection.brands.2.name'),
+      logoSrc: homeT('trustedBySection.brands.2.logoSrc'),
+      dataAiHint: homeT('trustedBySection.brands.2.dataAiHint'),
+    },
+    {
+      name: homeT('trustedBySection.brands.3.name'),
+      logoSrc: homeT('trustedBySection.brands.3.logoSrc'),
+      dataAiHint: homeT('trustedBySection.brands.3.dataAiHint'),
+    },
+  ];
 
 
   return (

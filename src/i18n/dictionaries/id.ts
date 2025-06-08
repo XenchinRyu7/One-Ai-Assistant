@@ -1,4 +1,3 @@
-
 // src/i18n/dictionaries/id.ts
 export default {
   navbar: {
@@ -110,7 +109,8 @@ export default {
         { name: "Salesforce", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "crm platform" },
         { name: "Netflix", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "streaming service" },
         { name: "Spotify", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "music streaming" },
-      ]
+      ],
+      logoAltTextSuffix: "logo"
     },
     securitySection: {
       imageAlt: "Keamanan Data",
@@ -531,4 +531,4 @@ export default {
     slaPremiumSupport: "SLA & dukungan premium 24/7"
   }
 } as const;
-    
+

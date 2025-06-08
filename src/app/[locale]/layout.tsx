@@ -1,6 +1,6 @@
 // src/app/[locale]/layout.tsx
 import type { Metadata } from 'next';
-import '../globals.css'; // Adjust path to globals.css
+import './globals.css'; // Adjust path to globals.css
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
@@ -14,13 +14,14 @@ export const metadata: Metadata = {
   description: 'Empower your website with One AI Assistant. Seamlessly integrate our intelligent chatbot to provide instant, accurate answers and elevate your customer support.',
 };
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: Locale };
 }>) {
+  const { locale } = await params;
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>

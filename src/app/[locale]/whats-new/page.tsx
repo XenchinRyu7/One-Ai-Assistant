@@ -1,34 +1,46 @@
-
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
-import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
-import { setStaticParamsLocale } from 'next-international/server';
-import type { Locale } from '@/i18n/settings';
+import {
+  getStaticParams as i18nGetStaticParams,
+  getScopedI18n,
+} from "@/i18n/server";
+import { setStaticParamsLocale } from "next-international/server";
+import type { Locale } from "@/i18n/settings";
 
-export default async function WhatsNewPage({ params: { locale } }: { params: { locale: Locale } }) {
+export default async function WhatsNewPage({
+  params,
+}: {
+  params: { locale: Locale };
+}) {
+  const { locale } = await params;
   setStaticParamsLocale(locale);
-  const t = await getScopedI18n('whatsNewPage');
-  const enhancementsData = t('enhancements');
-  const enhancements: string[] = Array.isArray(enhancementsData) ? enhancementsData : [];
+  const t = await getScopedI18n("whatsNewPage");
+
+  const enhancements: string[] = [
+    t("enhancements.0"),
+    t("enhancements.1"),
+    t("enhancements.2"),
+    t("enhancements.3"),
+  ];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <Card className="shadow-lg">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">
-            {t('title')}
+            {t("title")}
           </CardTitle>
           <Breadcrumbs />
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="text-lg text-foreground/80 text-center max-w-2xl mx-auto">
-            {t('description')}
+            {t("description")}
           </p>
           <div className="flex justify-center">
             <Image
               src="https://placehold.co/600x350.png"
-              alt={t('imageAlt')}
+              alt={t("imageAlt")}
               width={600}
               height={350}
               className="rounded-lg shadow-md"
@@ -36,15 +48,15 @@ export default async function WhatsNewPage({ params: { locale } }: { params: { l
             />
           </div>
           <div className="prose prose-lg max-w-none text-foreground/80">
-            <h3 className="font-semibold font-headline text-foreground">{t('upcomingEnhancementsTitle')}</h3>
+            <h3 className="font-semibold font-headline text-foreground">
+              {t("upcomingEnhancementsTitle")}
+            </h3>
             <ul>
               {enhancements.map((enhancement: string) => (
                 <li key={enhancement}>{enhancement}</li>
               ))}
             </ul>
-            <p className="text-center mt-8">
-              {t('checkBackSoon')}
-            </p>
+            <p className="text-center mt-8">{t("checkBackSoon")}</p>
           </div>
         </CardContent>
       </Card>

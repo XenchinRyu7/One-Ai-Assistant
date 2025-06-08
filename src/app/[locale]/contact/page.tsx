@@ -10,10 +10,9 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import React from 'react';
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { useScopedI18n } from '@/i18n/client';
-import { useTranslations } from 'next-intl';
 
 export default function ContactPage() {
-  const t = useTranslations('contactPage');
+  const t = useScopedI18n('contactPage');
   const { toast } = useToast();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -107,8 +106,8 @@ export default function ContactPage() {
               <CardTitle className="font-headline text-xl">{t('operatingHoursCardTitle')}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-foreground/80">
-              <p>{t.rich('weekdaysHours', { strong: (chunks) => <strong>{chunks}</strong> })}</p>
-              <p>{t.rich('weekendHours', { strong: (chunks) => <strong>{chunks}</strong> })}</p>
+              <p>{t('weekdaysHours')}</p>
+              <p>{t('weekendHours')}</p>
               <p>{t('aiAssistantAvailability')}</p>
             </CardContent>
           </Card>
