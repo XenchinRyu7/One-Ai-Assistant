@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -12,11 +10,10 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import React from 'react';
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { useScopedI18n } from '@/i18n/client';
-import { Trans } from "next-international/Trans"; // Corrected import path
-
+import { useTranslations } from 'next-intl';
 
 export default function ContactPage() {
-  const t = useScopedI18n('contactPage');
+  const t = useTranslations('contactPage');
   const { toast } = useToast();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -110,9 +107,9 @@ export default function ContactPage() {
               <CardTitle className="font-headline text-xl">{t('operatingHoursCardTitle')}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-foreground/80">
-               <p><Trans i18nKey="contactPage.weekdaysHours" components={{ strong: <strong /> }} /></p>
-               <p><Trans i18nKey="contactPage.weekendHours" components={{ strong: <strong /> }} /></p>
-               <p>{t('aiAssistantAvailability')}</p>
+              <p>{t.rich('weekdaysHours', { strong: (chunks) => <strong>{chunks}</strong> })}</p>
+              <p>{t.rich('weekendHours', { strong: (chunks) => <strong>{chunks}</strong> })}</p>
+              <p>{t('aiAssistantAvailability')}</p>
             </CardContent>
           </Card>
         </div>

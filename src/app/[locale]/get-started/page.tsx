@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
@@ -6,18 +5,26 @@ import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
 import { setStaticParamsLocale } from 'next-international/server';
-import { Trans } from 'next-international/Trans'; // Corrected import path
+import { useScopedI18n } from '@/i18n/client';
 import type { Locale } from '@/i18n/settings';
 
 export default async function GetStartedPage({ params: { locale } }: { params: { locale: Locale } }) {
   setStaticParamsLocale(locale);
   const t = await getScopedI18n('getStartedPage');
 
-  const freeTrialFeaturesData = t('freeTrialCard.features');
-  const freeTrialFeatures: string[] = Array.isArray(freeTrialFeaturesData) ? freeTrialFeaturesData : [];
-
-  const demoFeaturesData = t('demoCard.features');
-  const demoFeatures: string[] = Array.isArray(demoFeaturesData) ? demoFeaturesData : [];
+  // Ambil fitur trial dan demo sebagai array
+  const freeTrialFeatures = [
+    t('freeTrialCard.features.0'),
+    t('freeTrialCard.features.1'),
+    t('freeTrialCard.features.2'),
+    t('freeTrialCard.features.3'),
+  ];
+  const demoFeatures = [
+    t('demoCard.features.0'),
+    t('demoCard.features.1'),
+    t('demoCard.features.2'),
+    t('demoCard.features.3'),
+  ];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -92,13 +99,12 @@ export default async function GetStartedPage({ params: { locale } }: { params: {
       <div className="text-center mt-16">
         <h2 className="text-2xl font-semibold font-headline text-foreground">{t('haveQuestionsSection.title')}</h2>
         <p className="mt-2 text-lg text-foreground/70">
-          <Trans 
-            i18nKey="getStartedPage.haveQuestionsSection.text"
-            components={{
-              1: <Link href="/faq" className="text-primary hover:underline" />,
-              2: <Link href="/contact" className="text-primary hover:underline" />,
-            }}
-          />
+          {(() => {
+            const text = t('haveQuestionsSection.text');
+            // Ganti <1> dan <2> dengan komponen Link
+            const parts = text.split(/<\/?[12]>/g);
+            return <>{parts[0]}<Link href="/faq" className="text-primary hover:underline">{t('haveQuestionsSection.faqLinkText')}</Link>{parts[1]}<Link href="/contact" className="text-primary hover:underline">{t('haveQuestionsSection.contactLinkText')}</Link>{parts[2]}</>;
+          })()}
         </p>
       </div>
     </div>

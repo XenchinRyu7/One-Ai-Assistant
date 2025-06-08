@@ -1,11 +1,9 @@
-
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ShieldCheck, Lock, DatabaseZap, ServerCog } from "lucide-react";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { getStaticParams as i18nGetStaticParams, getScopedI18n } from '@/i18n/server';
 import { setStaticParamsLocale } from 'next-international/server';
-import { Trans } from "next-international";
 import type { Locale } from '@/i18n/settings';
 
 const icons = [
@@ -25,8 +23,34 @@ interface SecurityFeature {
 export default async function SecurityDetailsPage({ params: { locale } }: { params: { locale: Locale } }) {
   setStaticParamsLocale(locale);
   const t = await getScopedI18n('securityDetailsPage');
-  const securityFeaturesData = t('features');
-  const securityFeatures: SecurityFeature[] = Array.isArray(securityFeaturesData) ? securityFeaturesData : [];
+  
+  // Ambil array fitur keamanan dari dictionary
+  const securityFeatures: SecurityFeature[] = [
+    {
+      title: t('features.0.title'),
+      description: t('features.0.description'),
+    },
+    {
+      title: t('features.1.title'),
+      description: t('features.1.description'),
+    },
+    {
+      title: t('features.2.title'),
+      description: t('features.2.description'),
+    },
+    {
+      title: t('features.3.title'),
+      description: t('features.3.description'),
+    },
+    {
+      title: t('features.4.title'),
+      description: t('features.4.description'),
+    },
+    {
+      title: t('features.5.title'),
+      description: t('features.5.description'),
+    },
+  ];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -73,12 +97,13 @@ export default async function SecurityDetailsPage({ params: { locale } }: { para
                     {t('continuousImprovement.paragraph1')}
                 </p>
                 <p className="text-lg text-foreground/80">
-                  <Trans
-                    i18nKey="securityDetailsPage.continuousImprovement.paragraph2"
-                    components={{
-                      1: <a href="/contact" className="text-primary hover:underline" />
-                    }}
-                  />
+                  {/* Ganti Trans dengan interpolasi manual */}
+                  {(() => {
+                    const text = t('continuousImprovement.paragraph2');
+                    // Misal string: "Hubungi tim kami melalui <1>formulir kontak</1> untuk info lebih lanjut."
+                    const parts = text.split(/<1>|<\/1>/g);
+                    return <>{parts[0]}<a href="/contact" className="text-primary hover:underline">formulir kontak</a>{parts[2]}</>;
+                  })()}
                 </p>
             </div>
           </div>
