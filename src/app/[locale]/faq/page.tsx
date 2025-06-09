@@ -27,18 +27,16 @@ export default async function FAQPage({
   setStaticParamsLocale(locale);
   const t = await getScopedI18n("faqPage");
 
-  // Build FAQ items array using explicit keys for type safety
-  const faqItems: FAQItem[] = [];
-  for (let i = 0; ; i++) {
-    const questionKey = `items.${i}.question` as const;
-    const answerKey = `items.${i}.answer` as const;
-    // @ts-expect-error: next-international typegen doesn't allow dynamic keys, but this is safe
-    const question = t(questionKey);
-    // @ts-expect-error: next-international typegen doesn't allow dynamic keys, but this is safe
-    const answer = t(answerKey);
-    if (!question || !answer) break;
-    faqItems.push({ question, answer });
-  }
+  // Hardcode array FAQ sesuai jumlah item di i18n (7 item, index 0-6)
+  const faqItems: FAQItem[] = [
+    { question: t("items.0.question"), answer: t("items.0.answer") },
+    { question: t("items.1.question"), answer: t("items.1.answer") },
+    { question: t("items.2.question"), answer: t("items.2.answer") },
+    { question: t("items.3.question"), answer: t("items.3.answer") },
+    { question: t("items.4.question"), answer: t("items.4.answer") },
+    { question: t("items.5.question"), answer: t("items.5.answer") },
+    { question: t("items.6.question"), answer: t("items.6.answer") },
+  ];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">

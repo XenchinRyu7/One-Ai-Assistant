@@ -188,10 +188,10 @@ export function Navbar() {
             <LanguageSwitcher />
             <ThemeToggleButton />
             <Button asChild variant="ghost" size="sm">
-              <Link href="/signin">{t('signin')}</Link>
+              <Link href="https://one-ai-assistant-dashboard.vercel.app/en/auth/login">{t('signin')}</Link>
             </Button>
             <Button asChild variant="default" size="sm" className="bg-primary hover:bg-primary/90">
-              <Link href="/signup">{t('signup')}</Link>
+              <Link href="https://one-ai-assistant-dashboard.vercel.app/en/auth/register">{t('signup')}</Link>
             </Button>
           </div>
         </nav>
@@ -240,12 +240,12 @@ export function Navbar() {
                 <div className="mt-auto pt-6 space-y-2">
                    <SheetClose asChild>
                     <Button asChild variant="outline" size="lg" className="w-full">
-                       <Link href="/signin" onClick={() => setIsMobileMenuOpen(false)}>{t('signin')}</Link>
+                       <Link href="https://one-ai-assistant-dashboard.vercel.app/en/auth/login" onClick={() => setIsMobileMenuOpen(false)}>{t('signin')}</Link>
                     </Button>
                   </SheetClose>
                   <SheetClose asChild>
                     <Button asChild variant="default" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                       <Link href="/signup" onClick={() => setIsMobileMenuOpen(false)}>{t('signup')}</Link>
+                       <Link href="https://one-ai-assistant-dashboard.vercel.app/en/auth/register" onClick={() => setIsMobileMenuOpen(false)}>{t('signup')}</Link>
                     </Button>
                   </SheetClose>
                 </div>
