@@ -5,7 +5,7 @@ import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "next-themes";
-import { JosInitializer } from '@/components/layout/JosInitializer';
+import { JOSInit } from '@/components/layout/JosInit';
 import { I18nProviderClient } from '@/i18n/client';
 import type { Locale } from '@/i18n/settings';
 
@@ -36,9 +36,8 @@ export default async function LocaleLayout({
             attribute="class"
             defaultTheme="system"
             enableSystem
-            disableTransitionOnChange
-          >
-            <JosInitializer />
+            disableTransitionOnChange          >
+            <JOSInit />
             <Navbar />
             <main className="flex-grow">
               {children}
