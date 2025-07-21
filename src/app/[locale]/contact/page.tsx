@@ -82,14 +82,14 @@ export default function ContactPage() {
                 <Mail className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold">{t('emailInfo')}</h3>
-                  <a href="mailto:support@oneaiassistant.com" className="hover:text-primary">support@oneaiassistant.com</a>
+                  <a href="mailto:oneaiassistantindonesia@gmail.com" className="hover:text-primary">oneaiassistantindonesia@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-start">
                 <Phone className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold">{t('phoneInfo')}</h3>
-                  <a href="tel:+1234567890" className="hover:text-primary">+1 (234) 567-890</a>
+                  <a href="tel:+1234567890" className="hover:text-primary">083869947022</a>
                 </div>
               </div>
               <div className="flex items-start">

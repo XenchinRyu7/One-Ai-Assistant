@@ -1,78 +1,89 @@
 // src/i18n/dictionaries/id.ts
 export default {
   navbar: {
-    home: 'Beranda',
-    about: 'Tentang',
-    services: 'Layanan',
-    pricing: 'Harga',
-    more: 'Lainnya',
-    contact: 'Kontak',
-    signin: 'Masuk',
-    signup: 'Daftar',
+    home: "Beranda",
+    about: "Tentang",
+    services: "Layanan",
+    pricing: "Harga",
+    more: "Lainnya",
+    contact: "Kontak",
+    signin: "Masuk",
+    signup: "Daftar",
     whatsNew: "Yang Baru",
-    ourTeams: 'Tim Kami',
-    ourClients: 'Klien Kami',
-    faqs: 'Pertanyaan Umum',
-    language: 'Bahasa',
-    english: 'English',
-    indonesian: 'Bahasa Indonesia',
-    themeToggle: 'Ganti tema',
+    ourTeams: "Tim Kami",
+    ourClients: "Klien Kami",
+    faqs: "Pertanyaan Umum",
+    language: "Bahasa",
+    english: "English",
+    indonesian: "Bahasa Indonesia",
+    themeToggle: "Ganti tema",
   },
   hero: {
-    title: 'Perkuat Situs Web Anda dengan <1>One AI Assistant</1>',
-    subtitle: 'Integrasikan chatbot cerdas kami secara mulus untuk memberikan jawaban instan dan akurat menggunakan data Anda sendiri, dan tingkatkan dukungan pelanggan Anda.',
-    getStarted: 'Mulai Gratis',
-    requestDemo: 'Minta Demo',
-    aiChatbotInterfaceAlt: 'Pameran Antarmuka Chatbot AI',
+    title: "Perkuat Situs Web Anda dengan <1>One AI Assistant</1>",
+    subtitle:
+      "Integrasikan chatbot cerdas kami secara mulus untuk memberikan jawaban instan dan akurat menggunakan data Anda sendiri, dan tingkatkan dukungan pelanggan Anda.",
+    getStarted: "Mulai Gratis",
+    requestDemo: "Minta Demo",
+    aiChatbotInterfaceAlt: "Pameran Antarmuka Chatbot AI",
   },
   homepage: {
     featuresSection: {
       title: "Masa Depan Interaksi Pelanggan, Hari Ini.",
-      subtitle: "Temukan bagaimana One AI Assistant mengubah keterlibatan pelanggan Anda dengan fitur-fitur canggih yang mudah digunakan.",
+      subtitle:
+        "Temukan bagaimana One AI Assistant mengubah keterlibatan pelanggan Anda dengan fitur-fitur canggih yang mudah digunakan.",
       features: [
         {
-          title: 'Sistem RAG Cerdas',
-          description: 'Memanfaatkan Retrieval Augmented Generation tingkat lanjut untuk respons yang sadar konteks dan akurat dari basis pengetahuan Anda.',
+          title: "Sistem RAG Cerdas",
+          description:
+            "Memanfaatkan Retrieval Augmented Generation tingkat lanjut untuk respons yang sadar konteks dan akurat dari basis pengetahuan Anda.",
         },
         {
-          title: 'Integrasi Mulus',
-          description: 'Sematkan chatbot kami dengan mudah ke situs web Anda yang sudah ada dengan upaya minimal menggunakan skrip sederhana.',
+          title: "Integrasi Mulus",
+          description:
+            "Sematkan chatbot kami dengan mudah ke situs web Anda yang sudah ada dengan upaya minimal menggunakan skrip sederhana.",
         },
         {
-          title: 'Dukungan Otomatis 24/7',
-          description: 'Berikan bantuan sepanjang waktu kepada pengguna Anda, tingkatkan kepuasan dan keterlibatan kapan saja.',
+          title: "Dukungan Otomatis 24/7",
+          description:
+            "Berikan bantuan sepanjang waktu kepada pengguna Anda, tingkatkan kepuasan dan keterlibatan kapan saja.",
         },
         {
-          title: 'Sangat Dapat Disesuaikan',
-          description: "Sesuaikan tampilan, perilaku, dan respons chatbot agar sangat cocok dengan suara dan gaya merek Anda.",
+          title: "Sangat Dapat Disesuaikan",
+          description:
+            "Sesuaikan tampilan, perilaku, dan respons chatbot agar sangat cocok dengan suara dan gaya merek Anda.",
         },
-      ]
+      ],
     },
     howItWorksSection: {
       title: "Langkah Mudah Menuju Dukungan Lebih Cerdas",
       subtitle: "Siapkan asisten AI Anda dan jalankan dalam hitungan menit.",
       steps: [
         {
-          title: 'Hubungkan Data Anda',
-          description: 'Unggah dokumen, FAQ, atau konten situs web Anda dengan aman untuk membangun basis pengetahuan chatbot.',
+          title: "Hubungkan Data Anda",
+          description:
+            "Unggah dokumen, FAQ, atau konten situs web Anda dengan aman untuk membangun basis pengetahuan chatbot.",
         },
         {
-          title: 'Sesuaikan Bot Anda',
-          description: 'Sesuaikan pengaturan, tampilan, dan perintah yang telah ditentukan sebelumnya agar selaras dengan merek dan kebutuhan pengguna Anda.',
+          title: "Sesuaikan Bot Anda",
+          description:
+            "Sesuaikan pengaturan, tampilan, dan perintah yang telah ditentukan sebelumnya agar selaras dengan merek dan kebutuhan pengguna Anda.",
         },
         {
-          title: 'Sematkan & Luncurkan',
-          description: 'Tambahkan cuplikan kode sederhana ke situs web Anda dan mulailah berinteraksi dengan pelanggan secara instan.',
+          title: "Sematkan & Luncurkan",
+          description:
+            "Tambahkan cuplikan kode sederhana ke situs web Anda dan mulailah berinteraksi dengan pelanggan secara instan.",
         },
       ],
-      diagramAlt: "Diagram cara kerja"
+      diagramAlt: "Diagram cara kerja",
     },
     testimonialsSection: {
       title: "Apa Kata Klien Kami",
-      subtitle: "Kisah nyata dari bisnis yang mendapat manfaat dari One AI Assistant.",
+      subtitle:
+        "Kisah nyata dari bisnis yang mendapat manfaat dari One AI Assistant.",
       testimonials: [
         {
-          quote: "One AI Assistant telah merevolusi dukungan pelanggan kami. Waktu respons turun 60%, dan pelanggan kami menyukai jawaban instan dan akurat!",
+          quote:
+            "One AI Assistant telah merevolusi dukungan pelanggan kami. Waktu respons turun 60%, dan pelanggan kami menyukai jawaban instan dan akurat!",
           name: "Jane Doe",
           company: "Tech Solutions Inc.",
           avatarSrc: "https://placehold.co/100x100.png",
@@ -81,7 +92,8 @@ export default {
           dataAiHint: "professional woman",
         },
         {
-          quote: "Sistem RAG sangat kuat. Ia memahami konteks dan memberikan informasi yang relevan dari basis pengetahuan kami tidak seperti sebelumnya. Sangat direkomendasikan!",
+          quote:
+            "Sistem RAG sangat kuat. Ia memahami konteks dan memberikan informasi yang relevan dari basis pengetahuan kami tidak seperti sebelumnya. Sangat direkomendasikan!",
           name: "John Smith",
           company: "Global Innovations Ltd.",
           avatarSrc: "https://placehold.co/100x100.png",
@@ -90,62 +102,93 @@ export default {
           dataAiHint: "male executive",
         },
         {
-          quote: "Mengintegrasikan One AI Assistant ternyata mudah, dan dampaknya pada beban kerja tim kami langsung terasa. Sebuah terobosan untuk situs e-commerce kami.",
+          quote:
+            "Mengintegrasikan One AI Assistant ternyata mudah, dan dampaknya pada beban kerja tim kami langsung terasa. Sebuah terobosan untuk situs e-commerce kami.",
           name: "Alice Brown",
           company: "Online Emporium",
           avatarSrc: "https://placehold.co/100x100.png",
           avatarFallback: "AB",
           rating: 4,
           dataAiHint: "startup founder",
-        }
-      ]
+        },
+      ],
     },
     trustedBySection: {
       title: "Dipercaya oleh Perusahaan Terkemuka",
       brands: [
-        { name: "Google", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "tech company" },
-        { name: "Microsoft", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "software company" },
-        { name: "Amazon", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "ecommerce giant" },
-        { name: "Salesforce", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "crm platform" },
-        { name: "Netflix", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "streaming service" },
-        { name: "Spotify", logoSrc: "https://placehold.co/150x75.png", dataAiHint: "music streaming" },
+        // Alt text will be company name
+        {
+          name: "Google",
+          logoSrc: "/images/trusted/google_logo.svg",
+          dataAiHint: "tech company",
+        },
+        {
+          name: "Microsoft",
+          logoSrc: "/images/trusted/microsoft_logo.svg",
+          dataAiHint: "software company",
+        },
+        {
+          name: "Amazon",
+          logoSrc: "/images/trusted/amazon_logo.svg",
+          dataAiHint: "ecommerce giant",
+        },
+        {
+          name: "Salesforce",
+          logoSrc: "/images/trusted/salesforce_logo.svg",
+          dataAiHint: "crm platform",
+        },
+        {
+          name: "Netflix",
+          logoSrc: "/images/trusted/netflix_logo.svg",
+          dataAiHint: "streaming service",
+        },
+        {
+          name: "Spotify",
+          logoSrc: "/images/trusted/spotify_logo.png",
+          dataAiHint: "music streaming",
+        },
       ],
-      logoAltTextSuffix: "logo"
+      logoAltTextSuffix: "logo",
     },
     securitySection: {
       imageAlt: "Keamanan Data",
       title: "Data Anda, Aman dan Pribadi",
-      description: "Kami memprioritaskan keamanan dan privasi data Anda. Platform kami dibangun dengan praktik keamanan standar industri untuk memastikan informasi Anda terlindungi.",
+      description:
+        "Kami memprioritaskan keamanan dan privasi data Anda. Platform kami dibangun dengan praktik keamanan standar industri untuk memastikan informasi Anda terlindungi.",
       features: [
         "<strong>Enkripsi Ujung ke Ujung:</strong> Semua data dalam transit dan saat istirahat dienkripsi.",
         "<strong>Kontrol Akses:</strong> Kontrol granular atas siapa yang dapat mengakses dan mengelola chatbot dan data Anda.",
-        "<strong>Siap Kepatuhan:</strong> Dirancang untuk membantu Anda memenuhi peraturan privasi data yang relevan."
+        "<strong>Siap Kepatuhan:</strong> Dirancang untuk membantu Anda memenuhi peraturan privasi data yang relevan.",
       ],
-      learnMoreLink: "Pelajari lebih lanjut tentang keamanan kami"
+      learnMoreLink: "Pelajari lebih lanjut tentang keamanan kami",
     },
     ctaSection: {
       title: "Siap Mengubah Pengalaman Pelanggan Anda?",
-      description: "Bergabunglah dengan bisnis yang memanfaatkan One AI Assistant untuk memberikan dukungan luar biasa, meningkatkan keterlibatan, dan mengurangi biaya operasional."
-    }
+      description:
+        "Bergabunglah dengan bisnis yang memanfaatkan One AI Assistant untuk memberikan dukungan luar biasa, meningkatkan keterlibatan, dan mengurangi biaya operasional.",
+    },
   },
   footer: {
-    brandDescription: 'OneAiAssistant membantu bisnis Anda memberikan layanan pelanggan otomatis, cerdas, dan personal dengan teknologi chatbot LLM yang bisa dikustom sesuai kebutuhan website.',
-    websiteLinkText: 'www.oneaiassistant.com',
-    primaryPages: 'Halaman Utama',
-    utilityPages: 'Halaman Utilitas',
-    forgotPassword: 'Reset Kata Sandi',
-    notFoundExample: '404 Tidak Ditemukan',
-    subscribeNewsletter: 'Berlangganan Nawala Kami',
-    subscribePlaceholder: 'Masukkan email Anda',
-    subscribeButtonAlt: 'Berlangganan nawala',
-    subscribeHint: 'Dapatkan pembaruan mingguan tentang fitur dan promosi baru.',
-    copyright: '© {year} One AI Assistant. Hak cipta dilindungi undang-undang.',
-    privacyPolicy: 'Kebijakan Privasi',
-    termsOfService: 'Ketentuan Layanan',
+    brandDescription:
+      "OneAiAssistant membantu bisnis Anda memberikan layanan pelanggan otomatis, cerdas, dan personal dengan teknologi chatbot LLM yang bisa dikustom sesuai kebutuhan website.",
+    websiteLinkText: "www.oneaiassistant.com",
+    primaryPages: "Halaman Utama",
+    utilityPages: "Halaman Utilitas",
+    forgotPassword: "Reset Kata Sandi",
+    notFoundExample: "404 Tidak Ditemukan",
+    subscribeNewsletter: "Berlangganan Nawala Kami",
+    subscribePlaceholder: "Masukkan email Anda",
+    subscribeButtonAlt: "Berlangganan nawala",
+    subscribeHint:
+      "Dapatkan pembaruan mingguan tentang fitur dan promosi baru.",
+    copyright: "© {year} One AI Assistant. Hak cipta dilindungi undang-undang.",
+    privacyPolicy: "Kebijakan Privasi",
+    termsOfService: "Ketentuan Layanan",
   },
   pricingPage: {
     title: "Harga Fleksibel untuk Setiap Kebutuhan",
-    subtitle: "Pilih paket yang paling sesuai dengan tujuan bisnis Anda dan skalakan seiring pertumbuhan Anda. Semua paket menyertakan fitur chatbot AI inti kami.",
+    subtitle:
+      "Pilih paket yang paling sesuai dengan tujuan bisnis Anda dan skalakan seiring pertumbuhan Anda. Semua paket menyertakan fitur chatbot AI inti kami.",
     monthly: "Bulanan",
     annually: "Tahunan",
     usd: "USD",
@@ -155,64 +198,77 @@ export default {
     save20Percent: "Hemat 20% dengan tagihan tahunan!",
 
     starterPlanName: "Pemula",
-    starterPlanDescription: "Sempurna untuk bisnis kecil dan startup yang ingin mengotomatiskan pertanyaan pelanggan dasar.",
+    starterPlanDescription:
+      "Sempurna untuk bisnis kecil dan startup yang ingin mengotomatiskan pertanyaan pelanggan dasar.",
     starterFeatures: [
       "Hingga 1.000 interaksi/bulan",
       "Kapabilitas RAG dasar",
       "Integrasi basis pengetahuan standar",
-      "Dukungan email"
+      "Dukungan email",
     ],
     chooseStarter: "Pilih Pemula",
 
     professionalPlanName: "Profesional",
-    professionalPlanDescription: "Ideal untuk bisnis yang sedang berkembang yang membutuhkan lebih banyak kekuatan dan kustomisasi.",
+    professionalPlanDescription:
+      "Ideal untuk bisnis yang sedang berkembang yang membutuhkan lebih banyak kekuatan dan kustomisasi.",
     professionalFeatures: [
       "Hingga 5.000 interaksi/bulan",
       "Kapabilitas RAG tingkat lanjut",
       "Integrasi beberapa basis pengetahuan",
       "Dukungan email prioritas",
-      "Analitik dasar"
+      "Analitik dasar",
     ],
     chooseProfessional: "Pilih Profesional",
 
     enterprisePlanName: "Enterprise",
-    enterprisePlanDescription: "Solusi yang disesuaikan untuk organisasi besar dengan persyaratan khusus.",
+    enterprisePlanDescription:
+      "Solusi yang disesuaikan untuk organisasi besar dengan persyaratan khusus.",
     enterpriseFeatures: [
       "Interaksi tidak terbatas",
       "Fine-tuning RAG & LLM premium",
       "Integrasi khusus (CRM, dll.)",
       "Manajer akun khusus",
       "Analitik & pelaporan tingkat lanjut",
-      "SLA & dukungan premium 24/7"
+      "SLA & dukungan premium 24/7",
     ],
 
     contactSales: "Hubungi Sales",
     customSolutionTitle: "Butuh Solusi Khusus?",
-    customSolutionSubtitle: "Kami dapat menyesuaikan paket khusus untuk kebutuhan perusahaan Anda. Hubungi tim penjualan kami untuk penawaran yang dipersonalisasi.",
+    customSolutionSubtitle:
+      "Kami dapat menyesuaikan paket khusus untuk kebutuhan perusahaan Anda. Hubungi tim penjualan kami untuk penawaran yang dipersonalisasi.",
   },
   aboutPage: {
     title: "Tentang One AI Assistant",
-    welcome: "Selamat datang di One AI Assistant! Kami bersemangat untuk merevolusi cara bisnis berinteraksi dengan pelanggan mereka. Misi kami adalah menyediakan solusi chatbot AI mutakhir yang cerdas, intuitif, dan mudah diintegrasikan.",
-    founded: "Didirikan oleh tim penggemar AI dan insinyur perangkat lunak, One AI Assistant lahir dari keinginan untuk membuat AI canggih dapat diakses oleh bisnis dari semua ukuran. Kami percaya bahwa dengan memanfaatkan kekuatan Retrieval Augmented Generation (RAG) dan Large Language Models (LLM), kami dapat membantu Anda memberikan pengalaman pelanggan yang luar biasa, 24/7.",
+    welcome:
+      "Selamat datang di One AI Assistant! Kami bersemangat untuk merevolusi cara bisnis berinteraksi dengan pelanggan mereka. Misi kami adalah menyediakan solusi chatbot AI mutakhir yang cerdas, intuitif, dan mudah diintegrasikan.",
+    founded:
+      "Didirikan oleh tim penggemar AI dan insinyur perangkat lunak, One AI Assistant lahir dari keinginan untuk membuat AI canggih dapat diakses oleh bisnis dari semua ukuran. Kami percaya bahwa dengan memanfaatkan kekuatan Retrieval Augmented Generation (RAG) dan Large Language Models (LLM), kami dapat membantu Anda memberikan pengalaman pelanggan yang luar biasa, 24/7.",
     ourVision: "Visi Kami",
-    visionText: "Menjadi penyedia solusi dukungan pelanggan bertenaga AI terkemuka, memberdayakan bisnis di seluruh dunia untuk membangun hubungan pelanggan yang lebih kuat melalui interaksi yang mulus dan cerdas.",
+    visionText:
+      "Menjadi penyedia solusi dukungan pelanggan bertenaga AI terkemuka, memberdayakan bisnis di seluruh dunia untuk membangun hubungan pelanggan yang lebih kuat melalui interaksi yang mulus dan cerdas.",
     ourValues: "Nilai-nilai Kami",
     innovationTitle: "Inovasi:",
     innovationText: "Terus mengeksplorasi dan menerapkan kemajuan AI terbaru.",
     customerCentricityTitle: "Berpusat pada Pelanggan:",
-    customerCentricityText: "Merancang solusi yang benar-benar memenuhi kebutuhan klien kami dan pengguna mereka.",
+    customerCentricityText:
+      "Merancang solusi yang benar-benar memenuhi kebutuhan klien kami dan pengguna mereka.",
     integrityTitle: "Integritas:",
-    integrityText: "Beroperasi dengan transparansi dan komitmen kuat terhadap privasi dan keamanan data.",
+    integrityText:
+      "Beroperasi dengan transparansi dan komitmen kuat terhadap privasi dan keamanan data.",
     simplicityTitle: "Kesederhanaan:",
-    simplicityText: "Membuat teknologi kompleks mudah digunakan dan diintegrasikan.",
-    thankYou: "Terima kasih telah mempertimbangkan One AI Assistant. Kami berharap dapat membantu Anda mengubah dukungan pelanggan Anda!",
-    teamImageAlt: "Tim kami sedang bekerja"
+    simplicityText:
+      "Membuat teknologi kompleks mudah digunakan dan diintegrasikan.",
+    thankYou:
+      "Terima kasih telah mempertimbangkan One AI Assistant. Kami berharap dapat membantu Anda mengubah dukungan pelanggan Anda!",
+    teamImageAlt: "Tim kami sedang bekerja",
   },
   contactPage: {
     title: "Hubungi Kami",
-    subtitle: "Kami ingin mendengar dari Anda! Apakah Anda memiliki pertanyaan tentang layanan kami, harga, atau apa pun, tim kami siap menjawab semua pertanyaan Anda.",
+    subtitle:
+      "Kami ingin mendengar dari Anda! Apakah Anda memiliki pertanyaan tentang layanan kami, harga, atau apa pun, tim kami siap menjawab semua pertanyaan Anda.",
     formCardTitle: "Kirimkan kami pesan",
-    formCardDescription: "Isi formulir di bawah ini dan kami akan merespons sesegera mungkin.",
+    formCardDescription:
+      "Isi formulir di bawah ini dan kami akan merespons sesegera mungkin.",
     firstNameLabel: "Nama Depan",
     firstNamePlaceholder: "John",
     lastNameLabel: "Nama Belakang",
@@ -232,46 +288,58 @@ export default {
     operatingHoursCardTitle: "Jam Operasional",
     weekdaysHours: "<strong>Senin - Jumat:</strong> 09:00 - 18:00 (CST)",
     weekendHours: "<strong>Sabtu - Minggu:</strong> Tutup",
-    aiAssistantAvailability: "Asisten AI kami tersedia 24/7 di situs web klien!",
+    aiAssistantAvailability:
+      "Asisten AI kami tersedia 24/7 di situs web klien!",
     toastSuccessTitle: "Pesan Terkirim!",
-    toastSuccessDescription: "Terima kasih telah menghubungi kami. Kami akan segera menghubungi Anda."
+    toastSuccessDescription:
+      "Terima kasih telah menghubungi kami. Kami akan segera menghubungi Anda.",
   },
   faqPage: {
     title: "Pertanyaan yang Sering Diajukan",
     items: [
       {
         question: "Apa itu One AI Assistant?",
-        answer: "One AI Assistant adalah platform chatbot bertenaga AI canggih yang menggunakan Retrieval Augmented Generation (RAG) untuk memberikan respons yang cerdas dan sadar konteks berdasarkan basis pengetahuan spesifik bisnis Anda. Ini dirancang untuk meningkatkan dukungan dan keterlibatan pelanggan di situs web Anda.",
+        answer:
+          "One AI Assistant adalah platform chatbot bertenaga AI canggih yang menggunakan Retrieval Augmented Generation (RAG) untuk memberikan respons yang cerdas dan sadar konteks berdasarkan basis pengetahuan spesifik bisnis Anda. Ini dirancang untuk meningkatkan dukungan dan keterlibatan pelanggan di situs web Anda.",
       },
       {
         question: "Bagaimana cara kerja sistem RAG?",
-        answer: "Retrieval Augmented Generation (RAG) menggabungkan kekuatan model bahasa besar (LLM) dengan pengambilan informasi dari dokumen atau sumber data yang Anda sediakan. Ketika pengguna mengajukan pertanyaan, sistem pertama-tama mengambil informasi yang relevan dari basis pengetahuan Anda dan kemudian menggunakan LLM untuk menghasilkan jawaban yang komprehensif dan akurat berdasarkan konteks yang diambil tersebut.",
+        answer:
+          "Retrieval Augmented Generation (RAG) menggabungkan kekuatan model bahasa besar (LLM) dengan pengambilan informasi dari dokumen atau sumber data yang Anda sediakan. Ketika pengguna mengajukan pertanyaan, sistem pertama-tama mengambil informasi yang relevan dari basis pengetahuan Anda dan kemudian menggunakan LLM untuk menghasilkan jawaban yang komprehensif dan akurat berdasarkan konteks yang diambil tersebut.",
       },
       {
-        question: "Jenis data apa yang dapat saya gunakan untuk basis pengetahuan?",
-        answer: "Anda dapat menggunakan berbagai jenis data, termasuk dokumen PDF, file teks, konten situs web (melalui sitemap atau URL langsung), FAQ, manual produk, dan banyak lagi. Sistem kami dirancang untuk memproses dan memahami berbagai data tidak terstruktur dan terstruktur.",
+        question:
+          "Jenis data apa yang dapat saya gunakan untuk basis pengetahuan?",
+        answer:
+          "Anda dapat menggunakan berbagai jenis data, termasuk dokumen PDF, file teks, konten situs web (melalui sitemap atau URL langsung), FAQ, manual produk, dan banyak lagi. Sistem kami dirancang untuk memproses dan memahami berbagai data tidak terstruktur dan terstruktur.",
       },
       {
-        question: "Apakah sulit mengintegrasikan One AI Assistant ke situs web saya?",
-        answer: "Tidak, integrasi dirancang agar sederhana. Kami menyediakan cuplikan JavaScript kecil yang dapat Anda tambahkan dengan mudah ke kode situs web Anda. Tidak diperlukan pengkodean yang rumit, dan Anda biasanya dapat menjalankan chatbot dalam hitungan menit.",
+        question:
+          "Apakah sulit mengintegrasikan One AI Assistant ke situs web saya?",
+        answer:
+          "Tidak, integrasi dirancang agar sederhana. Kami menyediakan cuplikan JavaScript kecil yang dapat Anda tambahkan dengan mudah ke kode situs web Anda. Tidak diperlukan pengkodean yang rumit, dan Anda biasanya dapat menjalankan chatbot dalam hitungan menit.",
       },
       {
         question: "Dapatkah saya menyesuaikan tampilan dan respons chatbot?",
-        answer: "Ya, One AI Assistant sangat dapat disesuaikan. Anda dapat menyesuaikan tampilannya (warna, logo, gaya widget obrolan) agar sesuai dengan merek Anda. Anda juga dapat menyesuaikan gaya percakapan, pesan selamat datang, dan respons yang telah ditentukan sebelumnya untuk pertanyaan umum.",
+        answer:
+          "Ya, One AI Assistant sangat dapat disesuaikan. Anda dapat menyesuaikan tampilannya (warna, logo, gaya widget obrolan) agar sesuai dengan merek Anda. Anda juga dapat menyesuaikan gaya percakapan, pesan selamat datang, dan respons yang telah ditentukan sebelumnya untuk pertanyaan umum.",
       },
       {
         question: "Jenis dukungan apa yang Anda tawarkan?",
-        answer: "Kami menawarkan berbagai tingkat dukungan tergantung pada paket Anda, mulai dari dukungan email untuk paket dasar hingga manajer akun khusus dan dukungan premium 24/7 untuk klien perusahaan. Kami juga menyediakan dokumentasi komprehensif dan basis pengetahuan online.",
+        answer:
+          "Kami menawarkan berbagai tingkat dukungan tergantung pada paket Anda, mulai dari dukungan email untuk paket dasar hingga manajer akun khusus dan dukungan premium 24/7 untuk klien perusahaan. Kami juga menyediakan dokumentasi komprehensif dan basis pengetahuan online.",
       },
       {
         question: "Seberapa aman data saya dengan One AI Assistant?",
-        answer: "Keamanan data adalah prioritas utama bagi kami. Kami menerapkan langkah-langkah keamanan standar industri, termasuk enkripsi data saat transit dan saat istirahat, infrastruktur aman, dan kontrol akses untuk melindungi informasi Anda. Silakan merujuk ke Kebijakan Privasi kami untuk detail lebih lanjut.",
+        answer:
+          "Keamanan data adalah prioritas utama bagi kami. Kami menerapkan langkah-langkah keamanan standar industri, termasuk enkripsi data saat transit dan saat istirahat, infrastruktur aman, dan kontrol akses untuk melindungi informasi Anda. Silakan merujuk ke Kebijakan Privasi kami untuk detail lebih lanjut.",
       },
       {
         question: "Apa saja paket harganya?",
-        answer: "Kami menawarkan paket harga fleksibel yang sesuai untuk bisnis dari semua ukuran, dari startup hingga perusahaan besar. Silakan kunjungi halaman Harga kami untuk informasi terperinci tentang setiap paket dan fiturnya.",
+        answer:
+          "Kami menawarkan paket harga fleksibel yang sesuai untuk bisnis dari semua ukuran, dari startup hingga perusahaan besar. Silakan kunjungi halaman Harga kami untuk informasi terperinci tentang setiap paket dan fiturnya.",
       },
-    ]
+    ],
   },
   forgotPasswordPage: {
     title: "Lupa Kata Sandi",
@@ -282,84 +350,130 @@ export default {
     rememberedPassword: "Ingat kata sandi Anda?",
     signInLink: "Masuk",
     toastSuccessTitle: "Permintaan Reset Kata Sandi",
-    toastSuccessDescription: "Jika ada akun untuk email ini, instruksi untuk mengatur ulang kata sandi Anda telah dikirim."
+    toastSuccessDescription:
+      "Jika ada akun untuk email ini, instruksi untuk mengatur ulang kata sandi Anda telah dikirim.",
   },
   getStartedPage: {
     title: "Mari Mulai!",
-    subtitle: "Anda selangkah lebih dekat untuk merevolusi dukungan pelanggan Anda. Pilih opsi di bawah ini untuk memulai perjalanan Anda dengan One AI Assistant.",
+    subtitle:
+      "Anda selangkah lebih dekat untuk merevolusi dukungan pelanggan Anda. Pilih opsi di bawah ini untuk memulai perjalanan Anda dengan One AI Assistant.",
     freeTrialCard: {
       title: "Mulai Uji Coba Gratis",
-      description: "Rasakan kekuatan penuh One AI Assistant dengan uji coba gratis tanpa komitmen kami. Jelajahi semua fitur dan lihat dampaknya pada bisnis Anda.",
+      description:
+        "Rasakan kekuatan penuh One AI Assistant dengan uji coba gratis tanpa komitmen kami. Jelajahi semua fitur dan lihat dampaknya pada bisnis Anda.",
       imageAlt: "Ilustrasi Uji Coba Gratis",
       features: [
         "Akses penuh ke fitur paket Profesional.",
         "Integrasikan dengan situs web Anda dalam hitungan menit.",
         "Tidak perlu kartu kredit untuk memulai.",
-        "Dukungan khusus selama periode uji coba Anda."
+        "Dukungan khusus selama periode uji coba Anda.",
       ],
-      buttonText: "Mulai Uji Coba Gratis"
+      buttonText: "Mulai Uji Coba Gratis",
     },
     demoCard: {
       title: "Minta Demo Terpersonalisasi",
-      description: "Jadwalkan demo langsung dengan para ahli kami. Kami akan memandu Anda melalui platform dan membahas bagaimana One AI Assistant dapat disesuaikan dengan kebutuhan spesifik Anda.",
+      description:
+        "Jadwalkan demo langsung dengan para ahli kami. Kami akan memandu Anda melalui platform dan membahas bagaimana One AI Assistant dapat disesuaikan dengan kebutuhan spesifik Anda.",
       imageAlt: "Ilustrasi Demo",
       features: [
         "Lihat sistem RAG beraksi dengan data contoh.",
         "Diskusikan kasus penggunaan dan tantangan spesifik Anda.",
         "Dapatkan jawaban atas semua pertanyaan teknis Anda.",
-        "Jelajahi kemungkinan integrasi khusus."
+        "Jelajahi kemungkinan integrasi khusus.",
       ],
-      buttonText: "Jadwalkan Demo"
+      buttonText: "Jadwalkan Demo",
     },
     haveQuestionsSection: {
       title: "Ada Pertanyaan?",
       text: "Tim kami siap membantu. Kunjungi <1>halaman FAQ</1> kami atau <2>hubungi kami</2> secara langsung.",
       faqLinkText: "halaman FAQ",
-      contactLinkText: "hubungi kami"
-    }
+      contactLinkText: "hubungi kami",
+    },
   },
   ourClientsPage: {
     title: "Dipercaya oleh Bisnis Seperti Milik Anda",
-    description: "Kami bangga bermitra dengan berbagai organisasi, membantu mereka meningkatkan keterlibatan pelanggan dan menyederhanakan dukungan dengan solusi AI kami.",
+    description:
+      "Kami bangga bermitra dengan berbagai organisasi, membantu mereka meningkatkan keterlibatan pelanggan dan menyederhanakan dukungan dengan solusi AI kami.",
     valuedClientsSectionTitle: "Klien Berharga Kami",
     clientLogos: [
-      { name: "Innovatech Corp", logo: "https://placehold.co/150x80.png?text=Innovatech", dataAiHint: "tech logo" },
-      { name: "Global Solutions Ltd.", logo: "https://placehold.co/150x80.png?text=Global+Solutions", dataAiHint: "corporate logo" },
-      { name: "E-Commerce Pro", logo: "https://placehold.co/150x80.png?text=EcomPro", dataAiHint: "retail logo" },
-      { name: "HealthFirst Clinic", logo: "https://placehold.co/150x80.png?text=HealthFirst", dataAiHint: "medical logo" },
-      { name: "EduLearn Platform", logo: "https://placehold.co/150x80.png?text=EduLearn", dataAiHint: "education logo" },
-      { name: "TravelWise Agency", logo: "https://placehold.co/150x80.png?text=TravelWise", dataAiHint: "travel logo" },
+      {
+        name: "Innovatech Corp",
+        logo: "https://placehold.co/150x80.png?text=Innovatech",
+        dataAiHint: "tech logo",
+      },
+      {
+        name: "Global Solutions Ltd.",
+        logo: "https://placehold.co/150x80.png?text=Global+Solutions",
+        dataAiHint: "corporate logo",
+      },
+      {
+        name: "E-Commerce Pro",
+        logo: "https://placehold.co/150x80.png?text=EcomPro",
+        dataAiHint: "retail logo",
+      },
+      {
+        name: "HealthFirst Clinic",
+        logo: "https://placehold.co/150x80.png?text=HealthFirst",
+        dataAiHint: "medical logo",
+      },
+      {
+        name: "EduLearn Platform",
+        logo: "https://placehold.co/150x80.png?text=EduLearn",
+        dataAiHint: "education logo",
+      },
+      {
+        name: "TravelWise Agency",
+        logo: "https://placehold.co/150x80.png?text=TravelWise",
+        dataAiHint: "travel logo",
+      },
     ],
     successStoriesSectionTitle: "Kisah Sukses",
     testimonials: [
       {
-        quote: "One AI Assistant telah mengubah dukungan pelanggan kami, mengurangi waktu respons hingga 70% dan secara signifikan meningkatkan kepuasan pelanggan.",
+        quote:
+          "One AI Assistant telah mengubah dukungan pelanggan kami, mengurangi waktu respons hingga 70% dan secara signifikan meningkatkan kepuasan pelanggan.",
         name: "Sarah L., Kepala Dukungan",
         company: "Innovatech Corp",
         avatar: "https://placehold.co/80x80.png?text=SL",
-        dataAiHint: "business person"
+        dataAiHint: "business person",
       },
       {
-        quote: "Integrasi berjalan mulus, dan kemampuan AI untuk memahami dan menanggapi pertanyaan kompleks berdasarkan dokumentasi kami sangat mengesankan.",
+        quote:
+          "Integrasi berjalan mulus, dan kemampuan AI untuk memahami dan menanggapi pertanyaan kompleks berdasarkan dokumentasi kami sangat mengesankan.",
         name: "Mike B., CTO",
         company: "Global Solutions Ltd.",
         avatar: "https://placehold.co/80x80.png?text=MB",
-        dataAiHint: "tech executive"
-      }
+        dataAiHint: "tech executive",
+      },
     ],
-    joinUsText: "Bergabunglah dengan ini dan banyak bisnis lain yang memanfaatkan One AI Assistant untuk mencapai tujuan dukungan pelanggan mereka."
+    joinUsText:
+      "Bergabunglah dengan ini dan banyak bisnis lain yang memanfaatkan One AI Assistant untuk mencapai tujuan dukungan pelanggan mereka.",
   },
   ourTeamsPage: {
     title: "Temui Tim Kami",
-    description: "Pikiran-pikiran penuh semangat di balik One AI Assistant, berdedikasi untuk merevolusi interaksi pelanggan melalui kecerdasan buatan.",
+    description:
+      "Pikiran-pikiran penuh semangat di balik One AI Assistant, berdedikasi untuk merevolusi interaksi pelanggan melalui kecerdasan buatan.",
     teamMembers: [
-      { name: "Dr. Eva Rostova", role: "Peneliti AI Utama", bio: "PhD di bidang AI dengan fokus pada NLP. Eva memimpin upaya penelitian dan pengembangan kami, mendorong batas-batas AI percakapan.", avatar: "https://placehold.co/100x100.png?text=ER", initials: "ER", dataAiHint: "scientist portrait" },
-      { name: "Marcus Chen", role: "Chief Technology Officer", bio: "Arsitek perangkat lunak berpengalaman, Marcus memastikan platform kami dapat diskalakan, aman, dan kuat.", avatar: "https://placehold.co/100x100.png?text=MC", initials: "MC", dataAiHint: "engineer leader" },
-      { name: "Aisha Khan", role: "Kepala Produk", bio: "Aisha menerjemahkan kemampuan AI yang kompleks menjadi fitur yang ramah pengguna yang memecahkan masalah bisnis nyata.", avatar: "https://placehold.co/100x100.png?text=AK", initials: "AK", dataAiHint: "product manager" },
-      { name: "David Miller", role: "Insinyur Backend Senior", bio: "David berspesialisasi dalam membangun infrastruktur inti yang mendukung asisten AI kami.", avatar: "https://placehold.co/100x100.png?text=DM", initials: "DM", dataAiHint: "developer profile" },
+      {
+        name: "Dadan Abdillah",
+        role: "Founder & CEO",
+        bio: "Ahli dalam pengembangan web dan arsitektur perangkat lunak. Dadan memimpin visi strategis kami dan memastikan platform kami memberikan nilai luar biasa kepada klien kami.",
+        avatar: "/images/teams/dadanabdillah.jpg",
+        initials: "DA",
+        dataAiHint: "Founder portrait",
+      },
+      {
+        name: "Saeful Rohman",
+        role: "Co-Founder & CTO",
+        bio: "Mahasiswa Teknik Informatika Universitas Kuningan yang mengkhususkan diri dalam pengembangan mobile dan sistem inti AI. Saeful mendorong inovasi teknis dan kemampuan AI kami.",
+        avatar: "/images/teams/saefulrohman.jpg",
+        initials: "SR",
+        dataAiHint: "Co-Founder portrait",
+      },
     ],
     teamCollaborationImageAlt: "Tim berkolaborasi dalam sebuah proyek",
-    finalParagraph: "Kami adalah kelompok inovator, insinyur, dan ahli strategi yang beragam yang disatukan oleh tujuan bersama: membangun asisten AI yang paling cerdas dan membantu."
+    finalParagraph:
+      "Kami adalah tim inovator dan insinyur yang berdedikasi, disatukan oleh tujuan bersama: membangun asisten AI yang paling cerdas dan membantu untuk bisnis di seluruh dunia.",
   },
   privacyPolicyPage: {
     title: "Kebijakan Privasi",
@@ -372,79 +486,94 @@ export default {
       securityOfYourInformation: "5. Keamanan Informasi Anda",
       policyForChildren: "6. Kebijakan untuk Anak-anak",
       changesToThisPolicy: "7. Perubahan pada Kebijakan Privasi Ini",
-      contactUs: "8. Hubungi Kami"
+      contactUs: "8. Hubungi Kami",
     },
     contactEmailLabel: "Email:",
-    contactAddressLabel: "Alamat:"
+    contactAddressLabel: "Alamat:",
   },
   securityDetailsPage: {
     title: "Komitmen Kami terhadap Keamanan",
-    description: "Di One AI Assistant, keamanan dan privasi data Anda adalah yang utama. Kami berdedikasi untuk menerapkan dan memelihara langkah-langkah keamanan yang kuat untuk melindungi informasi Anda dan memastikan kepercayaan platform kami.",
+    description:
+      "Di One AI Assistant, keamanan dan privasi data Anda adalah yang utama. Kami berdedikasi untuk menerapkan dan memelihara langkah-langkah keamanan yang kuat untuk melindungi informasi Anda dan memastikan kepercayaan platform kami.",
     features: [
       {
         title: "Enkripsi Data",
-        description: "Semua data, baik saat transit (menggunakan TLS/SSL) maupun saat istirahat (menggunakan AES-256 atau lebih kuat), dienkripsi untuk memastikan kerahasiaan dan integritas."
+        description:
+          "Semua data, baik saat transit (menggunakan TLS/SSL) maupun saat istirahat (menggunakan AES-256 atau lebih kuat), dienkripsi untuk memastikan kerahasiaan dan integritas.",
       },
       {
         title: "Kontrol Akses & Otentikasi",
-        description: "Mekanisme otentikasi yang kuat dan kontrol akses berbasis peran (RBAC) diterapkan untuk memastikan hanya personel yang berwenang yang dapat mengakses data sensitif dan konfigurasi sistem."
+        description:
+          "Mekanisme otentikasi yang kuat dan kontrol akses berbasis peran (RBAC) diterapkan untuk memastikan hanya personel yang berwenang yang dapat mengakses data sensitif dan konfigurasi sistem.",
       },
       {
         title: "Infrastruktur Aman",
-        description: "Layanan kami dihosting di penyedia cloud terkemuka (mis., AWS, Google Cloud) yang mematuhi standar keamanan global yang ketat seperti ISO 27001, SOC 2, dan HIPAA."
+        description:
+          "Layanan kami dihosting di penyedia cloud terkemuka (mis., AWS, Google Cloud) yang mematuhi standar keamanan global yang ketat seperti ISO 27001, SOC 2, dan HIPAA.",
       },
       {
         title: "Audit Keamanan & Pengujian Penetrasi Reguler",
-        description: "Kami melakukan audit keamanan internal dan pihak ketiga serta pengujian penetrasi secara teratur untuk mengidentifikasi dan memulihkan potensi kerentanan."
+        description:
+          "Kami melakukan audit keamanan internal dan pihak ketiga serta pengujian penetrasi secara teratur untuk mengidentifikasi dan memulihkan potensi kerentanan.",
       },
       {
         title: "Kebijakan Minimisasi & Retensi Data",
-        description: "Kami hanya mengumpulkan data yang diperlukan untuk menyediakan layanan kami dan memiliki kebijakan yang jelas untuk retensi data dan penghapusan yang aman."
+        description:
+          "Kami hanya mengumpulkan data yang diperlukan untuk menyediakan layanan kami dan memiliki kebijakan yang jelas untuk retensi data dan penghapusan yang aman.",
       },
       {
         title: "Rencana Respons Insiden",
-        description: "Rencana respons insiden yang komprehensif tersedia untuk segera mengatasi dan memitigasi setiap potensi pelanggaran atau insiden keamanan."
-      }
+        description:
+          "Rencana respons insiden yang komprehensif tersedia untuk segera mengatasi dan memitigasi setiap potensi pelanggaran atau insiden keamanan.",
+      },
     ],
     continuousImprovement: {
       title: "Peningkatan Berkelanjutan",
-      paragraph1: "Lanskap keamanan terus berkembang, begitu juga upaya kami. Kami berkomitmen untuk terus memantau, mengevaluasi, dan meningkatkan praktik keamanan kami untuk melindungi dari ancaman yang muncul dan memastikan kepatuhan terhadap praktik terbaik industri dan persyaratan peraturan.",
-      paragraph2: "Jika Anda memiliki pertanyaan atau kekhawatiran terkait keamanan, jangan ragu untuk <1>menghubungi tim keamanan kami</1>.",
+      paragraph1:
+        "Lanskap keamanan terus berkembang, begitu juga upaya kami. Kami berkomitmen untuk terus memantau, mengevaluasi, dan meningkatkan praktik keamanan kami untuk melindungi dari ancaman yang muncul dan memastikan kepatuhan terhadap praktik terbaik industri dan persyaratan peraturan.",
+      paragraph2:
+        "Jika Anda memiliki pertanyaan atau kekhawatiran terkait keamanan, jangan ragu untuk <1>menghubungi tim keamanan kami</1>.",
       contactLinkText: "menghubungi tim keamanan kami",
-      imageAlt: "Pusat data aman"
-    }
+      imageAlt: "Pusat data aman",
+    },
   },
   servicesPage: {
     title: "Layanan Kami",
-    description: "Kami menawarkan rangkaian layanan komprehensif untuk membantu Anda menerapkan dan mengelola asisten AI yang kuat untuk bisnis Anda.",
+    description:
+      "Kami menawarkan rangkaian layanan komprehensif untuk membantu Anda menerapkan dan mengelola asisten AI yang kuat untuk bisnis Anda.",
     services: [
       {
         title: "Pengembangan Chatbot AI",
-        description: "Solusi chatbot AI khusus yang didukung oleh RAG dan LLM, disesuaikan dengan kebutuhan bisnis spesifik Anda dan basis pengetahuan."
+        description:
+          "Solusi chatbot AI khusus yang didukung oleh RAG dan LLM, disesuaikan dengan kebutuhan bisnis spesifik Anda dan basis pengetahuan.",
       },
       {
         title: "Layanan Integrasi Mulus",
-        description: "Bantuan ahli dalam mengintegrasikan platform chatbot kami dengan situs web, CRM, dan sistem bisnis Anda lainnya."
+        description:
+          "Bantuan ahli dalam mengintegrasikan platform chatbot kami dengan situs web, CRM, dan sistem bisnis Anda lainnya.",
       },
       {
         title: "Kustomisasi & Branding Chatbot",
-        description: "Personalisasi tampilan, nuansa, dan gaya percakapan chatbot Anda agar selaras sempurna dengan identitas merek Anda."
+        description:
+          "Personalisasi tampilan, nuansa, dan gaya percakapan chatbot Anda agar selaras sempurna dengan identitas merek Anda.",
       },
       {
         title: "Dukungan & Pemeliharaan Berkelanjutan",
-        description: "Dukungan khusus dan pembaruan rutin untuk memastikan asisten AI Anda bekerja secara optimal dan tetap mutakhir."
-      }
+        description:
+          "Dukungan khusus dan pembaruan rutin untuk memastikan asisten AI Anda bekerja secara optimal dan tetap mutakhir.",
+      },
     ],
     whyChooseUs: {
       title: "Mengapa Memilih Layanan Kami?",
-      description: "Di One AI Assistant, kami berkomitmen untuk menyediakan bukan hanya produk, tetapi solusi lengkap. Layanan kami dirancang untuk memastikan Anda mendapatkan hasil maksimal dari chatbot AI Anda, dari pengaturan awal hingga optimasi jangka panjang.",
+      description:
+        "Di One AI Assistant, kami berkomitmen untuk menyediakan bukan hanya produk, tetapi solusi lengkap. Layanan kami dirancang untuk memastikan Anda mendapatkan hasil maksimal dari chatbot AI Anda, dari pengaturan awal hingga optimasi jangka panjang.",
       features: [
         "Keahlian dalam teknologi AI dan RAG.",
         "Fokus pada pengalaman pengguna yang mulus.",
-        "Komitmen terhadap kesuksesan bisnis Anda."
+        "Komitmen terhadap kesuksesan bisnis Anda.",
       ],
-      imageAlt: "Diskusi tim layanan"
-    }
+      imageAlt: "Diskusi tim layanan",
+    },
   },
   signInPage: {
     title: "Masuk",
@@ -458,7 +587,7 @@ export default {
     noAccount: "Belum punya akun?",
     signUpLink: "Daftar",
     toastAttemptTitle: "Upaya Masuk",
-    toastAttemptDescription: "Fungsionalitas masuk belum diimplementasikan."
+    toastAttemptDescription: "Fungsionalitas masuk belum diimplementasikan.",
   },
   signUpPage: {
     title: "Buat Akun",
@@ -475,7 +604,7 @@ export default {
     haveAccount: "Sudah punya akun?",
     signInLink: "Masuk",
     toastAttemptTitle: "Upaya Daftar",
-    toastAttemptDescription: "Fungsionalitas daftar belum diimplementasikan."
+    toastAttemptDescription: "Fungsionalitas daftar belum diimplementasikan.",
   },
   termsOfServicePage: {
     title: "Ketentuan Layanan",
@@ -489,30 +618,32 @@ export default {
       governingLaw: "6. Hukum yang Mengatur",
       disclaimer: "7. Sangkalan",
       limitationOfLiability: "8. Batasan Tanggung Jawab",
-      contactUs: "9. Hubungi Kami"
+      contactUs: "9. Hubungi Kami",
     },
     contactEmailLabel: "Email:",
-    contactAddressLabel: "Alamat:"
+    contactAddressLabel: "Alamat:",
   },
   whatsNewPage: {
     title: "Yang Baru",
-    description: "Tetap terinformasi dengan perkembangan, fitur, dan kemajuan terbaru dari sistem chatbot One AI Assistant. Kami terus berinovasi untuk memberikan Anda solusi AI terbaik.",
+    description:
+      "Tetap terinformasi dengan perkembangan, fitur, dan kemajuan terbaru dari sistem chatbot One AI Assistant. Kami terus berinovasi untuk memberikan Anda solusi AI terbaik.",
     imageAlt: "Ilustrasi Fitur Baru",
     upcomingEnhancementsTitle: "Peningkatan Mendatang:",
     enhancements: [
       "Dasbor analitik lanjutan untuk kinerja chatbot.",
       "Opsi integrasi yang diperluas dengan platform CRM populer.",
       "Dukungan multibahasa yang ditingkatkan untuk audiens global.",
-      "Kemampuan pesan proaktif bertenaga AI."
+      "Kemampuan pesan proaktif bertenaga AI.",
     ],
-    checkBackSoon: "Periksa kembali secara berkala untuk pembaruan lainnya!"
+    checkBackSoon: "Periksa kembali secara berkala untuk pembaruan lainnya!",
   },
   notFoundExamplePage: {
     imageAlt: "Robot bingung",
     title: "404",
     description: "Ups! Halaman Tidak Ditemukan.",
-    message: "Halaman yang Anda cari mungkin telah dihapus, namanya diubah, atau sementara tidak tersedia.",
-    homeButton: "Ke Halaman Utama"
+    message:
+      "Halaman yang Anda cari mungkin telah dihapus, namanya diubah, atau sementara tidak tersedia.",
+    homeButton: "Ke Halaman Utama",
   },
   common: {
     learnMore: "Pelajari Lebih Lanjut",
@@ -528,7 +659,6 @@ export default {
     customIntegrations: "Integrasi khusus (CRM, dll.)",
     dedicatedAccountManager: "Manajer akun khusus",
     advancedAnalyticsReporting: "Analitik & pelaporan tingkat lanjut",
-    slaPremiumSupport: "SLA & dukungan premium 24/7"
-  }
+    slaPremiumSupport: "SLA & dukungan premium 24/7",
+  },
 } as const;
-

@@ -8,34 +8,45 @@ body {
 
 @layer base {
   :root {
-    --background: 220 17% 95%; /* Light Gray #F0F2F5 */
-    --foreground: 220 10% 25%; /* Dark Gray for text on light gray */
+    --background: 220 17% 95%;
+    /* Light Gray #F0F2F5 */
+    --foreground: 220 10% 25%;
+    /* Dark Gray for text on light gray */
 
-    --card: 0 0% 100%; /* White cards */
+    --card: 0 0% 100%;
+    /* White cards */
     --card-foreground: 220 10% 25%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 220 10% 25%;
 
-    --primary: 225 100% 58%; /* Deep Blue #2962FF */
-    --primary-foreground: 0 0% 98%; /* White for text on deep blue */
+    --primary: 225 100% 58%;
+    /* Deep Blue #2962FF */
+    --primary-foreground: 0 0% 98%;
+    /* White for text on deep blue */
 
-    --secondary: 220 15% 88%; /* A slightly darker gray for secondary elements */
+    --secondary: 220 15% 88%;
+    /* A slightly darker gray for secondary elements */
     --secondary-foreground: 220 10% 20%;
 
-    --muted: 220 15% 90%; /* Lighter muted for light theme */
+    --muted: 220 15% 90%;
+    /* Lighter muted for light theme */
     --muted-foreground: 220 10% 45%;
 
-    --accent: 225 100% 58%; /* Changed from Bright Purple to Deep Blue (same as primary) */
-    --accent-foreground: 0 0% 98%; /* White for text on accent (same as primary-foreground) */
+    --accent: 225 100% 58%;
+    /* Changed from Bright Purple to Deep Blue (same as primary) */
+    --accent-foreground: 0 0% 98%;
+    /* White for text on accent (same as primary-foreground) */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 10% 88%; /* Softer border */
+    --border: 220 10% 88%;
+    /* Softer border */
     --input: 220 10% 88%;
-    --ring: 225 100% 58%; /* Primary color for ring */
-    
+    --ring: 225 100% 58%;
+    /* Primary color for ring */
+
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -56,7 +67,8 @@ body {
 
   .dark {
     --background: 220 10% 10%;
-    --foreground: 0 0% 95%; /* Lighter foreground for dark mode */
+    --foreground: 0 0% 95%;
+    /* Lighter foreground for dark mode */
 
     --card: 220 10% 12%;
     --card-foreground: 0 0% 95%;
@@ -64,8 +76,9 @@ body {
     --popover: 220 10% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 225 100% 65%; /* Slightly lighter blue for dark mode */
-    --primary-foreground: 0 0% 98%; 
+    --primary: 225 100% 65%;
+    /* Slightly lighter blue for dark mode */
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 220 10% 20%;
     --secondary-foreground: 0 0% 95%;
@@ -73,8 +86,10 @@ body {
     --muted: 220 10% 22%;
     --muted-foreground: 220 10% 60%;
 
-    --accent: 225 100% 65%; /* Changed from Bright Purple to Lighter Blue (same as dark primary) */
-    --accent-foreground: 0 0% 98%; /* White for text on accent */
+    --accent: 225 100% 65%;
+    /* Changed from Bright Purple to Lighter Blue (same as dark primary) */
+    --accent-foreground: 0 0% 98%;
+    /* White for text on accent */
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
@@ -82,7 +97,7 @@ body {
     --border: 220 10% 25%;
     --input: 220 10% 25%;
     --ring: 225 100% 65%;
-        
+
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -105,12 +120,37 @@ body {
   * {
     @apply border-border;
   }
+
   html {
-    overflow-x: clip;
+    overflow-x: hidden;
   }
+
   body {
     @apply bg-background text-foreground;
     scrollbar-width: none;
-    overflow-x: clip;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Hide scrollbar for webkit browsers */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Ensure dropdowns and modals can still appear above content */
+  [data-radix-popper-content-wrapper] {
+    z-index: 50 !important;
+  }
+
+  /* Ensure navbar and its dropdowns work properly */
+  nav {
+    position: relative;
+    z-index: 40;
+  }
+
+  /* Fix for dropdown positioning */
+  [data-radix-dropdown-menu-content] {
+    z-index: 50 !important;
   }
 }

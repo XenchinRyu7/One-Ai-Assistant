@@ -141,10 +141,10 @@ export default async function TermsOfServicePage({
             <br />
             {t("contactEmailLabel")}{" "}
             <a
-              href="mailto:support@oneaiassistant.com"
+              href="mailto:oneaiassistantindonesia@gmail.com"
               className="text-primary hover:underline"
             >
-              support@oneaiassistant.com
+              oneaiassistantindonesia@gmail.com
             </a>
             <br />
             {t("contactAddressLabel")} 123 Main St, Anytown, USA

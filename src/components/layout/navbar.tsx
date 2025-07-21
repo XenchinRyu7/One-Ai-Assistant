@@ -77,7 +77,7 @@ function LanguageSwitcher() {
           <span className="sr-only">{t('language')}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-background">
+      <DropdownMenuContent align="end" className="bg-background z-50">
         <DropdownMenuLabel>{t('language')}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem
@@ -164,7 +164,7 @@ export function Navbar() {
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-background">
+              <DropdownMenuContent align="end" className="bg-background z-50">
                 {moreDropdownItems.map((item) => (
                   <DropdownMenuItem key={item.label} asChild>
                     <Link href={item.href} className="text-foreground/70 transition-colors hover:text-foreground">
@@ -188,10 +188,10 @@ export function Navbar() {
             <LanguageSwitcher />
             <ThemeToggleButton />
             <Button asChild variant="ghost" size="sm">
-              <Link href="https://one-ai-assistant-dashboard.vercel.app/en/auth/login">{t('signin')}</Link>
+              <Link href="https://console.oneaiassistant.id/en/auth/login">{t('signin')}</Link>
             </Button>
             <Button asChild variant="default" size="sm" className="bg-primary hover:bg-primary/90">
-              <Link href="https://one-ai-assistant-dashboard.vercel.app/en/auth/register">{t('signup')}</Link>
+              <Link href="https://console.oneaiassistant.id/en/auth/register">{t('signup')}</Link>
             </Button>
           </div>
         </nav>

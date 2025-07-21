@@ -43,27 +43,11 @@ export default async function OurTeamsPage({
       bio: t("teamMembers.1.bio"),
       dataAiHint: t("teamMembers.1.dataAiHint"),
     },
-    {
-      name: t("teamMembers.2.name"),
-      role: t("teamMembers.2.role"),
-      avatar: t("teamMembers.2.avatar"),
-      initials: t("teamMembers.2.initials"),
-      bio: t("teamMembers.2.bio"),
-      dataAiHint: t("teamMembers.2.dataAiHint"),
-    },
-    {
-      name: t("teamMembers.3.name"),
-      role: t("teamMembers.3.role"),
-      avatar: t("teamMembers.3.avatar"),
-      initials: t("teamMembers.3.initials"),
-      bio: t("teamMembers.3.bio"),
-      dataAiHint: t("teamMembers.3.dataAiHint"),
-    },
   ];
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-      <Card className="shadow-lg">
+      <Card className="shadow-md">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">
             {t("title")}
@@ -86,6 +70,7 @@ export default async function OurTeamsPage({
                       src={member.avatar}
                       alt={member.name}
                       data-ai-hint={member.dataAiHint}
+                      className="object-cover object-center"
                     />
                     <AvatarFallback>{member.initials}</AvatarFallback>
                   </Avatar>
@@ -104,11 +89,15 @@ export default async function OurTeamsPage({
           </div>
           <div className="mt-12 text-center">
             <Image
-              src="https://placehold.co/700x400.png"
+              src="/images/teams/teams.jpg"
               alt={t("teamCollaborationImageAlt")}
               width={700}
               height={400}
               className="rounded-lg shadow-lg mx-auto"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
               data-ai-hint="team meeting"
             />
             <p className="mt-6 text-lg text-foreground/80">

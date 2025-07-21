@@ -169,6 +169,16 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
       logoSrc: homeT("trustedBySection.brands.3.logoSrc"),
       dataAiHint: homeT("trustedBySection.brands.3.dataAiHint"),
     },
+    {
+      name: homeT("trustedBySection.brands.4.name"),
+      logoSrc: homeT("trustedBySection.brands.4.logoSrc"),
+      dataAiHint: homeT("trustedBySection.brands.4.dataAiHint"),
+    },
+    {
+      name: homeT("trustedBySection.brands.5.name"),
+      logoSrc: homeT("trustedBySection.brands.5.logoSrc"),
+      dataAiHint: homeT("trustedBySection.brands.5.dataAiHint"),
+    },
   ];
 
   return (
@@ -222,7 +232,7 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
             data-jos_delay="0.3"
           >
             <Image
-              src="https://placehold.co/1200x600.png"
+              src="/images/illustrations/home.png"
               alt={heroT("aiChatbotInterfaceAlt")}
               width={1200}
               height={600}
@@ -328,7 +338,7 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
             data-jos_delay="0.3"
           >
             <Image
-              src="https://placehold.co/800x400.png"
+              src="/images/illustrations/rag_illustration.png"
               alt={homeT("howItWorksSection.diagramAlt")}
               width={800}
               height={400}
@@ -459,10 +469,10 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
               data-jos_delay="0.1"
             >
               <Image
-                src="https://placehold.co/600x450.png"
+                src="/images/illustrations/security_illustration.png"
                 alt={homeT("securitySection.imageAlt")}
-                width={600}
-                height={450}
+                width={500}
+                height={400}
                 className="rounded-lg shadow-xl"
                 data-ai-hint="data security"
               />
