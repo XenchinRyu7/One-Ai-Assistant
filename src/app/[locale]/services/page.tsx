@@ -114,7 +114,7 @@ export default async function ServicesPage({
             </div>
             <div className="md:w-1/2">
               <Image
-                src="https://placehold.co/500x350.png"
+                src="/images/illustrations/why_choose_illustration.png"
                 alt={t("whyChooseUs.imageAlt")}
                 width={500}
                 height={350}

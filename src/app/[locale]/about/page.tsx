@@ -30,9 +30,9 @@ export default async function AboutPage({
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2">
               <Image
-                src="https://placehold.co/600x400.png"
+                src="/images/illustrations/about_illustration.png"
                 alt={t("teamImageAlt")}
-                width={600}
+                width={500}
                 height={400}
                 className="rounded-lg shadow-md"
                 data-ai-hint="team collaboration"

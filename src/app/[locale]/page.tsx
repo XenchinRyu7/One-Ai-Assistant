@@ -67,16 +67,6 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
   const heroTitleString = heroT("title");
   const heroTitleParts = heroTitleString.split(/<1>|<\/1>/);
 
-  const securitySectionFeature1 = homeT("securitySection.features.0");
-  const securitySectionFeature1Parts =
-    securitySectionFeature1.split(/<strong>|<\/strong>/);
-  const securitySectionFeature2 = homeT("securitySection.features.1");
-  const securitySectionFeature2Parts =
-    securitySectionFeature2.split(/<strong>|<\/strong>/);
-  const securitySectionFeature3 = homeT("securitySection.features.2");
-  const securitySectionFeature3Parts =
-    securitySectionFeature3.split(/<strong>|<\/strong>/);
-
   // Ambil fitur satu per satu sesuai struktur dictionary
   const featuresList: FeatureItem[] = [
     {
@@ -493,22 +483,22 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
                 <li className="flex items-start">
                   <ShieldCheck className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                   <span>
-                    <strong>{securitySectionFeature1Parts[1]}</strong>
-                    {securitySectionFeature1Parts[2]}
+                    <strong>{homeT("securitySection.features.0.title")}: </strong>
+                    {homeT("securitySection.features.0.description")}
                   </span>
                 </li>
                 <li className="flex items-start">
                   <ShieldCheck className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                   <span>
-                    <strong>{securitySectionFeature2Parts[1]}</strong>
-                    {securitySectionFeature2Parts[2]}
+                    <strong>{homeT("securitySection.features.1.title")}: </strong>
+                    {homeT("securitySection.features.1.description")}
                   </span>
                 </li>
                 <li className="flex items-start">
                   <ShieldCheck className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                   <span>
-                    <strong>{securitySectionFeature3Parts[1]}</strong>
-                    {securitySectionFeature3Parts[2]}
+                    <strong>{homeT("securitySection.features.2.title")}: </strong>
+                    {homeT("securitySection.features.2.description")}
                   </span>
                 </li>
               </ul>

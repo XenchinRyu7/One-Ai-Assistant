@@ -156,9 +156,9 @@ export default {
       description:
         "We prioritize the security and privacy of your data. Our platform is built with industry-standard security practices to ensure your information is protected.",
       features: [
-        "<strong>End-to-End Encryption:</strong> All data in transit and at rest is encrypted.",
-        "<strong>Access Controls:</strong> Granular control over who can access and manage your chatbot and data.",
-        "<strong>Compliance Ready:</strong> Designed to help you meet relevant data privacy regulations.",
+        { title: "End-to-End Encryption", description: "All data in transit and at rest is encrypted." },
+        { title: "Access Controls", description: "Granular control over who can access and manage your chatbot and data." },
+        { title: "Compliance Ready", description: "Designed to help you meet relevant data privacy regulations." },
       ],
       learnMoreLink: "Learn more about our security",
     },
@@ -283,7 +283,7 @@ export default {
     emailInfo: "Email",
     phoneInfo: "Phone",
     addressInfo: "Office Address",
-    addressValue: "123 AI Avenue, Tech City, TX 75001",
+    addressValue: "Jln Raya Siliwangi Kuningan Jawa Barat", // Usually not translated
     operatingHoursCardTitle: "Operating Hours",
     weekdaysHours: "Monday - Friday: 9:00 AM - 6:00 PM (CST)",
     weekendHours: "Saturday - Sunday: Closed",
@@ -397,32 +397,32 @@ export default {
       // Alt text will be client name
       {
         name: "Innovatech Corp",
-        logo: "https://placehold.co/150x80.png?text=Innovatech",
+        logo: "/images/client/innovatech.jpeg",
         dataAiHint: "tech logo",
       },
       {
         name: "Global Solutions Ltd.",
-        logo: "https://placehold.co/150x80.png?text=Global+Solutions",
+        logo: "/images/client/global_solutions.png",
         dataAiHint: "corporate logo",
       },
       {
         name: "E-Commerce Pro",
-        logo: "https://placehold.co/150x80.png?text=EcomPro",
+        logo: "/images/client/ecompro.jpeg",
         dataAiHint: "retail logo",
       },
       {
         name: "HealthFirst Clinic",
-        logo: "https://placehold.co/150x80.png?text=HealthFirst",
+        logo: "/images/client/healthfirst.svg",
         dataAiHint: "medical logo",
       },
       {
         name: "EduLearn Platform",
-        logo: "https://placehold.co/150x80.png?text=EduLearn",
+        logo: "/images/client/edulearn.png",
         dataAiHint: "education logo",
       },
       {
         name: "TravelWise Agency",
-        logo: "https://placehold.co/150x80.png?text=TravelWise",
+        logo: "/images/client/travelwise.png",
         dataAiHint: "travel logo",
       },
     ],

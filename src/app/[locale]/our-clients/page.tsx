@@ -131,7 +131,10 @@ export default async function OurClientsPage({
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {testimonials.map((testimonial: Testimonial) => (
-                <Card key={testimonial.name} className="shadow-md bg-secondary/30">
+                <Card
+                  key={testimonial.name}
+                  className="shadow-md bg-secondary/30"
+                >
                   <CardContent className="p-6">
                     <blockquote className="text-lg text-foreground/80 border-l-4 border-primary pl-4 italic mb-4">
                       "{testimonial.quote}"

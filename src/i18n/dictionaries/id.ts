@@ -156,9 +156,9 @@ export default {
       description:
         "Kami memprioritaskan keamanan dan privasi data Anda. Platform kami dibangun dengan praktik keamanan standar industri untuk memastikan informasi Anda terlindungi.",
       features: [
-        "<strong>Enkripsi Ujung ke Ujung:</strong> Semua data dalam transit dan saat istirahat dienkripsi.",
-        "<strong>Kontrol Akses:</strong> Kontrol granular atas siapa yang dapat mengakses dan mengelola chatbot dan data Anda.",
-        "<strong>Siap Kepatuhan:</strong> Dirancang untuk membantu Anda memenuhi peraturan privasi data yang relevan.",
+        { title: "Enkripsi Ujung ke Ujung", description: "Semua data dalam transit dan saat istirahat dienkripsi." },
+        { title: "Kontrol Akses", description: "Kontrol granular atas siapa yang dapat mengakses dan mengelola chatbot dan data Anda." },
+        { title: "Siap Kepatuhan", description: "Dirancang untuk membantu Anda memenuhi peraturan privasi data yang relevan." },
       ],
       learnMoreLink: "Pelajari lebih lanjut tentang keamanan kami",
     },
@@ -284,10 +284,10 @@ export default {
     emailInfo: "Email",
     phoneInfo: "Telepon",
     addressInfo: "Alamat Kantor",
-    addressValue: "123 AI Avenue, Tech City, TX 75001", // Usually not translated
+    addressValue: "Jln Raya Siliwangi Kuningan Jawa Barat", // Usually not translated
     operatingHoursCardTitle: "Jam Operasional",
-    weekdaysHours: "<strong>Senin - Jumat:</strong> 09:00 - 18:00 (CST)",
-    weekendHours: "<strong>Sabtu - Minggu:</strong> Tutup",
+    weekdaysHours: "Senin - Jumat: 09:00 - 18:00 (CST)",
+    weekendHours: "Sabtu - Minggu: Tutup",
     aiAssistantAvailability:
       "Asisten AI kami tersedia 24/7 di situs web klien!",
     toastSuccessTitle: "Pesan Terkirim!",
@@ -398,32 +398,32 @@ export default {
     clientLogos: [
       {
         name: "Innovatech Corp",
-        logo: "https://placehold.co/150x80.png?text=Innovatech",
+        logo: "/images/client/innovatech.jpeg",
         dataAiHint: "tech logo",
       },
       {
         name: "Global Solutions Ltd.",
-        logo: "https://placehold.co/150x80.png?text=Global+Solutions",
+        logo: "/images/client/global_solutions.png",
         dataAiHint: "corporate logo",
       },
       {
         name: "E-Commerce Pro",
-        logo: "https://placehold.co/150x80.png?text=EcomPro",
+        logo: "/images/client/ecompro.jpeg",
         dataAiHint: "retail logo",
       },
       {
         name: "HealthFirst Clinic",
-        logo: "https://placehold.co/150x80.png?text=HealthFirst",
+        logo: "/images/client/healthfirst.svg",
         dataAiHint: "medical logo",
       },
       {
         name: "EduLearn Platform",
-        logo: "https://placehold.co/150x80.png?text=EduLearn",
+        logo: "/images/client/edulearn.png",
         dataAiHint: "education logo",
       },
       {
         name: "TravelWise Agency",
-        logo: "https://placehold.co/150x80.png?text=TravelWise",
+        logo: "/images/client/travelwise.png",
         dataAiHint: "travel logo",
       },
     ],
@@ -434,7 +434,7 @@ export default {
           "One AI Assistant telah mengubah dukungan pelanggan kami, mengurangi waktu respons hingga 70% dan secara signifikan meningkatkan kepuasan pelanggan.",
         name: "Sarah L., Kepala Dukungan",
         company: "Innovatech Corp",
-        avatar: "https://placehold.co/80x80.png?text=SL",
+        avatar: "/images/client/sarah_l.jpg",
         dataAiHint: "business person",
       },
       {
@@ -442,7 +442,7 @@ export default {
           "Integrasi berjalan mulus, dan kemampuan AI untuk memahami dan menanggapi pertanyaan kompleks berdasarkan dokumentasi kami sangat mengesankan.",
         name: "Mike B., CTO",
         company: "Global Solutions Ltd.",
-        avatar: "https://placehold.co/80x80.png?text=MB",
+        avatar: "/images/client/mike_b.jpg",
         dataAiHint: "tech executive",
       },
     ],
