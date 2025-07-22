@@ -19,97 +19,97 @@ export default {
     themeToggle: "Toggle theme",
   },
   hero: {
-    title: "Empower Your Website with <1>One AI Assistant</1>",
+    title: "Create Multiple AI Projects with <1>One AI Assistant</1>",
     subtitle:
-      "Seamlessly integrate our intelligent chatbot to provide instant, accurate answers using your own data, and elevate your customer support.",
-    getStarted: "Get Started Free",
-    requestDemo: "Request a Demo",
+      "Project-based platform for Indonesian businesses. Start at Rp 300K/month. Team collaboration, dedicated API keys, and RAG-powered chatbots that scale with you.",
+    getStarted: "Start at Rp 300K",
+    requestDemo: "View Pricing",
     aiChatbotInterfaceAlt: "AI Chatbot Interface Showcase",
   },
   homepage: {
     featuresSection: {
-      title: "The Future of Customer Interaction, Today.",
+      title: "Project-Based AI Chatbot Platform",
       subtitle:
-        "Discover how One AI Assistant transforms your customer engagement with powerful, easy-to-use features.",
+        "Create unlimited projects, collaborate with teams, and deploy RAG-powered chatbots with transparent subscription billing.",
       features: [
         {
-          title: "Intelligent RAG System",
+          title: "Multi-Project Architecture",
           description:
-            "Leverages advanced Retrieval Augmented Generation for context-aware, accurate responses from your knowledge base.",
+            "Create multiple projects with dedicated API keys, knowledge bases, and team collaboration. Perfect for agencies and enterprises.",
         },
         {
-          title: "Seamless Integration",
+          title: "Team Collaboration",
           description:
-            "Easily embed our chatbot into your existing website with minimal effort using a simple script.",
+            "Invite team members with role-based permissions (Owner, Admin, Editor, Viewer) for seamless project management.",
         },
         {
-          title: "24/7 Automated Support",
+          title: "Flexible Subscription Plans",
           description:
-            "Provide round-the-clock assistance to your users, enhancing satisfaction and engagement anytime.",
+            "Start at Rp 300K/month with 1,000 interactions. Scale to Professional (Rp 750K) or Enterprise (unlimited) as you grow.",
         },
         {
-          title: "Highly Customizable",
+          title: "Real-Time Analytics",
           description:
-            "Tailor the chatbot's appearance, behavior, and responses to perfectly match your brand's voice and style.",
+            "Monitor conversation metrics, API usage, costs, and performance with comprehensive dashboards for each project.",
         },
       ],
     },
     howItWorksSection: {
-      title: "Simple Steps to Smarter Support",
-      subtitle: "Get your AI assistant up and running in minutes.",
+      title: "Deploy AI Chatbots in Minutes",
+      subtitle: "Project-based system designed for scalability and collaboration.",
       steps: [
         {
-          title: "Connect Your Data",
+          title: "Create Project & Subscribe",
           description:
-            "Securely upload your documents, FAQs, or website content to build the chatbot's knowledge base.",
+            "Create a new project, choose your subscription plan (starting Rp 300K), and get your dedicated API key for deployment.",
         },
         {
-          title: "Customize Your Bot",
+          title: "Upload Knowledge Base",
           description:
-            "Adjust settings, appearance, and pre-defined prompts to align with your brand and user needs.",
+            "Upload PDFs, documents, add social media links (max 5), and customer service numbers (max 2) to build your RAG system.",
         },
         {
-          title: "Embed & Launch",
+          title: "Deploy & Collaborate",
           description:
-            "Add a simple code snippet to your website and start engaging customers instantly.",
+            "Copy the embed code to your website and invite team members to collaborate on chatbot management and analytics.",
         },
       ],
-      diagramAlt: "How it works diagram",
+      diagramAlt: "Project-based workflow diagram",
     },
     testimonialsSection: {
-      title: "What Our Clients Say",
+      title: "Indonesian Businesses Trust Us",
       subtitle:
-        "Real stories from businesses benefiting from One AI Assistant.",
+        "Real success stories from Indonesian companies using our project-based AI platform.",
       testimonials: [
         {
           quote:
-            "One AI Assistant has revolutionized our customer support. Response times are down 60%, and our customers love the instant, accurate answers!",
-          name: "Jane Doe",
-          company: "Tech Solutions Inc.",
+            "The project-based system is perfect for our agency. We manage 15+ client chatbots with different teams and transparent billing. Rp 300K pricing is very competitive!",
+          name: "Budi Santoso",
+          company: "Digital Agency Jakarta",
           avatarSrc: "https://placehold.co/100x100.png",
-          avatarFallback: "JD",
+          avatarFallback: "BS",
           rating: 5,
-          dataAiHint: "professional woman",
+          dataAiHint: "Indonesian business owner",
         },
         {
           quote:
-            "The RAG system is incredibly powerful. It understands context and provides relevant information from our knowledge base like never before. Highly recommended!",
-          name: "John Smith",
-          company: "Global Innovations Ltd.",
+            "Team collaboration features are amazing. Our developers, content editors, and managers can work together seamlessly on multiple projects. RAG system works perfectly!",
+          name: "Sari Indira",
+          company: "E-commerce Surabaya",
           avatarSrc: "https://placehold.co/100x100.png",
-          avatarFallback: "JS",
+          avatarFallback: "SI",
           rating: 5,
-          dataAiHint: "male executive",
+          dataAiHint: "female tech executive",
         },
         {
           quote:
-            "Integrating One AI Assistant was surprisingly easy, and the impact on our team's workload was immediate. A game-changer for our e-commerce site.",
-          name: "Alice Brown",
-          company: "Online Emporium",
+            "Started with Starter plan (Rp 300K) and scaled to Professional as we grew. Analytics dashboard helps us track ROI across all our chatbot projects.",
+          name: "Andi Pratama",
+          company: "Startup Bandung",
           avatarSrc: "https://placehold.co/100x100.png",
-          avatarFallback: "AB",
-          rating: 4,
-          dataAiHint: "startup founder",
+          avatarFallback: "AP",
+          rating: 5,
+          dataAiHint: "young entrepreneur",
         },
       ],
     },
@@ -151,27 +151,27 @@ export default {
       logoAltTextSuffix: "logo",
     },
     securitySection: {
-      imageAlt: "Data Security",
-      title: "Your Data, Secured and Private",
+      imageAlt: "Enterprise Security",
+      title: "Enterprise-Grade Security & Team Management",
       description:
-        "We prioritize the security and privacy of your data. Our platform is built with industry-standard security practices to ensure your information is protected.",
+        "Built for Indonesian businesses with secure API key management, role-based team access, and transparent billing across all your projects.",
       features: [
-        { title: "End-to-End Encryption", description: "All data in transit and at rest is encrypted." },
-        { title: "Access Controls", description: "Granular control over who can access and manage your chatbot and data." },
-        { title: "Compliance Ready", description: "Designed to help you meet relevant data privacy regulations." },
+        { title: "Secure API Key Management", description: "Rotate API keys, set rate limits, and monitor usage across all projects with enterprise security." },
+        { title: "Role-Based Team Access", description: "Control who can manage projects, edit knowledge bases, or view analytics with Owner/Admin/Editor/Viewer roles." },
+        { title: "Indonesian Compliance Ready", description: "SOC 2 compliant with data residency options and transparent billing in IDR for local businesses." },
       ],
       learnMoreLink: "Learn more about our security",
     },
     ctaSection: {
-      title: "Ready to Transform Your Customer Experience?",
+      title: "Launch Your AI Project Today - Starting Rp 300K",
       description:
-        "Join businesses leveraging One AI Assistant to provide exceptional support, increase engagement, and reduce operational costs.",
+        "Join Indonesian businesses building multiple AI chatbot projects with team collaboration and transparent pricing. Perfect for agencies and growing companies.",
     },
   },
   footer: {
     brandDescription:
-      "OneAiAssistant helps your business provide automated, intelligent, and personalized customer service with LLM chatbot technology that can be customized to your website needs.",
-    websiteLinkText: "www.oneaiassistant.com",
+      "One AI Assistant empowers Indonesian businesses with project-based AI chatbot solutions. Founded by Dadan Abdillah and Saeful Rohman, we provide affordable, scalable AI technology starting at Rp 300K per project.",
+    websiteLinkText: "www.oneaiassistant.id",
     primaryPages: "Primary Pages",
     utilityPages: "Utility Pages",
     forgotPassword: "Password Reset",
@@ -239,27 +239,28 @@ export default {
   aboutPage: {
     title: "About One AI Assistant",
     welcome:
-      "Welcome to One AI Assistant! We are passionate about revolutionizing how businesses interact with their customers. Our mission is to provide cutting-edge AI chatbot solutions that are intelligent, intuitive, and easy to integrate.",
+      "Welcome to One AI Assistant! Founded by Dadan Abdillah (Founder & CEO) and Saeful Rohman (Co-Founder & CTO), we are revolutionizing how businesses deploy AI chatbots through our innovative project-based platform.",
     founded:
-      "Founded by a team of AI enthusiasts and software engineers, One AI Assistant was born from the desire to make advanced AI accessible to businesses of all sizes. We believe that by leveraging the power of Retrieval Augmented Generation (RAG) and Large Language Models (LLMs), we can help you deliver exceptional customer experiences, 24/7.",
+      "Launched on July 30, 2025, One AI Assistant emerged from our vision to make enterprise-grade AI accessible through a scalable, project-based architecture. Our platform empowers businesses to create multiple AI projects with dedicated RAG systems, team collaboration, and flexible subscription plans starting at Rp 300,000.",
     ourVision: "Our Vision",
     visionText:
-      "To be the leading provider of AI-powered customer support solutions, empowering businesses worldwide to build stronger customer relationships through seamless and intelligent interactions.",
+      "To democratize AI chatbot technology in Indonesia and beyond by providing a project-based platform that scales from startups to enterprises, enabling seamless team collaboration and intelligent customer interactions.",
     ourValues: "Our Values",
     innovationTitle: "Innovation:",
     innovationText:
-      "Continuously exploring and implementing the latest AI advancements.",
+      "Pioneering project-based RAG architecture with real-time analytics and team collaboration features.",
     customerCentricityTitle: "Customer-Centricity:",
     customerCentricityText:
-      "Designing solutions that truly meet the needs of our clients and their users.",
+      "Designing affordable solutions (starting Rp 300K) that grow with Indonesian businesses.",
     integrityTitle: "Integrity:",
     integrityText:
-      "Operating with transparency and a strong commitment to data privacy and security.",
+      "Operating with transparency, secure API key management, and enterprise-grade data protection.",
     simplicityTitle: "Simplicity:",
-    simplicityText: "Making complex technology easy to use and integrate.",
+    simplicityText: "One-click deployment with comprehensive team management and billing transparency.",
     thankYou:
-      "Thank you for considering One AI Assistant. We look forward to helping you transform your customer support!",
-    teamImageAlt: "Our team working",
+      "Founded by experienced developers, we're committed to empowering Indonesian businesses with world-class AI solutions. Visit our teams page to learn more about Dadan and Saeful's journey.",
+    teamImageAlt: "Our founders and team working",
+    meetFoundersButton: "Meet Our Founders",
   },
   contactPage: {
     title: "Get In Touch",
@@ -297,45 +298,54 @@ export default {
     title: "Frequently Asked Questions",
     items: [
       {
-        question: "What is One AI Assistant?",
+        question: "What is One AI Assistant and how does it work?",
         answer:
-          "One AI Assistant is an advanced AI-powered chatbot platform that uses Retrieval Augmented Generation (RAG) to provide intelligent, context-aware responses based on your business's specific knowledge base. It's designed to enhance customer support and engagement on your website.",
+          "One AI Assistant is a project-based AI chatbot platform that uses Retrieval Augmented Generation (RAG) to provide intelligent responses. Each user can create multiple projects, subscribe to plans, upload knowledge bases, and deploy chatbots with just a few lines of code.",
       },
       {
-        question: "How does the RAG system work?",
+        question: "How does the project-based system work?",
         answer:
-          "Retrieval Augmented Generation (RAG) combines the power of large language models (LLMs) with information retrieval from your provided documents or data sources. When a user asks a question, the system first retrieves relevant information from your knowledge base and then uses the LLM to generate a comprehensive and accurate answer based on that retrieved context.",
+          "Each user can create multiple projects for different websites or purposes. Each project requires a subscription plan, has its own API keys, knowledge base, system prompts, and usage tracking. You can also invite team members to collaborate on projects.",
       },
       {
-        question: "What kind of data can I use for the knowledge base?",
+        question: "What subscription plans do you offer?",
         answer:
-          "You can use various types of data, including PDF documents, text files, website content (via sitemap or direct URLs), FAQs, product manuals, and more. Our system is designed to process and understand a wide range of unstructured and structured data.",
+          "We offer three plans: Starter (Rp 300,000/month) for 1,000 interactions, Professional (Rp 750,000/month) for 5,000 interactions, and Enterprise (custom pricing) for unlimited interactions. All plans include core RAG features and real-time analytics.",
       },
       {
-        question:
-          "Is it difficult to integrate One AI Assistant into my website?",
+        question: "How do I integrate the chatbot into my website?",
         answer:
-          "No, integration is designed to be simple. We provide a small JavaScript snippet that you can easily add to your website's code. No complex coding is required, and you can typically have the chatbot running in minutes.",
+          "After subscribing to a plan and setting up your knowledge base, you'll get a simple JavaScript code snippet to copy and paste into your website. The integration is one-click and takes just minutes to deploy.",
       },
       {
-        question: "Can I customize the chatbot's appearance and responses?",
+        question: "What files can I upload to the knowledge base?",
         answer:
-          "Yes, One AI Assistant is highly customizable. You can tailor its appearance (colors, logo, chat widget style) to match your brand. You can also customize its conversational style, welcome messages, and pre-defined responses for common queries.",
+          "You can upload PDF documents, text files (.txt, .md), Word documents (.docx), CSV/Excel files, and provide web URLs. Additionally, you can add up to 5 social media links and 2 customer service phone numbers for comprehensive support.",
       },
       {
-        question: "What kind of support do you offer?",
+        question: "Can I invite team members to manage my projects?",
         answer:
-          "We offer various levels of support depending on your plan, ranging from email support for basic plans to dedicated account managers and 24/7 premium support for enterprise clients. We also provide comprehensive documentation and an online knowledge base.",
+          "Yes! Project owners can invite team members with different roles: Owner (full access), Admin (project management), Editor (knowledge base editing), and Viewer (read-only access). This enables effective team collaboration.",
       },
       {
-        question: "How secure is my data with One AI Assistant?",
+        question: "How does billing and payment work?",
         answer:
-          "Data security is a top priority for us. We employ industry-standard security measures, including data encryption in transit and at rest, secure infrastructure, and access controls to protect your information. Please refer to our Privacy Policy for more details.",
+          "We use secure payment gateways with automatic recurring billing. You'll have access to billing history, invoices, and usage tracking. Billing is per project, so you only pay for what you use.",
       },
       {
-        question: "What are the pricing plans?",
+        question: "What analytics and tracking features are available?",
         answer:
-          "We offer flexible pricing plans to suit businesses of all sizes, from startups to large enterprises. Please visit our Pricing page for detailed information on each plan and its features.",
+          "Each project includes real-time analytics dashboard showing conversation metrics, usage statistics, popular questions, response accuracy, and cost analysis. You can track API usage, set alerts, and export reports.",
+      },
+      {
+        question: "How secure is my data and API keys?",
+        answer:
+          "We implement end-to-end encryption, secure API key management with rotation capabilities, rate limiting, and SOC 2 compliance. Your data is protected with industry-standard security measures.",
+      },
+      {
+        question: "What's coming in future updates?",
+        answer:
+          "We're working on customizable chatbot UI themes, advanced CRM integrations (Salesforce, HubSpot), multi-language support, and white-label solutions for enterprise clients.",
       },
     ],
   },
@@ -352,40 +362,40 @@ export default {
       "If an account exists for this email, instructions to reset your password have been sent.",
   },
   getStartedPage: {
-    title: "Let's Get Started!",
+    title: "Start Your AI Project Today!",
     subtitle:
-      "You're one step closer to revolutionizing your customer support. Choose an option below to begin your journey with One AI Assistant.",
+      "Choose your subscription plan and begin building intelligent chatbots for your business. All plans start at Rp 300K with transparent pricing.",
     freeTrialCard: {
-      title: "Start a Free Trial",
+      title: "Starter Plan - Rp 300K/month",
       description:
-        "Experience the full power of One AI Assistant with our no-commitment free trial. Explore all features and see the impact on your business.",
-      imageAlt: "Free Trial Illustration",
+        "Perfect for small businesses and startups. Get 1,000 monthly interactions with full RAG features, team collaboration, and 24/7 support.",
+      imageAlt: "Starter Plan Illustration",
       features: [
-        "Full access to Professional plan features.",
-        "Integrate with your website in minutes.",
-        "No credit card required to start.",
-        "Dedicated support during your trial period.",
+        "1,000 interactions per month included.",
+        "Full RAG system with knowledge base upload.",
+        "Team collaboration with role management.",
+        "Real-time analytics and API management.",
       ],
-      buttonText: "Begin Free Trial",
+      buttonText: "Choose Starter Plan",
     },
     demoCard: {
-      title: "Request a Personalized Demo",
+      title: "Professional Plan - Rp 750K/month",
       description:
-        "Schedule a live demo with our experts. We'll walk you through the platform and discuss how One AI Assistant can be tailored to your specific needs.",
-      imageAlt: "Demo Illustration",
+        "Ideal for growing businesses. 5,000 monthly interactions, priority support, advanced analytics, and everything from Starter plan.",
+      imageAlt: "Professional Plan Illustration",
       features: [
-        "See the RAG system in action with example data.",
-        "Discuss your specific use cases and challenges.",
-        "Get answers to all your technical questions.",
-        "Explore custom integration possibilities.",
+        "5,000 interactions per month included.",
+        "Priority support and faster response times.",
+        "Advanced analytics and custom reports.",
+        "API rate limiting and enhanced security.",
       ],
-      buttonText: "Schedule a Demo",
+      buttonText: "Choose Professional Plan",
     },
     haveQuestionsSection: {
-      title: "Have Questions?",
-      text: "Our team is here to help. Visit our <1>FAQ page</1> or <2>contact us</2> directly.",
-      faqLinkText: "FAQ page", // For matching <1>
-      contactLinkText: "contact us", // For matching <2>
+      title: "Need Enterprise Solutions?",
+      text: "For unlimited interactions and custom solutions, check our <1>pricing page</1> or <2>contact our sales team</2> directly.",
+      faqLinkText: "pricing page", // For matching <1>
+      contactLinkText: "contact our sales team", // For matching <2>
     },
   },
   ourClientsPage: {
@@ -433,7 +443,7 @@ export default {
           "One AI Assistant has transformed our customer support, reducing response times by 70% and significantly improving customer satisfaction.",
         name: "Sarah L., Head of Support",
         company: "Innovatech Corp",
-        avatar: "https://placehold.co/80x80.png?text=SL",
+        avatar: "/images/client/sarah_l.jpg",
         dataAiHint: "business person",
       },
       {
@@ -441,7 +451,7 @@ export default {
           "The integration was seamless, and the AI's ability to understand and respond to complex queries based on our documentation is impressive.",
         name: "Mike B., CTO",
         company: "Global Solutions Ltd.",
-        avatar: "https://placehold.co/80x80.png?text=MB",
+        avatar: "/images/client/mike_b.jpg",
         dataAiHint: "tech executive",
       },
     ],
@@ -487,9 +497,37 @@ export default {
       changesToThisPolicy: "7. Changes to This Privacy Policy",
       contactUs: "8. Contact Us",
     },
-    // Body text for legal pages is mostly kept static in the component for now
+    introductionContent: "One AI Assistant is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our project-based AI chatbot platform. By using our services, you consent to the practices described in this policy.",
+    informationWeCollectIntro: "We may collect the following types of information:",
+    personalDataTitle: "Personal Data:",
+    personalDataContent: "Name, email address, phone number, company information, billing details, and other information you provide when creating projects or subscribing to our services.",
+    derivativeDataTitle: "Usage Data:",
+    derivativeDataContent: "Information about how you interact with our platform, including project usage, API calls, team collaboration activities, and analytics data.",
+    chatbotInteractionsTitle: "Chatbot Data:",
+    chatbotInteractionsContent: "Knowledge base uploads, conversation logs, system prompts, and other data related to your chatbot projects for RAG processing and improvement.",
+    useOfYourInformationIntro: "We use your information to:",
+    useCases: [
+      "Provide and maintain our project-based chatbot services",
+      "Process payments and manage subscriptions (Starter, Professional, Enterprise)",
+      "Enable team collaboration features with role-based permissions",
+      "Generate analytics and usage reports for your projects",
+      "Provide customer support and technical assistance",
+      "Send service updates, billing notifications, and security alerts",
+      "Improve our platform based on usage patterns and feedback"
+    ],
+    disclosureOfYourInformationIntro: "We may disclose your information in the following situations:",
+    byLawTitle: "Legal Requirements:",
+    byLawContent: "When required by Indonesian law, court orders, or regulatory compliance.",
+    thirdPartyProvidersTitle: "Service Providers:",
+    thirdPartyProvidersContent: "To trusted third parties who assist in payment processing, cloud hosting (SOC 2 compliant), and essential platform operations.",
+    securityOfYourInformationContent: "We implement enterprise-grade security measures including encryption, secure API key management, role-based access controls, and regular security audits. Your project data is isolated and protected with Indonesian compliance standards.",
+    policyForChildrenContent: "Our services are designed for businesses and are not intended for individuals under 18 years of age. We do not knowingly collect personal information from children.",
+    changesToThisPolicyContent: "We may update this Privacy Policy periodically. Changes will be posted on this page with an updated 'Last Updated' date. Continued use of our services constitutes acceptance of any changes.",
+    contactUsIntro: "If you have questions about this Privacy Policy or our data practices, please contact us:",
     contactEmailLabel: "Email:",
+    contactEmailValue: "privacy@oneaiassistant.com",
     contactAddressLabel: "Address:",
+    contactAddressValue: "Jakarta, Indonesia",
   },
   securityDetailsPage: {
     title: "Our Commitment to Security",
@@ -540,37 +578,37 @@ export default {
   servicesPage: {
     title: "Our Services",
     description:
-      "We offer a comprehensive suite of services to help you deploy and manage a powerful AI assistant for your business.",
+      "Comprehensive project-based AI chatbot solutions with team collaboration, subscription billing, and enterprise-grade features.",
     services: [
       {
-        title: "AI Chatbot Development",
+        title: "Project-Based AI Chatbot Platform",
         description:
-          "Custom AI chatbot solutions powered by RAG and LLMs, tailored to your specific business needs and knowledge base.",
+          "Create multiple projects with dedicated RAG-powered chatbots. Each project includes custom API keys, knowledge base management, and real-time analytics dashboard.",
       },
       {
-        title: "Seamless Integration Services",
+        title: "Team Collaboration & Management",
         description:
-          "Expert assistance in integrating our chatbot platform with your website, CRM, and other business systems.",
+          "Invite team members with different roles (Owner, Admin, Editor, Viewer) to collaborate on projects. Manage permissions and streamline workflow across your organization.",
       },
       {
-        title: "Chatbot Customization & Branding",
+        title: "Flexible Subscription Plans",
         description:
-          "Personalize the look, feel, and conversational style of your chatbot to perfectly align with your brand identity.",
+          "Choose from Starter (Rp 300K, 1,000 interactions), Professional (Rp 750K, 5,000 interactions), or Enterprise (unlimited) plans. Per-project billing for scalable growth.",
       },
       {
-        title: "Ongoing Support & Maintenance",
+        title: "Advanced Analytics & API Management",
         description:
-          "Dedicated support and regular updates to ensure your AI assistant performs optimally and stays up-to-date.",
+          "Monitor conversation metrics, track API usage, set rate limits, rotate API keys securely, and export detailed reports with enterprise-grade security.",
       },
     ],
     whyChooseUs: {
-      title: "Why Choose Our Services?",
+      title: "Why Choose Our Platform?",
       description:
-        "At One AI Assistant, we are committed to providing not just a product, but a complete solution. Our services are designed to ensure you get the most out of your AI chatbot, from initial setup to long-term optimization.",
+        "Founded by Dadan Abdillah and Saeful Rohman, One AI Assistant combines deep technical expertise with practical business solutions. Our project-based approach scales with your needs.",
       features: [
-        "Expertise in AI and RAG technology.",
-        "Focus on seamless user experience.",
-        "Commitment to your business success.",
+        "Project-based architecture for unlimited scalability",
+        "Team collaboration with role-based permissions",
+        "Indonesian market pricing starting at Rp 300K",
       ],
       imageAlt: "Service team discussion",
     },
@@ -620,22 +658,42 @@ export default {
       limitationOfLiability: "8. Limitation of Liability",
       contactUs: "9. Contact Us",
     },
+    agreementContent: "These Terms of Service constitute a legally binding agreement between you and One AI Assistant concerning your access to and use of our project-based AI chatbot platform. By using our services, you agree to be bound by these terms. Our platform operates on a subscription basis starting at Rp 300,000/month with project-based architecture for team collaboration.",
+    intellectualPropertyContent: "The One AI Assistant platform, including our RAG technology, API systems, and user interface, are our proprietary intellectual property. You retain ownership of your knowledge base uploads, conversation data, and project content. We grant you a limited license to use our platform according to your subscription plan (Starter, Professional, or Enterprise).",
+    userRepresentationsContent: "By using our services, you represent that: (a) you have the legal capacity to enter into binding contracts, (b) you will provide accurate information for billing and project management, (c) you have rights to any content you upload to your knowledge base, and (d) you will comply with Indonesian laws and regulations.",
+    prohibitedActivitiesContent: "You may not: (a) use our platform for illegal activities, (b) attempt to reverse engineer our RAG technology, (c) exceed your subscription limits or attempt to circumvent rate limiting, (d) share API keys with unauthorized parties, or (e) upload harmful, offensive, or copyrighted content without permission.",
+    serviceAvailabilityContent: "We strive to maintain 99.9% uptime for our platform. We reserve the right to modify features, adjust pricing plans, or suspend accounts for violations. Planned maintenance will be announced in advance. Your projects and data remain accessible according to your subscription status.",
+    governingLawContent: "These Terms are governed by Indonesian law. Any disputes will be resolved through arbitration in Jakarta, Indonesia. Our platform complies with Indonesian data protection regulations and international security standards.",
+    disclaimerContent: "Our services are provided 'as is.' While we implement enterprise-grade security and maintain high availability, we cannot guarantee uninterrupted service or complete accuracy of AI responses. Users are responsible for reviewing chatbot outputs and maintaining backup copies of critical data.",
+    limitationOfLiabilityContent: "Our liability is limited to the amount paid for your subscription in the preceding 12 months. We are not liable for indirect, incidental, or consequential damages. This limitation applies to the maximum extent permitted by Indonesian law.",
+    contactUsContent: "For questions about these Terms of Service, contact us at:",
     contactEmailLabel: "Email:",
+    contactEmailValue: "legal@oneaiassistant.com",
     contactAddressLabel: "Address:",
+    contactAddressValue: "Jakarta, Indonesia",
   },
   whatsNewPage: {
-    title: "What's New",
+    title: "🎉 We're Officially Live!",
     description:
-      "Stay updated with the latest developments, features, and progress of the One AI Assistant chatbot system. We're constantly innovating to bring you the best AI solutions.",
-    imageAlt: "New Features Illustration",
-    upcomingEnhancementsTitle: "Upcoming Enhancements:",
-    enhancements: [
-      "Advanced analytics dashboard for chatbot performance.",
-      "Expanded integration options with popular CRM platforms.",
-      "Enhanced multilingual support for global audiences.",
-      "AI-powered proactive messaging capabilities.",
+      "Welcome to the launch of One AI Assistant! After months of development, we're excited to introduce our intelligent chatbot solution to help businesses transform their customer support experience.",
+    imageAlt: "One AI Assistant Launch Celebration",
+    launchAnnouncementTitle: "Launch Features:",
+    launchFeatures: [
+      "Project-based system with team collaboration features",
+      "Intelligent RAG-powered conversations with custom knowledge base",
+      "Easy website integration with one-click plugin deployment",
+      "Real-time analytics dashboard and usage tracking",
+      "Social media links integration (up to 5 links) and customer service phone numbers (up to 2)",
     ],
-    checkBackSoon: "Check back regularly for more updates!",
+    upcomingFeaturesTitle: "What's Coming Next:",
+    upcomingFeatures: [
+      "Customizable chatbot UI themes and styling options",
+      "Advanced CRM integrations (Salesforce, HubSpot, etc.)",
+      "Multi-language support for global businesses",
+    ],
+    launchDate: "Launched: July 30, 2025",
+    thankYou: "Thank you for being part of our journey! We're excited to help you revolutionize your customer interactions.",
+    getStartedCTA: "Ready to get started? Check out our pricing plans and join the AI revolution!",
   },
   notFoundExamplePage: {
     imageAlt: "Confused robot",

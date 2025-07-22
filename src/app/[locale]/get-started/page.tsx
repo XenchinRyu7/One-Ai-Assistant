@@ -62,7 +62,7 @@ export default async function GetStartedPage({
           </CardHeader>
           <CardContent className="flex-grow">
             <Image
-              src="https://placehold.co/500x300.png"
+              src="/images/illustrations/basic_plan.jpg"
               alt={t("freeTrialCard.imageAlt")}
               width={500}
               height={300}
@@ -81,9 +81,7 @@ export default async function GetStartedPage({
               className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
               size="lg"
             >
-              <Link href="/signup?trial=true">
-                {t("freeTrialCard.buttonText")}
-              </Link>
+              <Link href="/pricing">{t("freeTrialCard.buttonText")}</Link>
             </Button>
           </CardContent>
         </Card>
@@ -112,9 +110,7 @@ export default async function GetStartedPage({
           </CardContent>
           <CardContent className="mt-auto">
             <Button asChild variant="outline" className="w-full" size="lg">
-              <Link href="/contact?reason=demo">
-                {t("demoCard.buttonText")}
-              </Link>
+              <Link href="/pricing">{t("demoCard.buttonText")}</Link>
             </Button>
           </CardContent>
         </Card>
@@ -132,7 +128,7 @@ export default async function GetStartedPage({
             return (
               <>
                 {parts[0]}
-                <Link href="/faq" className="text-primary hover:underline">
+                <Link href="/pricing" className="text-primary hover:underline">
                   {t("haveQuestionsSection.faqLinkText")}
                 </Link>
                 {parts[1]}

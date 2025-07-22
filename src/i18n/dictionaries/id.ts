@@ -19,97 +19,97 @@ export default {
     themeToggle: "Ganti tema",
   },
   hero: {
-    title: "Perkuat Situs Web Anda dengan <1>One AI Assistant</1>",
+    title: "Buat Beberapa Proyek AI dengan <1>One AI Assistant</1>",
     subtitle:
-      "Integrasikan chatbot cerdas kami secara mulus untuk memberikan jawaban instan dan akurat menggunakan data Anda sendiri, dan tingkatkan dukungan pelanggan Anda.",
-    getStarted: "Mulai Gratis",
-    requestDemo: "Minta Demo",
+      "Platform berbasis proyek untuk bisnis Indonesia. Mulai dari Rp 300K/bulan. Kolaborasi tim, API key khusus, dan chatbot RAG yang berkembang bersama Anda.",
+    getStarted: "Mulai dari Rp 300K",
+    requestDemo: "Lihat Harga",
     aiChatbotInterfaceAlt: "Pameran Antarmuka Chatbot AI",
   },
   homepage: {
     featuresSection: {
-      title: "Masa Depan Interaksi Pelanggan, Hari Ini.",
+      title: "Platform Chatbot AI Berbasis Proyek",
       subtitle:
-        "Temukan bagaimana One AI Assistant mengubah keterlibatan pelanggan Anda dengan fitur-fitur canggih yang mudah digunakan.",
+        "Buat proyek unlimited, kolaborasi dengan tim, dan deploy chatbot RAG dengan billing berlangganan transparan.",
       features: [
         {
-          title: "Sistem RAG Cerdas",
+          title: "Arsitektur Multi-Proyek",
           description:
-            "Memanfaatkan Retrieval Augmented Generation tingkat lanjut untuk respons yang sadar konteks dan akurat dari basis pengetahuan Anda.",
+            "Buat beberapa proyek dengan API key khusus, knowledge base, dan kolaborasi tim. Sempurna untuk agensi dan perusahaan.",
         },
         {
-          title: "Integrasi Mulus",
+          title: "Kolaborasi Tim",
           description:
-            "Sematkan chatbot kami dengan mudah ke situs web Anda yang sudah ada dengan upaya minimal menggunakan skrip sederhana.",
+            "Undang anggota tim dengan izin berbasis peran (Owner, Admin, Editor, Viewer) untuk manajemen proyek yang mulus.",
         },
         {
-          title: "Dukungan Otomatis 24/7",
+          title: "Paket Berlangganan Fleksibel",
           description:
-            "Berikan bantuan sepanjang waktu kepada pengguna Anda, tingkatkan kepuasan dan keterlibatan kapan saja.",
+            "Mulai dari Rp 300K/bulan dengan 1.000 interaksi. Naik ke Professional (Rp 750K) atau Enterprise (unlimited) seiring pertumbuhan.",
         },
         {
-          title: "Sangat Dapat Disesuaikan",
+          title: "Analitik Real-Time",
           description:
-            "Sesuaikan tampilan, perilaku, dan respons chatbot agar sangat cocok dengan suara dan gaya merek Anda.",
+            "Monitor metrik percakapan, penggunaan API, biaya, dan performa dengan dashboard komprehensif untuk setiap proyek.",
         },
       ],
     },
     howItWorksSection: {
-      title: "Langkah Mudah Menuju Dukungan Lebih Cerdas",
-      subtitle: "Siapkan asisten AI Anda dan jalankan dalam hitungan menit.",
+      title: "Deploy Chatbot AI dalam Menit",
+      subtitle: "Sistem berbasis proyek dirancang untuk skalabilitas dan kolaborasi.",
       steps: [
         {
-          title: "Hubungkan Data Anda",
+          title: "Buat Proyek & Berlangganan",
           description:
-            "Unggah dokumen, FAQ, atau konten situs web Anda dengan aman untuk membangun basis pengetahuan chatbot.",
+            "Buat proyek baru, pilih paket berlangganan (mulai Rp 300K), dan dapatkan API key khusus untuk deployment.",
         },
         {
-          title: "Sesuaikan Bot Anda",
+          title: "Upload Knowledge Base",
           description:
-            "Sesuaikan pengaturan, tampilan, dan perintah yang telah ditentukan sebelumnya agar selaras dengan merek dan kebutuhan pengguna Anda.",
+            "Upload PDF, dokumen, tambahkan link media sosial (maks 5), dan nomor layanan pelanggan (maks 2) untuk membangun sistem RAG.",
         },
         {
-          title: "Sematkan & Luncurkan",
+          title: "Deploy & Kolaborasi",
           description:
-            "Tambahkan cuplikan kode sederhana ke situs web Anda dan mulailah berinteraksi dengan pelanggan secara instan.",
+            "Salin kode embed ke website Anda dan undang anggota tim untuk berkolaborasi dalam manajemen chatbot dan analitik.",
         },
       ],
-      diagramAlt: "Diagram cara kerja",
+      diagramAlt: "Diagram workflow berbasis proyek",
     },
     testimonialsSection: {
-      title: "Apa Kata Klien Kami",
+      title: "Bisnis Indonesia Mempercayai Kami",
       subtitle:
-        "Kisah nyata dari bisnis yang mendapat manfaat dari One AI Assistant.",
+        "Kisah sukses nyata dari perusahaan Indonesia yang menggunakan platform AI berbasis proyek kami.",
       testimonials: [
         {
           quote:
-            "One AI Assistant telah merevolusi dukungan pelanggan kami. Waktu respons turun 60%, dan pelanggan kami menyukai jawaban instan dan akurat!",
-          name: "Jane Doe",
-          company: "Tech Solutions Inc.",
+            "Sistem berbasis proyek sempurna untuk agensi kami. Kami mengelola 15+ chatbot klien dengan tim berbeda dan billing transparan. Harga Rp 300K sangat kompetitif!",
+          name: "Budi Santoso",
+          company: "Digital Agency Jakarta",
           avatarSrc: "https://placehold.co/100x100.png",
-          avatarFallback: "JD",
+          avatarFallback: "BS",
           rating: 5,
-          dataAiHint: "professional woman",
+          dataAiHint: "pemilik bisnis Indonesia",
         },
         {
           quote:
-            "Sistem RAG sangat kuat. Ia memahami konteks dan memberikan informasi yang relevan dari basis pengetahuan kami tidak seperti sebelumnya. Sangat direkomendasikan!",
-          name: "John Smith",
-          company: "Global Innovations Ltd.",
+            "Fitur kolaborasi tim luar biasa. Developer, content editor, dan manajer kami bisa bekerja sama dengan mulus di beberapa proyek. Sistem RAG bekerja sempurna!",
+          name: "Sari Indira",
+          company: "E-commerce Surabaya",
           avatarSrc: "https://placehold.co/100x100.png",
-          avatarFallback: "JS",
+          avatarFallback: "SI",
           rating: 5,
-          dataAiHint: "male executive",
+          dataAiHint: "eksekutif tech wanita",
         },
         {
           quote:
-            "Mengintegrasikan One AI Assistant ternyata mudah, dan dampaknya pada beban kerja tim kami langsung terasa. Sebuah terobosan untuk situs e-commerce kami.",
-          name: "Alice Brown",
-          company: "Online Emporium",
+            "Mulai dengan paket Starter (Rp 300K) dan naik ke Professional seiring pertumbuhan. Dashboard analitik membantu kami melacak ROI di semua proyek chatbot.",
+          name: "Andi Pratama",
+          company: "Startup Bandung",
           avatarSrc: "https://placehold.co/100x100.png",
-          avatarFallback: "AB",
-          rating: 4,
-          dataAiHint: "startup founder",
+          avatarFallback: "AP",
+          rating: 5,
+          dataAiHint: "pengusaha muda",
         },
       ],
     },
@@ -151,27 +151,27 @@ export default {
       logoAltTextSuffix: "logo",
     },
     securitySection: {
-      imageAlt: "Keamanan Data",
-      title: "Data Anda, Aman dan Pribadi",
+      imageAlt: "Keamanan Enterprise",
+      title: "Keamanan Tingkat Enterprise & Manajemen Tim",
       description:
-        "Kami memprioritaskan keamanan dan privasi data Anda. Platform kami dibangun dengan praktik keamanan standar industri untuk memastikan informasi Anda terlindungi.",
+        "Dibangun untuk bisnis Indonesia dengan manajemen API key aman, akses tim berbasis peran, dan billing transparan di semua proyek Anda.",
       features: [
-        { title: "Enkripsi Ujung ke Ujung", description: "Semua data dalam transit dan saat istirahat dienkripsi." },
-        { title: "Kontrol Akses", description: "Kontrol granular atas siapa yang dapat mengakses dan mengelola chatbot dan data Anda." },
-        { title: "Siap Kepatuhan", description: "Dirancang untuk membantu Anda memenuhi peraturan privasi data yang relevan." },
+        { title: "Manajemen API Key Aman", description: "Rotasi API key, atur rate limit, dan monitor penggunaan di semua proyek dengan keamanan enterprise." },
+        { title: "Akses Tim Berbasis Peran", description: "Kontrol siapa yang bisa mengelola proyek, edit knowledge base, atau lihat analitik dengan peran Owner/Admin/Editor/Viewer." },
+        { title: "Siap Kepatuhan Indonesia", description: "SOC 2 compliant dengan opsi data residency dan billing transparan dalam IDR untuk bisnis lokal." },
       ],
       learnMoreLink: "Pelajari lebih lanjut tentang keamanan kami",
     },
     ctaSection: {
-      title: "Siap Mengubah Pengalaman Pelanggan Anda?",
+      title: "Luncurkan Proyek AI Anda Hari Ini - Mulai Rp 300K",
       description:
-        "Bergabunglah dengan bisnis yang memanfaatkan One AI Assistant untuk memberikan dukungan luar biasa, meningkatkan keterlibatan, dan mengurangi biaya operasional.",
+        "Bergabung dengan bisnis Indonesia yang membangun beberapa proyek chatbot AI dengan kolaborasi tim dan harga transparan. Sempurna untuk agensi dan perusahaan berkembang.",
     },
   },
   footer: {
     brandDescription:
-      "OneAiAssistant membantu bisnis Anda memberikan layanan pelanggan otomatis, cerdas, dan personal dengan teknologi chatbot LLM yang bisa dikustom sesuai kebutuhan website.",
-    websiteLinkText: "www.oneaiassistant.com",
+      "One AI Assistant memberdayakan bisnis Indonesia dengan solusi chatbot AI berbasis proyek. Didirikan oleh Dadan Abdillah dan Saeful Rohman, kami menyediakan teknologi AI terjangkau dan scalable mulai dari Rp 300K per proyek.",
+    websiteLinkText: "www.oneaiassistant.id",
     primaryPages: "Halaman Utama",
     utilityPages: "Halaman Utilitas",
     forgotPassword: "Reset Kata Sandi",
@@ -240,27 +240,28 @@ export default {
   aboutPage: {
     title: "Tentang One AI Assistant",
     welcome:
-      "Selamat datang di One AI Assistant! Kami bersemangat untuk merevolusi cara bisnis berinteraksi dengan pelanggan mereka. Misi kami adalah menyediakan solusi chatbot AI mutakhir yang cerdas, intuitif, dan mudah diintegrasikan.",
+      "Selamat datang di One AI Assistant! Didirikan oleh Dadan Abdillah (Founder & CEO) dan Saeful Rohman (Co-Founder & CTO), kami merevolusi cara bisnis men-deploy chatbot AI melalui platform berbasis proyek yang inovatif.",
     founded:
-      "Didirikan oleh tim penggemar AI dan insinyur perangkat lunak, One AI Assistant lahir dari keinginan untuk membuat AI canggih dapat diakses oleh bisnis dari semua ukuran. Kami percaya bahwa dengan memanfaatkan kekuatan Retrieval Augmented Generation (RAG) dan Large Language Models (LLM), kami dapat membantu Anda memberikan pengalaman pelanggan yang luar biasa, 24/7.",
+      "Diluncurkan pada 30 Juli 2025, One AI Assistant muncul dari visi kami untuk membuat AI tingkat enterprise dapat diakses melalui arsitektur berbasis proyek yang scalable. Platform kami memberdayakan bisnis untuk membuat beberapa proyek AI dengan sistem RAG khusus, kolaborasi tim, dan paket berlangganan fleksibel mulai dari Rp 300.000.",
     ourVision: "Visi Kami",
     visionText:
-      "Menjadi penyedia solusi dukungan pelanggan bertenaga AI terkemuka, memberdayakan bisnis di seluruh dunia untuk membangun hubungan pelanggan yang lebih kuat melalui interaksi yang mulus dan cerdas.",
+      "Mendemokratisasi teknologi chatbot AI di Indonesia dan sekitarnya dengan menyediakan platform berbasis proyek yang berkembang dari startup hingga enterprise, memungkinkan kolaborasi tim seamless dan interaksi pelanggan yang cerdas.",
     ourValues: "Nilai-nilai Kami",
     innovationTitle: "Inovasi:",
-    innovationText: "Terus mengeksplorasi dan menerapkan kemajuan AI terbaru.",
+    innovationText:
+      "Memelopori arsitektur RAG berbasis proyek dengan analitik real-time dan fitur kolaborasi tim.",
     customerCentricityTitle: "Berpusat pada Pelanggan:",
     customerCentricityText:
-      "Merancang solusi yang benar-benar memenuhi kebutuhan klien kami dan pengguna mereka.",
+      "Merancang solusi terjangkau (mulai Rp 300K) yang berkembang bersama bisnis Indonesia.",
     integrityTitle: "Integritas:",
     integrityText:
-      "Beroperasi dengan transparansi dan komitmen kuat terhadap privasi dan keamanan data.",
+      "Beroperasi dengan transparansi, manajemen API key aman, dan proteksi data tingkat enterprise.",
     simplicityTitle: "Kesederhanaan:",
-    simplicityText:
-      "Membuat teknologi kompleks mudah digunakan dan diintegrasikan.",
+    simplicityText: "Deployment satu klik dengan manajemen tim komprehensif dan transparansi billing.",
     thankYou:
-      "Terima kasih telah mempertimbangkan One AI Assistant. Kami berharap dapat membantu Anda mengubah dukungan pelanggan Anda!",
-    teamImageAlt: "Tim kami sedang bekerja",
+      "Didirikan oleh developer berpengalaman, kami berkomitmen memberdayakan bisnis Indonesia dengan solusi AI kelas dunia. Kunjungi halaman tim kami untuk mengetahui lebih lanjut perjalanan Dadan dan Saeful.",
+    teamImageAlt: "Founder dan tim kami sedang bekerja",
+    meetFoundersButton: "Temui Para Founder",
   },
   contactPage: {
     title: "Hubungi Kami",
@@ -298,46 +299,54 @@ export default {
     title: "Pertanyaan yang Sering Diajukan",
     items: [
       {
-        question: "Apa itu One AI Assistant?",
+        question: "Apa itu One AI Assistant dan bagaimana cara kerjanya?",
         answer:
-          "One AI Assistant adalah platform chatbot bertenaga AI canggih yang menggunakan Retrieval Augmented Generation (RAG) untuk memberikan respons yang cerdas dan sadar konteks berdasarkan basis pengetahuan spesifik bisnis Anda. Ini dirancang untuk meningkatkan dukungan dan keterlibatan pelanggan di situs web Anda.",
+          "One AI Assistant adalah platform chatbot AI berbasis proyek yang menggunakan Retrieval Augmented Generation (RAG) untuk memberikan respons cerdas. Setiap pengguna dapat membuat beberapa proyek, berlangganan paket, mengunggah knowledge base, dan men-deploy chatbot hanya dengan beberapa baris kode.",
       },
       {
-        question: "Bagaimana cara kerja sistem RAG?",
+        question: "Bagaimana sistem berbasis proyek bekerja?",
         answer:
-          "Retrieval Augmented Generation (RAG) menggabungkan kekuatan model bahasa besar (LLM) dengan pengambilan informasi dari dokumen atau sumber data yang Anda sediakan. Ketika pengguna mengajukan pertanyaan, sistem pertama-tama mengambil informasi yang relevan dari basis pengetahuan Anda dan kemudian menggunakan LLM untuk menghasilkan jawaban yang komprehensif dan akurat berdasarkan konteks yang diambil tersebut.",
+          "Setiap pengguna dapat membuat beberapa proyek untuk website atau tujuan yang berbeda. Setiap proyek memerlukan paket berlangganan, memiliki API key sendiri, knowledge base, system prompt, dan pelacakan penggunaan. Anda juga dapat mengundang anggota tim untuk berkolaborasi dalam proyek.",
       },
       {
-        question:
-          "Jenis data apa yang dapat saya gunakan untuk basis pengetahuan?",
+        question: "Paket berlangganan apa yang ditawarkan?",
         answer:
-          "Anda dapat menggunakan berbagai jenis data, termasuk dokumen PDF, file teks, konten situs web (melalui sitemap atau URL langsung), FAQ, manual produk, dan banyak lagi. Sistem kami dirancang untuk memproses dan memahami berbagai data tidak terstruktur dan terstruktur.",
+          "Kami menawarkan tiga paket: Starter (Rp 300.000/bulan) untuk 1.000 interaksi, Professional (Rp 750.000/bulan) untuk 5.000 interaksi, dan Enterprise (harga kustom) untuk interaksi tak terbatas. Semua paket mencakup fitur RAG inti dan analitik real-time.",
       },
       {
-        question:
-          "Apakah sulit mengintegrasikan One AI Assistant ke situs web saya?",
+        question: "Bagaimana cara mengintegrasikan chatbot ke website saya?",
         answer:
-          "Tidak, integrasi dirancang agar sederhana. Kami menyediakan cuplikan JavaScript kecil yang dapat Anda tambahkan dengan mudah ke kode situs web Anda. Tidak diperlukan pengkodean yang rumit, dan Anda biasanya dapat menjalankan chatbot dalam hitungan menit.",
+          "Setelah berlangganan paket dan mengatur knowledge base, Anda akan mendapatkan potongan kode JavaScript sederhana untuk disalin dan ditempel ke website Anda. Integrasinya satu klik dan hanya membutuhkan beberapa menit untuk deploy.",
       },
       {
-        question: "Dapatkah saya menyesuaikan tampilan dan respons chatbot?",
+        question: "File apa saja yang bisa diunggah ke knowledge base?",
         answer:
-          "Ya, One AI Assistant sangat dapat disesuaikan. Anda dapat menyesuaikan tampilannya (warna, logo, gaya widget obrolan) agar sesuai dengan merek Anda. Anda juga dapat menyesuaikan gaya percakapan, pesan selamat datang, dan respons yang telah ditentukan sebelumnya untuk pertanyaan umum.",
+          "Anda dapat mengunggah dokumen PDF, file teks (.txt, .md), dokumen Word (.docx), file CSV/Excel, dan menyediakan URL web. Selain itu, Anda dapat menambahkan hingga 5 link media sosial dan 2 nomor telepon layanan pelanggan untuk dukungan komprehensif.",
       },
       {
-        question: "Jenis dukungan apa yang Anda tawarkan?",
+        question: "Bisakah saya mengundang anggota tim untuk mengelola proyek?",
         answer:
-          "Kami menawarkan berbagai tingkat dukungan tergantung pada paket Anda, mulai dari dukungan email untuk paket dasar hingga manajer akun khusus dan dukungan premium 24/7 untuk klien perusahaan. Kami juga menyediakan dokumentasi komprehensif dan basis pengetahuan online.",
+          "Ya! Pemilik proyek dapat mengundang anggota tim dengan peran berbeda: Owner (akses penuh), Admin (manajemen proyek), Editor (editing knowledge base), dan Viewer (akses read-only). Ini memungkinkan kolaborasi tim yang efektif.",
       },
       {
-        question: "Seberapa aman data saya dengan One AI Assistant?",
+        question: "Bagaimana sistem billing dan pembayaran bekerja?",
         answer:
-          "Keamanan data adalah prioritas utama bagi kami. Kami menerapkan langkah-langkah keamanan standar industri, termasuk enkripsi data saat transit dan saat istirahat, infrastruktur aman, dan kontrol akses untuk melindungi informasi Anda. Silakan merujuk ke Kebijakan Privasi kami untuk detail lebih lanjut.",
+          "Kami menggunakan gateway pembayaran aman dengan billing berulang otomatis. Anda akan memiliki akses ke riwayat billing, invoice, dan pelacakan penggunaan. Billing per proyek, jadi Anda hanya membayar apa yang Anda gunakan.",
       },
       {
-        question: "Apa saja paket harganya?",
+        question: "Fitur analitik dan pelacakan apa yang tersedia?",
         answer:
-          "Kami menawarkan paket harga fleksibel yang sesuai untuk bisnis dari semua ukuran, dari startup hingga perusahaan besar. Silakan kunjungi halaman Harga kami untuk informasi terperinci tentang setiap paket dan fiturnya.",
+          "Setiap proyek mencakup dashboard analitik real-time yang menampilkan metrik percakapan, statistik penggunaan, pertanyaan populer, akurasi respons, dan analisis biaya. Anda dapat melacak penggunaan API, mengatur alert, dan mengekspor laporan.",
+      },
+      {
+        question: "Seberapa aman data dan API key saya?",
+        answer:
+          "Kami menerapkan enkripsi end-to-end, manajemen API key aman dengan kemampuan rotasi, rate limiting, dan kepatuhan SOC 2. Data Anda dilindungi dengan langkah-langkah keamanan standar industri.",
+      },
+      {
+        question: "Apa yang akan datang dalam pembaruan mendatang?",
+        answer:
+          "Kami sedang mengerjakan tema UI chatbot yang dapat disesuaikan, integrasi CRM lanjutan (Salesforce, HubSpot), dukungan multi-bahasa, dan solusi white-label untuk klien enterprise.",
       },
     ],
   },
@@ -354,40 +363,40 @@ export default {
       "Jika ada akun untuk email ini, instruksi untuk mengatur ulang kata sandi Anda telah dikirim.",
   },
   getStartedPage: {
-    title: "Mari Mulai!",
+    title: "Mulai Proyek AI Anda Hari Ini!",
     subtitle:
-      "Anda selangkah lebih dekat untuk merevolusi dukungan pelanggan Anda. Pilih opsi di bawah ini untuk memulai perjalanan Anda dengan One AI Assistant.",
+      "Pilih paket berlangganan Anda dan mulai membangun chatbot cerdas untuk bisnis Anda. Semua paket mulai dari Rp 300K dengan harga transparan.",
     freeTrialCard: {
-      title: "Mulai Uji Coba Gratis",
+      title: "Paket Starter - Rp 300K/bulan",
       description:
-        "Rasakan kekuatan penuh One AI Assistant dengan uji coba gratis tanpa komitmen kami. Jelajahi semua fitur dan lihat dampaknya pada bisnis Anda.",
-      imageAlt: "Ilustrasi Uji Coba Gratis",
+        "Sempurna untuk bisnis kecil dan startup. Dapatkan 1.000 interaksi bulanan dengan fitur RAG lengkap, kolaborasi tim, dan dukungan 24/7.",
+      imageAlt: "Ilustrasi Paket Starter",
       features: [
-        "Akses penuh ke fitur paket Profesional.",
-        "Integrasikan dengan situs web Anda dalam hitungan menit.",
-        "Tidak perlu kartu kredit untuk memulai.",
-        "Dukungan khusus selama periode uji coba Anda.",
+        "1.000 interaksi per bulan sudah termasuk.",
+        "Sistem RAG lengkap dengan upload knowledge base.",
+        "Kolaborasi tim dengan manajemen peran.",
+        "Analitik real-time dan manajemen API.",
       ],
-      buttonText: "Mulai Uji Coba Gratis",
+      buttonText: "Pilih Paket Starter",
     },
     demoCard: {
-      title: "Minta Demo Terpersonalisasi",
+      title: "Paket Professional - Rp 750K/bulan",
       description:
-        "Jadwalkan demo langsung dengan para ahli kami. Kami akan memandu Anda melalui platform dan membahas bagaimana One AI Assistant dapat disesuaikan dengan kebutuhan spesifik Anda.",
-      imageAlt: "Ilustrasi Demo",
+        "Ideal untuk bisnis berkembang. 5.000 interaksi bulanan, dukungan prioritas, analitik lanjutan, dan semua fitur dari paket Starter.",
+      imageAlt: "Ilustrasi Paket Professional",
       features: [
-        "Lihat sistem RAG beraksi dengan data contoh.",
-        "Diskusikan kasus penggunaan dan tantangan spesifik Anda.",
-        "Dapatkan jawaban atas semua pertanyaan teknis Anda.",
-        "Jelajahi kemungkinan integrasi khusus.",
+        "5.000 interaksi per bulan sudah termasuk.",
+        "Dukungan prioritas dan waktu respons lebih cepat.",
+        "Analitik lanjutan dan laporan kustom.",
+        "Rate limiting API dan keamanan ditingkatkan.",
       ],
-      buttonText: "Jadwalkan Demo",
+      buttonText: "Pilih Paket Professional",
     },
     haveQuestionsSection: {
-      title: "Ada Pertanyaan?",
-      text: "Tim kami siap membantu. Kunjungi <1>halaman FAQ</1> kami atau <2>hubungi kami</2> secara langsung.",
-      faqLinkText: "halaman FAQ",
-      contactLinkText: "hubungi kami",
+      title: "Butuh Solusi Enterprise?",
+      text: "Untuk interaksi unlimited dan solusi kustom, cek <1>halaman harga</1> kami atau <2>hubungi tim sales</2> secara langsung.",
+      faqLinkText: "halaman harga",
+      contactLinkText: "hubungi tim sales",
     },
   },
   ourClientsPage: {
@@ -488,8 +497,37 @@ export default {
       changesToThisPolicy: "7. Perubahan pada Kebijakan Privasi Ini",
       contactUs: "8. Hubungi Kami",
     },
+    introductionContent: "One AI Assistant berkomitmen melindungi privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, dan melindungi informasi Anda saat menggunakan platform chatbot AI berbasis proyek kami. Dengan menggunakan layanan kami, Anda menyetujui praktik yang dijelaskan dalam kebijakan ini.",
+    informationWeCollectIntro: "Kami dapat mengumpulkan jenis informasi berikut:",
+    personalDataTitle: "Data Pribadi:",
+    personalDataContent: "Nama, alamat email, nomor telepon, informasi perusahaan, detail penagihan, dan informasi lain yang Anda berikan saat membuat proyek atau berlangganan layanan kami.",
+    derivativeDataTitle: "Data Penggunaan:",
+    derivativeDataContent: "Informasi tentang bagaimana Anda berinteraksi dengan platform kami, termasuk penggunaan proyek, panggilan API, aktivitas kolaborasi tim, dan data analitik.",
+    chatbotInteractionsTitle: "Data Chatbot:",
+    chatbotInteractionsContent: "Upload knowledge base, log percakapan, system prompt, dan data lain terkait proyek chatbot Anda untuk pemrosesan RAG dan peningkatan layanan.",
+    useOfYourInformationIntro: "Kami menggunakan informasi Anda untuk:",
+    useCases: [
+      "Menyediakan dan memelihara layanan chatbot berbasis proyek kami",
+      "Memproses pembayaran dan mengelola langganan (Starter, Professional, Enterprise)",
+      "Mengaktifkan fitur kolaborasi tim dengan izin berbasis peran",
+      "Menghasilkan analitik dan laporan penggunaan untuk proyek Anda",
+      "Memberikan dukungan pelanggan dan bantuan teknis",
+      "Mengirim pembaruan layanan, notifikasi penagihan, dan peringatan keamanan",
+      "Meningkatkan platform kami berdasarkan pola penggunaan dan umpan balik"
+    ],
+    disclosureOfYourInformationIntro: "Kami dapat mengungkapkan informasi Anda dalam situasi berikut:",
+    byLawTitle: "Persyaratan Hukum:",
+    byLawContent: "Ketika diwajibkan oleh hukum Indonesia, perintah pengadilan, atau kepatuhan regulasi.",
+    thirdPartyProvidersTitle: "Penyedia Layanan:",
+    thirdPartyProvidersContent: "Kepada pihak ketiga terpercaya yang membantu dalam pemrosesan pembayaran, hosting cloud (SOC 2 compliant), dan operasi platform penting.",
+    securityOfYourInformationContent: "Kami menerapkan langkah keamanan tingkat enterprise termasuk enkripsi, manajemen API key aman, kontrol akses berbasis peran, dan audit keamanan reguler. Data proyek Anda terisolasi dan dilindungi dengan standar kepatuhan Indonesia.",
+    policyForChildrenContent: "Layanan kami dirancang untuk bisnis dan tidak ditujukan untuk individu di bawah 18 tahun. Kami tidak secara sengaja mengumpulkan informasi pribadi dari anak-anak.",
+    changesToThisPolicyContent: "Kami dapat memperbarui Kebijakan Privasi ini secara berkala. Perubahan akan diposting di halaman ini dengan tanggal 'Terakhir Diperbarui' yang diperbarui. Penggunaan layanan kami yang berkelanjutan merupakan penerimaan atas perubahan apa pun.",
+    contactUsIntro: "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau praktik data kami, silakan hubungi kami:",
     contactEmailLabel: "Email:",
+    contactEmailValue: "privacy@oneaiassistant.com",
     contactAddressLabel: "Alamat:",
+    contactAddressValue: "Jakarta, Indonesia",
   },
   securityDetailsPage: {
     title: "Komitmen Kami terhadap Keamanan",
@@ -540,37 +578,37 @@ export default {
   servicesPage: {
     title: "Layanan Kami",
     description:
-      "Kami menawarkan rangkaian layanan komprehensif untuk membantu Anda menerapkan dan mengelola asisten AI yang kuat untuk bisnis Anda.",
+      "Solusi chatbot AI berbasis proyek yang komprehensif dengan kolaborasi tim, billing berlangganan, dan fitur tingkat enterprise.",
     services: [
       {
-        title: "Pengembangan Chatbot AI",
+        title: "Platform Chatbot AI Berbasis Proyek",
         description:
-          "Solusi chatbot AI khusus yang didukung oleh RAG dan LLM, disesuaikan dengan kebutuhan bisnis spesifik Anda dan basis pengetahuan.",
+          "Buat beberapa proyek dengan chatbot RAG khusus. Setiap proyek mencakup API key khusus, manajemen knowledge base, dan dashboard analitik real-time.",
       },
       {
-        title: "Layanan Integrasi Mulus",
+        title: "Kolaborasi & Manajemen Tim",
         description:
-          "Bantuan ahli dalam mengintegrasikan platform chatbot kami dengan situs web, CRM, dan sistem bisnis Anda lainnya.",
+          "Undang anggota tim dengan peran berbeda (Owner, Admin, Editor, Viewer) untuk berkolaborasi dalam proyek. Kelola izin dan streamline workflow di organisasi Anda.",
       },
       {
-        title: "Kustomisasi & Branding Chatbot",
+        title: "Paket Berlangganan Fleksibel",
         description:
-          "Personalisasi tampilan, nuansa, dan gaya percakapan chatbot Anda agar selaras sempurna dengan identitas merek Anda.",
+          "Pilih dari paket Starter (Rp 300K, 1.000 interaksi), Professional (Rp 750K, 5.000 interaksi), atau Enterprise (unlimited). Billing per-proyek untuk pertumbuhan yang scalable.",
       },
       {
-        title: "Dukungan & Pemeliharaan Berkelanjutan",
+        title: "Analitik Lanjutan & Manajemen API",
         description:
-          "Dukungan khusus dan pembaruan rutin untuk memastikan asisten AI Anda bekerja secara optimal dan tetap mutakhir.",
+          "Monitor metrik percakapan, lacak penggunaan API, atur rate limit, rotasi API key secara aman, dan ekspor laporan detail dengan keamanan tingkat enterprise.",
       },
     ],
     whyChooseUs: {
-      title: "Mengapa Memilih Layanan Kami?",
+      title: "Mengapa Memilih Platform Kami?",
       description:
-        "Di One AI Assistant, kami berkomitmen untuk menyediakan bukan hanya produk, tetapi solusi lengkap. Layanan kami dirancang untuk memastikan Anda mendapatkan hasil maksimal dari chatbot AI Anda, dari pengaturan awal hingga optimasi jangka panjang.",
+        "Didirikan oleh Dadan Abdillah dan Saeful Rohman, One AI Assistant menggabungkan keahlian teknis mendalam dengan solusi bisnis praktis. Pendekatan berbasis proyek kami berkembang sesuai kebutuhan Anda.",
       features: [
-        "Keahlian dalam teknologi AI dan RAG.",
-        "Fokus pada pengalaman pengguna yang mulus.",
-        "Komitmen terhadap kesuksesan bisnis Anda.",
+        "Arsitektur berbasis proyek untuk skalabilitas unlimited",
+        "Kolaborasi tim dengan izin berbasis peran",
+        "Harga pasar Indonesia mulai dari Rp 300K",
       ],
       imageAlt: "Diskusi tim layanan",
     },
@@ -620,22 +658,42 @@ export default {
       limitationOfLiability: "8. Batasan Tanggung Jawab",
       contactUs: "9. Hubungi Kami",
     },
+    agreementContent: "Ketentuan Layanan ini merupakan perjanjian yang mengikat secara hukum antara Anda, baik secara pribadi atau atas nama suatu entitas (\\\"Anda\\\") dan One AI Assistant (\\\"kami,\\\" \\\"kita,\\\" atau \\\"milik kami\\\"), mengenai akses dan penggunaan Anda terhadap platform chatbot AI berbasis proyek kami serta layanan terkait (secara kolektif, \\\"Situs\\\" dan \\\"Layanan\\\" kami). Anda setuju bahwa dengan mengakses Situs dan/atau Layanan, Anda telah membaca, memahami, dan setuju untuk terikat oleh semua Ketentuan Layanan ini. JIKA ANDA TIDAK SETUJU DENGAN SEMUA KETENTUAN LAYANAN INI, MAKA ANDA DILARANG KERAS MENGGUNAKAN SITUS DAN LAYANAN DAN ANDA HARUS SEGERA MENGHENTIKAN PENGGUNAAN.",
+    intellectualPropertyContent: "Kecuali ditentukan lain, Situs dan Layanan adalah properti milik kami dan semua kode sumber, database, fungsionalitas, perangkat lunak, desain website, audio, video, teks, foto, dan grafik di Situs (secara kolektif, \\\"Konten\\\") dan merek dagang, merek layanan, dan logo yang terkandung di dalamnya (\\\"Merek\\\") dimiliki atau dikontrol oleh kami atau dilisensikan kepada kami, dan dilindungi oleh hak cipta dan hukum merek dagang serta berbagai hak kekayaan intelektual lainnya. Teknologi RAG (Retrieval-Augmented Generation) dan sistem manajemen proyek yang kami kembangkan merupakan kekayaan intelektual kami.",
+    userRepresentationsContent: "Dengan menggunakan Situs atau Layanan, Anda menyatakan dan menjamin bahwa: (1) semua informasi registrasi yang Anda kirimkan akan benar, akurat, terkini, dan lengkap; (2) Anda akan mempertahankan keakuratan informasi tersebut dan segera memperbarui informasi registrasi tersebut jika diperlukan; (3) Anda memiliki kapasitas hukum dan Anda setuju untuk mematuhi Ketentuan Layanan ini; (4) Anda tidak berusia di bawah 13 tahun; (5) Anda tidak akan mengakses Situs atau Layanan melalui cara otomatis atau non-manusia; (6) Anda tidak akan menggunakan Situs atau Layanan untuk tujuan ilegal atau tidak sah; (7) penggunaan Anda terhadap Situs atau Layanan tidak akan melanggar hukum atau peraturan yang berlaku.",
+    prohibitedActivitiesContent: "Anda tidak boleh mengakses atau menggunakan Situs atau Layanan untuk tujuan apa pun selain yang kami sediakan. Situs dan Layanan tidak boleh digunakan dalam hubungannya dengan usaha komersial apa pun kecuali yang secara khusus didukung atau disetujui oleh kami. Anda dilarang menggunakan layanan untuk membuat konten yang melanggar hukum, menyesatkan, atau merugikan.",
+    serviceAvailabilityContent: "Kami berhak mengubah, memodifikasi, atau menghapus konten Situs atau Layanan kapan saja atau untuk alasan apa pun atas kebijakan kami sendiri tanpa pemberitahuan. Kami juga berhak memodifikasi atau menghentikan semua atau sebagian Layanan tanpa pemberitahuan kapan saja. Kami tidak akan bertanggung jawab kepada Anda atau pihak ketiga mana pun atas modifikasi, perubahan harga, penangguhan, atau penghentian Situs atau Layanan.",
+    governingLawContent: "Ketentuan ini akan diatur oleh dan didefinisikan mengikuti hukum Republik Indonesia. One AI Assistant dan Anda dengan tidak dapat dibatalkan menyetujui bahwa pengadilan di Jakarta, Indonesia akan memiliki yurisdiksi eksklusif untuk menyelesaikan setiap sengketa yang mungkin timbul sehubungan dengan ketentuan ini.",
+    disclaimerContent: "Situs dan Layanan disediakan atas dasar sebagaimana adanya dan sebagaimana tersedia. Anda setuju bahwa penggunaan Anda terhadap Situs dan/atau Layanan akan menjadi risiko Anda sendiri. Sejauh diizinkan oleh hukum, kami menafikan semua jaminan, tersurat atau tersirat, sehubungan dengan Situs dan Layanan dan penggunaan Anda terhadapnya.",
+    limitationOfLiabilityContent: "Dalam keadaan apa pun kami atau direktur, karyawan, atau agen kami tidak akan bertanggung jawab kepada Anda atau pihak ketiga mana pun atas kerusakan langsung, tidak langsung, konsekuensial, teladan, insidental, khusus, atau hukuman, termasuk kehilangan keuntungan, kehilangan pendapatan, kehilangan data, atau kerusakan lain yang timbul dari penggunaan Anda terhadap Situs atau Layanan, bahkan jika kami telah diberitahu tentang kemungkinan kerusakan tersebut.",
+    contactUsContent: "Jika Anda memiliki pertanyaan atau komentar tentang Ketentuan Layanan ini, Anda dapat menghubungi kami:",
     contactEmailLabel: "Email:",
+    contactEmailValue: "oneaiassistantindonesia@gmail.com",
     contactAddressLabel: "Alamat:",
+    contactAddressValue: "Jakarta, Indonesia",
   },
   whatsNewPage: {
-    title: "Yang Baru",
+    title: "🎉 Kami Resmi Diluncurkan!",
     description:
-      "Tetap terinformasi dengan perkembangan, fitur, dan kemajuan terbaru dari sistem chatbot One AI Assistant. Kami terus berinovasi untuk memberikan Anda solusi AI terbaik.",
-    imageAlt: "Ilustrasi Fitur Baru",
-    upcomingEnhancementsTitle: "Peningkatan Mendatang:",
-    enhancements: [
-      "Dasbor analitik lanjutan untuk kinerja chatbot.",
-      "Opsi integrasi yang diperluas dengan platform CRM populer.",
-      "Dukungan multibahasa yang ditingkatkan untuk audiens global.",
-      "Kemampuan pesan proaktif bertenaga AI.",
+      "Selamat datang di peluncuran One AI Assistant! Setelah berbulan-bulan pengembangan, kami dengan bangga memperkenalkan solusi chatbot cerdas untuk membantu bisnis mentransformasi pengalaman dukungan pelanggan mereka.",
+    imageAlt: "Perayaan Peluncuran One AI Assistant",
+    launchAnnouncementTitle: "Fitur Peluncuran:",
+    launchFeatures: [
+      "Sistem berbasis proyek dengan fitur kolaborasi tim",
+      "Percakapan cerdas berbasis RAG dengan knowledge base kustom",
+      "Integrasi website mudah dengan plugin deployment satu klik",
+      "Dashboard analitik real-time dan pelacakan penggunaan",
+      "Integrasi link media sosial (hingga 5 link) dan nomor layanan pelanggan (hingga 2)",
     ],
-    checkBackSoon: "Periksa kembali secara berkala untuk pembaruan lainnya!",
+    upcomingFeaturesTitle: "Yang Akan Datang:",
+    upcomingFeatures: [
+      "Opsi tema dan styling UI chatbot yang dapat disesuaikan",
+      "Integrasi CRM lanjutan (Salesforce, HubSpot, dll.)",
+      "Dukungan multi-bahasa untuk bisnis global",
+    ],
+    launchDate: "Diluncurkan: 30 Juli 2025",
+    thankYou: "Terima kasih telah menjadi bagian dari perjalanan kami! Kami senang membantu Anda merevolusi interaksi pelanggan.",
+    getStartedCTA: "Siap memulai? Lihat paket harga kami dan bergabunglah dengan revolusi AI!",
   },
   notFoundExamplePage: {
     imageAlt: "Robot bingung",

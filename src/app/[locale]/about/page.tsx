@@ -1,5 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import { Users } from "lucide-react";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import {
   getStaticParams as i18nGetStaticParams,
@@ -28,7 +31,7 @@ export default async function AboutPage({
         </CardHeader>
         <CardContent className="space-y-8 text-lg text-foreground/80">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="md:w-1/2">
+            <div className="md:w-1/4">
               <Image
                 src="/images/illustrations/about_illustration.png"
                 alt={t("teamImageAlt")}
@@ -38,7 +41,7 @@ export default async function AboutPage({
                 data-ai-hint="team collaboration"
               />
             </div>
-            <div className="md:w-1/2 space-y-4">
+            <div className="md:w-3/4 space-y-4">
               <p>{t("welcome")}</p>
               <p>{t("founded")}</p>
             </div>
@@ -68,6 +71,15 @@ export default async function AboutPage({
             </ul>
           </div>
           <p className="text-center pt-4">{t("thankYou")}</p>
+          
+          <div className="flex justify-center pt-6">
+            <Link href={`/${locale}/our-teams`}>
+              <Button className="flex items-center gap-2" size="lg">
+                <Users className="h-5 w-5" />
+                {t("meetFoundersButton")}
+              </Button>
+            </Link>
+          </div>
         </CardContent>
       </Card>
     </div>

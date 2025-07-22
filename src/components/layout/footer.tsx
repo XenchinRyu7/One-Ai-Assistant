@@ -42,7 +42,7 @@ export function Footer() {
               {t('brandDescription')}
             </p>
             <p className="text-sm text-foreground/70">
-              {t('websiteLinkText')}: <a href="https://www.oneaiassistant.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">www.oneaiassistant.com</a>
+              {t('websiteLinkText')}: <a href="https://www.oneaiassistant.id" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">www.oneaiassistant.id</a>
             </p>
           </div>
 

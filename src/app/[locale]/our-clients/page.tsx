@@ -91,7 +91,7 @@ export default async function OurClientsPage({
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-      <Card className="shadow-lg">
+      <Card className="shadow">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">
             {t("title")}
@@ -110,14 +110,14 @@ export default async function OurClientsPage({
               {clientLogos.map((client: ClientLogo) => (
                 <div
                   key={client.name}
-                  className="p-4 bg-card rounded-lg shadow-sm border border-border"
+                  className="w-40 h-24 p-4 bg-card rounded-lg shadow-sm border border-border hover:shadow-md transition-shadow duration-200 flex items-center justify-center"
                 >
                   <Image
                     src={client.logo}
                     alt={`${client.name} logo`}
                     width={150}
                     height={80}
-                    className="object-contain"
+                    className="max-w-full max-h-full object-cover rounded filter hover:brightness-110 transition-all duration-200"
                     data-ai-hint={client.dataAiHint}
                   />
                 </div>
@@ -133,23 +133,23 @@ export default async function OurClientsPage({
               {testimonials.map((testimonial: Testimonial) => (
                 <Card
                   key={testimonial.name}
-                  className="shadow-md bg-secondary/30"
+                  className="shadow-md bg-secondary/30 hover:shadow-lg transition-shadow duration-200"
                 >
                   <CardContent className="p-6">
-                    <blockquote className="text-lg text-foreground/80 border-l-4 border-primary pl-4 italic mb-4">
+                    <blockquote className="text-lg text-foreground/80 border-l-4 border-primary pl-4 italic mb-6">
                       "{testimonial.quote}"
                     </blockquote>
                     <div className="flex items-center gap-4">
                       <Image
                         src={testimonial.avatar}
                         alt={testimonial.name}
-                        width={80}
-                        height={80}
-                        className="rounded-full object-cover"
+                        width={60}
+                        height={60}
+                        className="rounded-full object-cover ring-2 ring-primary/20"
                         data-ai-hint={testimonial.dataAiHint}
                       />
                       <div>
-                        <div className="font-semibold text-foreground">
+                        <div className="font-semibold text-foreground text-lg">
                           {testimonial.name}
                         </div>
                         <div className="text-foreground/70 text-sm">

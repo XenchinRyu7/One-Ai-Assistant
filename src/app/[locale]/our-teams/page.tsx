@@ -47,7 +47,7 @@ export default async function OurTeamsPage({
 
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-      <Card className="shadow-md">
+      <Card className="shadow">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl md:text-4xl font-bold font-headline text-primary">
             {t("title")}

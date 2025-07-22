@@ -11,9 +11,9 @@ import {
 } from "@/components/ui/card";
 import {
   Brain,
-  Puzzle,
-  Clock,
-  Palette,
+  Users,
+  CreditCard,
+  BarChart3,
   Zap,
   Settings2,
   MessageSquare,
@@ -21,7 +21,6 @@ import {
   ArrowRight,
   Star,
 } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   getI18n,
   getScopedI18n,
@@ -213,7 +212,7 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
               variant="outline"
               className="shadow-md transform hover:scale-105 transition-transform duration-200"
             >
-              <Link href="/contact">{heroT("requestDemo")}</Link>
+              <Link href="/pricing">{heroT("requestDemo")}</Link>
             </Button>
           </div>{" "}
           <div
@@ -262,13 +261,13 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
                     <Brain className="h-10 w-10 text-primary mb-4" />
                   )}
                   {index === 1 && (
-                    <Puzzle className="h-10 w-10 text-primary mb-4" />
+                    <Users className="h-10 w-10 text-primary mb-4" />
                   )}
                   {index === 2 && (
-                    <Clock className="h-10 w-10 text-primary mb-4" />
+                    <CreditCard className="h-10 w-10 text-primary mb-4" />
                   )}
                   {index === 3 && (
-                    <Palette className="h-10 w-10 text-primary mb-4" />
+                    <BarChart3 className="h-10 w-10 text-primary mb-4" />
                   )}
                   <CardTitle className="font-headline text-xl">
                     {feature.title}
@@ -382,25 +381,13 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
                     <blockquote className="text-foreground/80 italic mb-4 flex-grow">
                       "{testimonial.quote}"
                     </blockquote>
-                    <div className="flex items-center mt-auto">
-                      <Avatar className="h-12 w-12 mr-4 border-2 border-primary">
-                        <AvatarImage
-                          src={testimonial.avatarSrc}
-                          alt={testimonial.name}
-                          data-ai-hint={testimonial.dataAiHint}
-                        />
-                        <AvatarFallback>
-                          {testimonial.avatarFallback}
-                        </AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <p className="font-semibold text-foreground">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-sm text-foreground/70">
-                          {testimonial.company}
-                        </p>
-                      </div>
+                    <div className="mt-auto">
+                      <p className="font-semibold text-foreground">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-foreground/70">
+                        {testimonial.company}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -454,7 +441,7 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
           {" "}
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div
-              className="md:w-1/2 jos"
+              className="md:w-1/4 jos"
               data-jos_animation="fade-right"
               data-jos_delay="0.1"
             >
@@ -468,7 +455,7 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
               />
             </div>
             <div
-              className="md:w-1/2 jos"
+              className="md:w-3/4 jos"
               data-jos_animation="fade-left"
               data-jos_duration="0.5"
               data-jos_delay="0.5"
@@ -483,21 +470,27 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
                 <li className="flex items-start">
                   <ShieldCheck className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                   <span>
-                    <strong>{homeT("securitySection.features.0.title")}: </strong>
+                    <strong>
+                      {homeT("securitySection.features.0.title")}:{" "}
+                    </strong>
                     {homeT("securitySection.features.0.description")}
                   </span>
                 </li>
                 <li className="flex items-start">
                   <ShieldCheck className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                   <span>
-                    <strong>{homeT("securitySection.features.1.title")}: </strong>
+                    <strong>
+                      {homeT("securitySection.features.1.title")}:{" "}
+                    </strong>
                     {homeT("securitySection.features.1.description")}
                   </span>
                 </li>
                 <li className="flex items-start">
                   <ShieldCheck className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                   <span>
-                    <strong>{homeT("securitySection.features.2.title")}: </strong>
+                    <strong>
+                      {homeT("securitySection.features.2.title")}:{" "}
+                    </strong>
                     {homeT("securitySection.features.2.description")}
                   </span>
                 </li>
