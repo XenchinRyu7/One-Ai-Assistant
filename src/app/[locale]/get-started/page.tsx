@@ -95,7 +95,7 @@ export default async function GetStartedPage({
           </CardHeader>
           <CardContent className="flex-grow">
             <Image
-              src="https://placehold.co/500x300.png"
+              src="/images/illustrations/professional_plan.jpg"
               alt={t("demoCard.imageAlt")}
               width={500}
               height={300}
