@@ -12,6 +12,18 @@ import type { Locale } from '@/i18n/settings';
 export const metadata: Metadata = {
   title: 'One AI Assistant - Intelligent Chatbot Solutions',
   description: 'Empower your website with One AI Assistant. Seamlessly integrate our intelligent chatbot to provide instant, accurate answers and elevate your customer support.',
+  icons: {
+    icon: [
+      {
+        url: '/OAA_light.svg',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/OAA_dark.svg',
+        media: '(prefers-color-scheme: dark)',
+      }
+    ],
+  },
 };
 
 export default async function LocaleLayout({
@@ -28,7 +40,9 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/OAA_light.svg" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/OAA_dark.svg" media="(prefers-color-scheme: dark)" />
+        <link rel="icon" href="/OAA_light.svg" />
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen">
         <I18nProviderClient locale={locale}>
