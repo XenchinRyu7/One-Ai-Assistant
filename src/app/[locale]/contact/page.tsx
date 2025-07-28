@@ -12,23 +12,42 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin } from "lucide-react";
-import React from "react";
+import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
+import React, { useState } from "react";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { useScopedI18n } from "@/i18n/client";
 
 export default function ContactPage() {
   const t = useScopedI18n("contactPage");
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(event.currentTarget);
+    const firstName = formData.get('firstName') as string;
+    const lastName = formData.get('lastName') as string;
+    const email = formData.get('email') as string;
+    const subject = formData.get('subject') as string;
+    const message = formData.get('message') as string;
+
+    // Create mailto link with pre-filled information
+    const mailtoLink = `mailto:oneaiassistantindonesia@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+
+    // Open default email client
+    window.open(mailtoLink, '_blank');
+
     toast({
-      title: t("toastSuccessTitle"),
-      description: t("toastSuccessDescription"),
+      title: "Email Client Opened",
+      description: "Your default email client has been opened with a pre-filled message. Please review and send the email.",
       variant: "default",
     });
+
+    // Reset form
     (event.target as HTMLFormElement).reset();
+    setIsSubmitting(false);
   };
 
   return (
@@ -58,6 +77,7 @@ export default function ContactPage() {
                   <Label htmlFor="firstName">{t("firstNameLabel")}</Label>
                   <Input
                     id="firstName"
+                    name="firstName"
                     placeholder={t("firstNamePlaceholder")}
                     required
                   />
@@ -66,6 +86,7 @@ export default function ContactPage() {
                   <Label htmlFor="lastName">{t("lastNameLabel")}</Label>
                   <Input
                     id="lastName"
+                    name="lastName"
                     placeholder={t("lastNamePlaceholder")}
                     required
                   />
@@ -75,6 +96,7 @@ export default function ContactPage() {
                 <Label htmlFor="email">{t("emailLabel")}</Label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder={t("emailPlaceholder")}
                   required
@@ -84,6 +106,7 @@ export default function ContactPage() {
                 <Label htmlFor="subject">{t("subjectLabel")}</Label>
                 <Input
                   id="subject"
+                  name="subject"
                   placeholder={t("subjectPlaceholder")}
                   required
                 />
@@ -92,6 +115,7 @@ export default function ContactPage() {
                 <Label htmlFor="message">{t("messageLabel")}</Label>
                 <Textarea
                   id="message"
+                  name="message"
                   placeholder={t("messagePlaceholder")}
                   rows={5}
                   required
@@ -101,8 +125,16 @@ export default function ContactPage() {
                 type="submit"
                 className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                 size="lg"
+                disabled={isSubmitting}
               >
-                {t("sendMessageButton")}
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Opening Email...
+                  </>
+                ) : (
+                  "Send Message via Email"
+                )}
               </Button>
             </form>
           </CardContent>
@@ -132,7 +164,12 @@ export default function ContactPage() {
                 <Phone className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold">{t("phoneInfo")}</h3>
-                  <a href="tel:+1234567890" className="hover:text-primary">
+                  <a 
+                    href="https://wa.me/6283869947022" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-primary"
+                  >
                     083869947022
                   </a>
                 </div>

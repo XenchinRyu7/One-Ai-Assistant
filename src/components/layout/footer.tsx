@@ -21,17 +21,12 @@ export function Footer() {
     { href: '/contact', label: navT('contact') },
   ];
 
-  const utilityPages = [
-    { href: '/signup', label: navT('signup') },
-    { href: '/signin', label: navT('signin') },
-    { href: '/404-example', label: t('notFoundExample') },
-    { href: '/forgot-password', label: t('forgotPassword'), className: 'text-destructive hover:text-destructive/80' },
-  ];
+
 
   return (
     <footer className="border-t border-border/40 bg-background text-foreground">
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Column 1: Brand Info */}
           <div className="space-y-4">
             <Link href={`/${locale}`} className="flex items-center gap-2" prefetch={false}>
@@ -60,19 +55,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Utility Pages */}
-          <div>
-            <h3 className="text-lg font-semibold font-headline mb-4">{t('utilityPages')}</h3>
-            <ul className="space-y-2">
-              {utilityPages.map(page => (
-                <li key={page.label}>
-                  <Link href={page.href} className={`text-sm text-foreground/70 hover:text-primary hover:underline ${page.className || ''}`}>
-                    {page.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+
 
           {/* Column 4: Subscribe to Newsletter */}
           <div>
