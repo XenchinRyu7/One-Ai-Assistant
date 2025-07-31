@@ -108,10 +108,10 @@ export function Navbar() {
     setIsMounted(true);
   }, []);
 
-  const primaryNavItems = primaryNavItemsConfig.map(item => ({...item, label: t(item.labelKey as any)}));
-  const moreDropdownItems = moreDropdownItemsConfig.map(item => ({...item, label: t(item.labelKey as any)}));
-  const contactNavItem = {...contactNavItemConfig, label: t(contactNavItemConfig.labelKey as any)};
-  
+  const primaryNavItems = primaryNavItemsConfig.map(item => ({ ...item, label: t(item.labelKey as any) }));
+  const moreDropdownItems = moreDropdownItemsConfig.map(item => ({ ...item, label: t(item.labelKey as any) }));
+  const contactNavItem = { ...contactNavItemConfig, label: t(contactNavItemConfig.labelKey as any) };
+
   const mobileNavSections = [
     { items: primaryNavItems },
     { title: t('more'), items: moreDropdownItems },
@@ -126,11 +126,11 @@ export function Navbar() {
             <Bot className="h-7 w-7 text-primary" />
             <span className="text-xl font-bold text-foreground font-headline">One AI Assistant</span>
           </Link>
-           <div className="md:hidden">
-             <Button variant="ghost" size="icon" disabled>
-                <Menu className="h-6 w-6" />
-             </Button>
-           </div>
+          <div className="md:hidden">
+            <Button variant="ghost" size="icon" disabled>
+              <Menu className="h-6 w-6" />
+            </Button>
+          </div>
         </div>
       </header>
     );
@@ -143,7 +143,7 @@ export function Navbar() {
           <Bot className="h-7 w-7 text-primary" />
           <span className="text-xl font-bold text-foreground font-headline">One AI Assistant</span>
         </Link>
-        
+
         <nav className="hidden md:flex flex-1 items-center justify-end text-sm font-medium">
           <div className="flex items-center space-x-6">
             {primaryNavItems.map((item) => (
@@ -183,7 +183,7 @@ export function Navbar() {
               {contactNavItem.label}
             </Link>
           </div>
-          
+
           <div className="flex items-center space-x-2 ml-6">
             <LanguageSwitcher />
             <ThemeToggleButton />
@@ -207,16 +207,16 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-background p-0">
-              <SheetHeader className="p-6"> 
+              <SheetHeader className="p-6">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <SheetDescription className="sr-only">Access main sections of the One AI Assistant website.</SheetDescription>
               </SheetHeader>
-              <div className="p-6 flex flex-col h-full">
+              <div className="p-6 flex flex-col h-full overflow-y-auto">
                 <Link href={`/${currentLocale}`} className="flex items-center gap-2 mb-8" onClick={() => setIsMobileMenuOpen(false)}>
                   <Bot className="h-7 w-7 text-primary" />
                   <span className="text-xl font-bold text-foreground font-headline">One AI Assistant</span>
                 </Link>
-                <nav className="flex flex-col space-y-1 flex-grow">
+                <nav className="flex flex-col space-y-1">
                   {mobileNavSections.map((section, sectionIndex) => (
                     <React.Fragment key={section.title || `section-${sectionIndex}`}>
                       {section.title && (
@@ -237,15 +237,15 @@ export function Navbar() {
                     </React.Fragment>
                   ))}
                 </nav>
-                <div className="mt-auto pt-6 space-y-2">
-                   <SheetClose asChild>
+                <div className="pt-6 space-y-2 pb-10">
+                  <SheetClose asChild>
                     <Button asChild variant="outline" size="lg" className="w-full">
-                       <Link href="https://one-ai-assistant-dashboard.vercel.app/en/auth/login" onClick={() => setIsMobileMenuOpen(false)}>{t('signin')}</Link>
+                      <Link href="https://console.oneaiassistant.id/en/auth/login" onClick={() => setIsMobileMenuOpen(false)}>{t('signin')}</Link>
                     </Button>
                   </SheetClose>
                   <SheetClose asChild>
                     <Button asChild variant="default" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                       <Link href="https://one-ai-assistant-dashboard.vercel.app/en/auth/register" onClick={() => setIsMobileMenuOpen(false)}>{t('signup')}</Link>
+                      <Link href="https://console.oneaiassistant.id/en/auth/register" onClick={() => setIsMobileMenuOpen(false)}>{t('signup')}</Link>
                     </Button>
                   </SheetClose>
                 </div>
