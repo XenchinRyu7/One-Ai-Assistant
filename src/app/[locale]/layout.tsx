@@ -74,7 +74,7 @@ export default async function LocaleLayout({
             `,
           }}
         />
-        <script src="https://plugin.oneaiassistant.id/widget_loader.js"></script>
+        <script src="https://plugin.oneaiassistant.id/widget_loader.js" />
       </body>
     </html>
   );
