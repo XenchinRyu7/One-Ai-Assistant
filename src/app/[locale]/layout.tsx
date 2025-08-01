@@ -60,6 +60,21 @@ export default async function LocaleLayout({
             <Toaster />
           </ThemeProvider>
         </I18nProviderClient>
+        
+        {/* One AI Assistant Chat Widget */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.tawkConfig = {
+                apiKey: 'sk-s7v5rzxv5eh5a3lx3o3147d920ioetb5',
+                projectId: 'UAXkBjP2XCLEFqBZAl29',
+                clientName: 'Saeful Rohman',
+                position: 'bottom-right',
+              };
+            `,
+          }}
+        />
+        <script src="https://plugin.oneaiassistant.id/widget_loader.js"></script>
       </body>
     </html>
   );
