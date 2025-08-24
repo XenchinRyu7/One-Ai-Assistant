@@ -9,22 +9,29 @@ import { JOSInit } from '@/components/layout/JosInit';
 import { I18nProviderClient } from '@/i18n/client';
 import type { Locale } from '@/i18n/settings';
 
-export const metadata: Metadata = {
-  title: 'One AI Assistant - Intelligent Chatbot Solutions',
-  description: 'Empower your website with One AI Assistant. Seamlessly integrate our intelligent chatbot to provide instant, accurate answers and elevate your customer support.',
-  icons: {
-    icon: [
-      {
-        url: '/OAA_light.svg',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/OAA_dark.svg',
-        media: '(prefers-color-scheme: dark)',
-      }
-    ],
-  },
-};
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return {
+    title: {
+      template: '%s | One AI Assistant',
+      default: 'One AI Assistant - Intelligent Chatbot Solutions',
+    },
+    description: 'Empower your website with One AI Assistant. Seamlessly integrate our intelligent chatbot to provide instant, accurate answers and elevate your customer support.',
+    icons: {
+      icon: [
+        {
+          url: '/OAA_light.svg',
+          media: '(prefers-color-scheme: light)',
+        },
+        {
+          url: '/OAA_dark.svg',
+          media: '(prefers-color-scheme: dark)',
+        }
+      ],
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,

@@ -12,6 +12,8 @@ import {
   getScopedI18n,
 } from "@/i18n/server";
 import { setStaticParamsLocale } from "next-international/server";
+import type { Metadata } from 'next';
+import { generatePageMetadata, metadataConfigs } from "@/lib/metadata";
 import type { Locale } from "@/i18n/settings";
 
 interface ClientLogo {
@@ -26,6 +28,25 @@ interface Testimonial {
   company: string;
   avatar: string;
   dataAiHint: string;
+}
+
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = await params;
+  setStaticParamsLocale(locale);
+  const t = await getScopedI18n("ourClientsPage");
+
+  const title = t("title");
+  const description = t("description");
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: metadataConfigs.ourClients.keywords,
+    path: '/our-clients',
+    imagePath: metadataConfigs.ourClients.imagePath,
+    imageAlt: metadataConfigs.ourClients.imageAlt,
+    locale,
+  });
 }
 
 export default async function OurClientsPage({

@@ -8,8 +8,29 @@ import {
   getScopedI18n,
 } from "@/i18n/server";
 import { setStaticParamsLocale } from "next-international/server";
+import type { Metadata } from 'next';
+import { generatePageMetadata, metadataConfigs } from "@/lib/metadata";
 import type { Locale } from "@/i18n/settings";
 import { Sparkles, Rocket, Calendar } from "lucide-react";
+
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = await params;
+  setStaticParamsLocale(locale);
+  const t = await getScopedI18n("whatsNewPage");
+
+  const title = t("title");
+  const description = t("description");
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: metadataConfigs.whatsNew.keywords,
+    path: '/whats-new',
+    imagePath: metadataConfigs.whatsNew.imagePath,
+    imageAlt: metadataConfigs.whatsNew.imageAlt,
+    locale,
+  });
+}
 
 export default async function WhatsNewPage({
   params,

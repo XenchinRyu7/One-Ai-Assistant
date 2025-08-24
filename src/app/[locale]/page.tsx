@@ -27,6 +27,8 @@ import {
   getStaticParams as i18nGetStaticParams,
 } from "@/i18n/server";
 import { setStaticParamsLocale } from "next-international/server";
+import type { Metadata } from 'next';
+import { generatePageMetadata, metadataConfigs } from "@/lib/metadata";
 // import { Trans } from 'next-international';
 import type { Locale } from "@/i18n/settings";
 
@@ -543,4 +545,25 @@ export default async function HomePage(props: { params: { locale: Locale } }) {
 
 export async function generateStaticParams() {
   return i18nGetStaticParams();
+}
+
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = await params;
+  setStaticParamsLocale(locale);
+  const heroT = await getScopedI18n("hero");
+
+  const title = heroT("title").replace(/<1>|<\/1>/g, '');
+  const description = heroT("subtitle");
+  
+  console.log('🔍 generateMetadata called:', { title, description, locale });
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: metadataConfigs.home.keywords,
+    path: '/',
+    imagePath: metadataConfigs.home.imagePath,
+    imageAlt: metadataConfigs.home.imageAlt,
+    locale,
+  });
 }

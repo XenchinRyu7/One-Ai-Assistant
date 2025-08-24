@@ -9,7 +9,28 @@ import {
   getScopedI18n,
 } from "@/i18n/server";
 import { setStaticParamsLocale } from "next-international/server";
+import type { Metadata } from 'next';
+import { generatePageMetadata, metadataConfigs } from "@/lib/metadata";
 import type { Locale } from "@/i18n/settings";
+
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = await params;
+  setStaticParamsLocale(locale);
+  const t = await getScopedI18n("aboutPage");
+
+  const title = t("title");
+  const description = t("welcome");
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: metadataConfigs.about.keywords,
+    path: '/about',
+    imagePath: metadataConfigs.about.imagePath,
+    imageAlt: metadataConfigs.about.imageAlt,
+    locale,
+  });
+}
 
 export default async function AboutPage({
   params,

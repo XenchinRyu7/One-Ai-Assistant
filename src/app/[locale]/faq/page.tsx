@@ -11,11 +11,32 @@ import {
   getScopedI18n,
 } from "@/i18n/server";
 import { setStaticParamsLocale } from "next-international/server";
+import type { Metadata } from 'next';
+import { generatePageMetadata, metadataConfigs } from "@/lib/metadata";
 import type { Locale } from "@/i18n/settings";
 
 interface FAQItem {
   question: string;
   answer: string;
+}
+
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = await params;
+  setStaticParamsLocale(locale);
+  const t = await getScopedI18n("faqPage");
+
+  const title = t("title");
+  const description = t("title"); // Using title as description since there's no subtitle
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: metadataConfigs.faq.keywords,
+    path: '/faq',
+    imagePath: metadataConfigs.faq.imagePath,
+    imageAlt: metadataConfigs.faq.imageAlt,
+    locale,
+  });
 }
 
 export default async function FAQPage({

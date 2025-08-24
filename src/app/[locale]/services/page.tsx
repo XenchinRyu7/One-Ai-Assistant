@@ -13,6 +13,8 @@ import {
   getScopedI18n,
 } from "@/i18n/server";
 import { setStaticParamsLocale } from "next-international/server";
+import type { Metadata } from 'next';
+import { generatePageMetadata, metadataConfigs } from "@/lib/metadata";
 import type { Locale } from "@/i18n/settings";
 
 const icons = [
@@ -25,6 +27,25 @@ const icons = [
 interface ServiceItem {
   title: string;
   description: string;
+}
+
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = await params;
+  setStaticParamsLocale(locale);
+  const t = await getScopedI18n("servicesPage");
+
+  const title = t("title");
+  const description = t("description");
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: metadataConfigs.services.keywords,
+    path: '/services',
+    imagePath: metadataConfigs.services.imagePath,
+    imageAlt: metadataConfigs.services.imageAlt,
+    locale,
+  });
 }
 
 export default async function ServicesPage({

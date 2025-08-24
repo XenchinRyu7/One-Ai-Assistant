@@ -5,7 +5,28 @@ import {
   getScopedI18n,
 } from "@/i18n/server";
 import { setStaticParamsLocale } from "next-international/server";
+import type { Metadata } from 'next';
+import { generatePageMetadata, metadataConfigs } from "@/lib/metadata";
 import type { Locale } from "@/i18n/settings";
+
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = await params;
+  setStaticParamsLocale(locale);
+  const t = await getScopedI18n("termsOfServicePage");
+
+  const title = t("title");
+  const description = t("agreementContent");
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: metadataConfigs.termsOfService.keywords,
+    path: '/terms-of-service',
+    imagePath: metadataConfigs.termsOfService.imagePath,
+    imageAlt: metadataConfigs.termsOfService.imageAlt,
+    locale,
+  });
+}
 
 export default async function TermsOfServicePage({
   params,

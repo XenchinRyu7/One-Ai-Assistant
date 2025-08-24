@@ -5,7 +5,28 @@ import {
   getScopedI18n,
 } from "@/i18n/server";
 import { setStaticParamsLocale } from "next-international/server";
+import type { Metadata } from 'next';
+import { generatePageMetadata, metadataConfigs } from "@/lib/metadata";
 import type { Locale } from "@/i18n/settings";
+
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const { locale } = await params;
+  setStaticParamsLocale(locale);
+  const t = await getScopedI18n("privacyPolicyPage");
+
+  const title = t("title");
+  const description = t("introductionContent");
+  
+  return generatePageMetadata({
+    title,
+    description,
+    keywords: metadataConfigs.privacyPolicy.keywords,
+    path: '/privacy-policy',
+    imagePath: metadataConfigs.privacyPolicy.imagePath,
+    imageAlt: metadataConfigs.privacyPolicy.imageAlt,
+    locale,
+  });
+}
 
 export default async function PrivacyPolicyPage({
   params,
