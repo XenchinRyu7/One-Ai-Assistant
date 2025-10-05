@@ -72,7 +72,7 @@ export default async function LocaleLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.tawkConfig = {
+              window.oneAiAssistantConfig = {
                 apiKey: 'sk-s7v5rzxv5eh5a3lx3o3147d920ioetb5',
                 projectId: 'UAXkBjP2XCLEFqBZAl29',
                 clientName: 'Saeful Rohman',

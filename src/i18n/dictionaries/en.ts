@@ -239,7 +239,7 @@ export default {
   aboutPage: {
     title: "About One AI Assistant",
     welcome:
-      "Welcome to One AI Assistant! Founded by Dadan Abdillah (Founder & CEO) and Saeful Rohman (Co-Founder & CTO), we are revolutionizing how businesses deploy AI chatbots through our innovative project-based platform.",
+      "Welcome to One AI Assistant! Founded by Dadan Abdillah (Founder) and Saeful Rohman (Fullstack Developer), we are revolutionizing how businesses deploy AI chatbots through our innovative project-based platform.",
     founded:
       "Launched on July 30, 2025, One AI Assistant emerged from our vision to make enterprise-grade AI accessible through a scalable, project-based architecture. Our platform empowers businesses to create multiple AI projects with dedicated RAG systems, team collaboration, and flexible subscription plans starting at Rp 300,000.",
     ourVision: "Our Vision",
@@ -465,7 +465,7 @@ export default {
     teamMembers: [
       {
         name: "Saeful Rohman",
-        role: "Founder & CEO",
+        role: "Fullstack Developer",
         bio: "Computer Science student at Kuningan University specializing in mobile development and AI core systems. Saeful leads our strategic vision and drives our technical innovation and AI capabilities.",
         avatar: "/images/teams/saefulrohman.jpg",
         initials: "SR",
@@ -473,7 +473,7 @@ export default {
       },
       {
         name: "Dadan Abdillah",
-        role: "Co-Founder & CTO",
+        role: "Founder",
         bio: "Expert in web development and software architecture. Dadan ensures our platform delivers exceptional value to our clients and manages our technical infrastructure.",
         avatar: "/images/teams/dadanabdillah.jpg",
         initials: "DA",
